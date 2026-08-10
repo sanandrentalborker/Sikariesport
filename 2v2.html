@@ -32,7 +32,6 @@
       padding: 15px 10px 40px 10px;
     }
 
-    /* Cyberpunk Animated Background */
     .bg-animation {
       position: fixed;
       top: 0;
@@ -47,7 +46,6 @@
       filter: brightness(0.7);
     }
 
-    /* Layout Wrapper */
     .main-wrapper {
       width: 100%;
       max-width: 450px;
@@ -56,7 +54,6 @@
       gap: 22px;
     }
 
-    /* Top Header Section */
     .hero {
       text-align: center;
       margin-top: 10px;
@@ -101,7 +98,6 @@
       margin-top: 3px;
     }
 
-    /* Match Info Grid */
     .match-info-grid {
       display: flex;
       gap: 12px;
@@ -131,7 +127,32 @@
       font-weight: 800;
     }
 
-    /* SEPARATE BOX 1: CUSTOM ROOM SETTINGS */
+    .timing-box {
+      background: rgba(255, 102, 0, 0.15);
+      border: 2px solid #ff6600;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 0 25px rgba(255, 102, 0, 0.3);
+      backdrop-filter: blur(12px);
+      text-align: left;
+    }
+
+    .timing-box h4 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      color: #ffaa00;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timing-box p {
+      font-size: 0.88rem;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
     .settings-box {
       background: rgba(12, 12, 20, 0.92);
       border: 2px solid #ffcc00;
@@ -189,7 +210,6 @@
       font-family: 'Orbitron', sans-serif;
     }
 
-    /* SEPARATE BOX 2: GAME RULES WARNING BOX */
     .rules-box {
       background: rgba(28, 10, 16, 0.92);
       border: 2px solid #ff0055;
@@ -231,7 +251,6 @@
       font-weight: 700;
     }
 
-    /* SEPARATE BOX 3: PLAYER REGISTRATION FORM */
     .registration-box {
       background: rgba(15, 15, 25, 0.95);
       border: 2.5px solid #00ff66;
@@ -256,7 +275,7 @@
     }
 
     .player-title {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #ffcc00;
       font-weight: bold;
       margin-bottom: 8px;
@@ -335,7 +354,6 @@
       box-shadow: 0 0 30px rgba(0, 255, 102, 0.8);
     }
 
-    /* Dedicated QR Payment View Box */
     .qr-box {
       display: none;
       text-align: center;
@@ -374,7 +392,6 @@
       font-weight: 600;
     }
 
-    /* Instagram Success View Box */
     .insta-box {
       display: none;
       text-align: center;
@@ -383,6 +400,21 @@
       border-radius: 18px;
       padding: 22px;
       box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
+    }
+
+    .info-card-dm {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 204, 0, 0.4);
+      border-radius: 10px;
+      padding: 12px;
+      margin: 15px 0;
+      text-align: left;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .info-card-dm b {
+      color: #ffcc00;
     }
 
     .btn-insta {
@@ -398,7 +430,7 @@
       gap: 10px;
       box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
       transition: all 0.3s ease;
-      margin-top: 15px;
+      margin-top: 10px;
       width: 100%;
       justify-content: center;
     }
@@ -415,7 +447,7 @@
 
   <div class="main-wrapper">
 
-    <!-- Header / Logo Section -->
+    <!-- Header Section -->
     <div class="hero" data-aos="zoom-in" data-aos-duration="1000">
       <div class="logo-frame">
         <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/ff0066/ffffff?text=SIKARI'">
@@ -439,7 +471,15 @@
     <!-- PAGE 1: SEPARATE BOXES -->
     <div id="formPage" style="display: flex; flex-direction: column; gap: 22px;">
 
-      <!-- BOX 1: CUSTOM ROOM SETTINGS -->
+      <!-- BOX 1: MATCH TIMING & WAITING POLICY -->
+      <div class="timing-box" data-aos="fade-up" data-aos-duration="800">
+        <h4><i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES</h4>
+        <p>• Match exact scheduled time par chalu kar diya jayega.</p>
+        <p>• **Waiting Time:** Sabhi players ka maximum **5 Minutes** hi wait kiya jayega (e.g. Agar match 10:00 AM ka hai toh 10:05 AM tak room start ho jayega).</p>
+        <p>• 5 minutes ke baad late hone par match start ho jayega aur **refund nahi milega**.</p>
+      </div>
+
+      <!-- BOX 2: CUSTOM ROOM SETTINGS -->
       <div class="settings-box" data-aos="zoom-in-up" data-aos-duration="900">
         <div class="box-header">
           <i class="fa-solid fa-sliders"></i> CUSTOM ROOM SETTINGS
@@ -468,7 +508,7 @@
         </div>
       </div>
 
-      <!-- BOX 2: GAME RULES -->
+      <!-- BOX 3: GAME RULES -->
       <div class="rules-box" data-aos="flip-up" data-aos-duration="1000">
         <div class="box-header" style="color: #ff0055;">
           <i class="fa-solid fa-triangle-exclamation"></i> STRICT MATCH RULES
@@ -484,7 +524,7 @@
         </div>
       </div>
 
-      <!-- BOX 3: 2v2 TEAM REGISTRATION FORM -->
+      <!-- BOX 4: 2v2 TEAM REGISTRATION FORM -->
       <div class="registration-box" data-aos="fade-up" data-aos-duration="1000">
         <div class="form-header">
           <i class="fa-solid fa-users"></i> 2v2 TEAM REGISTRATION
@@ -568,10 +608,15 @@
     <!-- PAGE 3: Instagram Verification Page Box -->
     <div class="insta-box" id="instaPage">
       <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #ffcc00; margin-bottom: 12px;"></i>
-      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">VERIFICATION REQUIRED</h2>
-      <p style="color: #ddd; margin: 12px 0; font-size: 0.95rem; line-height: 1.5;">
-        Payment verify karne ke liye niche diye gaye button par click karke **Payment ka Screenshot** hamare Instagram (**@sikariesport**) par DM karein. Payment confirmation ke baad hi aapko **Room ID & Password** diya jayega!
-      </p>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">PAYMENT VERIFICATION</h2>
+
+      <div class="info-card-dm">
+        <p style="margin-bottom: 8px;">📩 <b>Room ID & Password Kahan Milega?</b><br>
+        Payment screenshot verified hone ke baad, match start hone se <b>10-15 minutes pehle</b> aapko **Direct Instagram DM** me Room ID & Password bhej diya jayega.</p>
+        
+        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 8px; margin-top: 8px;">💰 <b>Refund Policy (Slot Issue):</b><br>
+        Agar match ke **Slots / Players poore nahi hote**, toh verified players ko match time ke **15 Minutes ke andar Full Entry Fee Refund** kar di jayegi.</p>
+      </div>
 
       <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta">
         <i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i> SEND SCREENSHOT FOR VERIFICATION

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔥 SIKARI ESPORTS - 1v1 CS CUSTOM TOURNAMENT 🔥</title>
+  <title>🔥 SIKARI ESPORTS - Payment Portal 🔥</title>
   
-  <!-- Fonts & Icons -->
+  <!-- Gaming Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -29,7 +29,7 @@
       padding: 20px 10px;
     }
 
-    /* Cyberpunk Gaming Grid Background */
+    /* Cyberpunk Animated Gaming Background */
     .bg-animation {
       position: fixed;
       top: 0;
@@ -37,14 +37,14 @@
       width: 100%;
       height: 100%;
       background: 
-        radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.25), transparent 70%),
-        linear-gradient(to bottom, rgba(10, 10, 15, 0.8), rgba(5, 5, 8, 0.95)),
+        radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.3), transparent 70%),
+        linear-gradient(to bottom, rgba(10, 10, 15, 0.85), rgba(5, 5, 8, 0.98)),
         url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
       z-index: -1;
       filter: brightness(0.7);
     }
 
-    /* Hero Logo Section with Fire Glow */
+    /* Top Logo & Title Header */
     .hero {
       text-align: center;
       margin-bottom: 20px;
@@ -54,12 +54,12 @@
     .logo-frame {
       position: relative;
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .logo-img {
-      width: 130px;
-      height: 130px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       border: 3.5px solid #ff0066;
       box-shadow: 0 0 30px #ff0066, inset 0 0 15px #ff0066;
@@ -74,7 +74,7 @@
 
     .main-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 900;
       letter-spacing: 2px;
       color: #fff;
@@ -82,7 +82,7 @@
     }
 
     .sub-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ffcc00;
       font-weight: 800;
       letter-spacing: 1.5px;
@@ -90,30 +90,33 @@
       margin-top: 5px;
     }
 
-    /* Tournament Banner Cards (1v1, Prize, Entry) */
+    /* Main Gaming Container */
+    .card-box {
+      background: rgba(15, 15, 22, 0.92);
+      border: 2px solid rgba(255, 0, 102, 0.6);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      padding: 25px;
+      box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
+      backdrop-filter: blur(12px);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Match Info Cards (Entry vs Win) */
     .match-info-grid {
       display: flex;
       gap: 12px;
-      width: 100%;
-      max-width: 420px;
       margin-bottom: 20px;
     }
 
     .info-card {
       flex: 1;
-      background: rgba(20, 20, 30, 0.85);
+      background: rgba(25, 25, 38, 0.85);
       border: 1.5px solid #ff0066;
       border-radius: 10px;
       padding: 10px 5px;
       text-align: center;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
-    }
-
-    .info-card i {
-      font-size: 1.2rem;
-      color: #ff0066;
-      margin-bottom: 4px;
     }
 
     .info-card .label {
@@ -127,23 +130,9 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 1.1rem;
       font-weight: 800;
-      color: #00ff66;
     }
 
-    /* Form Container */
-    .card-box {
-      background: rgba(15, 15, 22, 0.9);
-      border: 2px solid rgba(255, 0, 102, 0.6);
-      border-radius: 16px;
-      width: 100%;
-      max-width: 420px;
-      padding: 25px;
-      box-shadow: 0 0 35px rgba(255, 0, 102, 0.3);
-      backdrop-filter: blur(10px);
-      animation: fadeInUp 1s ease-out;
-    }
-
-    /* Input Field Styling */
+    /* Input Styling */
     .input-group {
       margin-bottom: 18px;
       text-align: left;
@@ -155,7 +144,6 @@
       color: #ccc;
       margin-bottom: 6px;
       font-weight: 700;
-      letter-spacing: 0.5px;
     }
 
     .input-wrapper {
@@ -189,7 +177,7 @@
       box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
     }
 
-    /* Action Buttons */
+    /* Glowing Gaming Buttons */
     .btn-main {
       width: 100%;
       padding: 14px;
@@ -216,7 +204,7 @@
       box-shadow: 0 0 30px rgba(255, 0, 102, 0.9);
     }
 
-    /* QR Box */
+    /* Dedicated QR Payment View */
     .qr-box {
       display: none;
       text-align: center;
@@ -225,21 +213,33 @@
 
     .qr-frame {
       background: #fff;
-      padding: 10px;
-      border-radius: 12px;
+      padding: 12px;
+      border-radius: 14px;
       display: inline-block;
       border: 3.5px solid #ff0066;
-      box-shadow: 0 0 25px rgba(255, 0, 102, 0.7);
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
       margin: 15px 0;
     }
 
     .qr-frame img {
-      width: 200px;
-      height: 200px;
+      width: 210px;
+      height: 210px;
       display: block;
+      object-fit: contain;
     }
 
-    /* Insta Box */
+    .pay-instruction {
+      background: rgba(255, 0, 102, 0.15);
+      border: 1px dashed #ff0066;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 0.85rem;
+      color: #ffcc00;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    /* Instagram Success View */
     .insta-box {
       display: none;
       text-align: center;
@@ -259,11 +259,13 @@
       gap: 10px;
       box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
       transition: all 0.3s ease;
-      margin-top: 10px;
+      margin-top: 15px;
+      width: 100%;
+      justify-content: center;
     }
 
     .btn-insta:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
       box-shadow: 0 0 30px rgba(220, 39, 67, 0.9);
     }
 
@@ -279,7 +281,7 @@
     }
 
     @keyframes zoomIn {
-      from { opacity: 0; transform: scale(0.8); }
+      from { opacity: 0; transform: scale(0.85); }
       to { opacity: 1; transform: scale(1); }
     }
   </style>
@@ -291,39 +293,30 @@
   <!-- Header / Logo Section -->
   <div class="hero">
     <div class="logo-frame">
-      <!-- Aapke Logo ki Image Path -->
-      <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/130/ff0066/ffffff?text=SIKARI'">
+      <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/ff0066/ffffff?text=SIKARI'">
     </div>
     <h1 class="main-title">SIKARI ESPORTS</h1>
-    <p class="sub-title">⚔️ Free Fire 1v1 CS Custom ⚔️</p>
+    <p class="sub-title">⚔️ 1v1 CS Custom Match Registration ⚔️</p>
   </div>
 
-  <!-- Highlights Banner Cards -->
-  <div class="match-info-grid">
-    <div class="info-card">
-      <i class="fa-solid fa-crosshairs"></i>
-      <div class="label">MODE</div>
-      <div class="val" style="color:#ff0066;">1 v 1 CS</div>
-    </div>
-    <div class="info-card">
-      <i class="fa-solid fa-trophy"></i>
-      <div class="label">WIN PRIZE</div>
-      <div class="val">₹55</div>
-    </div>
-    <div class="info-card">
-      <i class="fa-solid fa-ticket"></i>
-      <div class="label">ENTRY FEE</div>
-      <div class="val" style="color:#ffcc00;">₹30</div>
-    </div>
-  </div>
-
-  <!-- Registration / Payment Card -->
+  <!-- Registration & Payment Card -->
   <div class="card-box">
 
-    <!-- STEP 1: Registration Form -->
-    <div id="formSection">
+    <!-- PAGE 1: Registration Form -->
+    <div id="formPage">
+      <div class="match-info-grid">
+        <div class="info-card">
+          <div class="label">ENTRY FEE</div>
+          <div class="val" style="color:#ffcc00;">₹30</div>
+        </div>
+        <div class="info-card">
+          <div class="label">WINNING PRIZE</div>
+          <div class="val" style="color:#00ff66;">₹55</div>
+        </div>
+      </div>
+
       <div class="input-group">
-        <label for="name"><i class="fa-solid fa-user-ninja"></i> GAME NAME</label>
+        <label for="name"><i class="fa-solid fa-user-ninja"></i> FREE FIRE GAME NAME</label>
         <div class="input-wrapper">
           <i class="fa-solid fa-gamepad"></i>
           <input type="text" id="name" class="input-field" placeholder="In-Game Name..." required>
@@ -339,67 +332,73 @@
       </div>
 
       <div class="input-group">
-        <label for="insta"><label for="insta"><i class="fa-brands fa-instagram"></i> INSTAGRAM USERNAME</label></label>
+        <label for="insta"><i class="fa-brands fa-instagram"></i> INSTAGRAM USERNAME</label>
         <div class="input-wrapper">
           <i class="fa-brands fa-instagram"></i>
           <input type="text" id="insta" class="input-field" placeholder="@your_instagram_id" required>
         </div>
       </div>
 
-      <button class="btn-main" onclick="goToPayment()">
-        PROCEED TO PAY ₹30 <i class="fa-solid fa-bolt"></i>
+      <button class="btn-main" onclick="openPaymentPage()">
+        PROCEED TO PAY ₹30 <i class="fa-solid fa-qrcode"></i>
       </button>
     </div>
 
-    <!-- STEP 2: Payment QR Code Section -->
-    <div class="qr-box" id="qrSection">
-      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.3rem;">SCAN & PAY ₹30</h2>
-      <p style="color: #aaa; font-size: 0.9rem; margin-top: 5px;">Winning Prize: <b style="color:#00ff66;">₹55 CASH</b></p>
-      
+    <!-- PAGE 2: Dedicated QR Code Payment Page -->
+    <div class="qr-box" id="qrPage">
+      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.3rem;">SCAN & PAY ENTRY FEE</h2>
+      <p style="color: #00ff66; font-size: 1rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹30 | Win: ₹55</p>
+
       <div class="qr-frame">
-        <!-- Aapka Payment QR Code -->
-        <img src="qr.png" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/200/000000/ffffff?text=Scan+QR+Code'">
+        <!-- Aapke QR Code ki Image (qr.jpeg) -->
+        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/210/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
       </div>
 
-      <button class="btn-main" onclick="paymentDone()" style="background: linear-gradient(45deg, #00b09b, #96c93d);">
-        <i class="fa-solid fa-circle-check"></i> PAYMENT COMPLETED
+      <div class="pay-instruction">
+        ⚠️ Paytm / PhonePe / Google Pay se QR scan karke ₹30 pay karein!
+      </div>
+
+      <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #00b09b, #96c93d); box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);">
+        <i class="fa-solid fa-circle-check"></i> PAYMENT COMPLETE
       </button>
     </div>
 
-    <!-- STEP 3: Instagram Verification Section -->
-    <div class="insta-box" id="instaSection">
-      <i class="fa-solid fa-shield-halved" style="font-size: 3.2rem; color: #00ff66; margin-bottom: 12px;"></i>
-      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">LAST STEP!</h2>
-      <p style="color: #ddd; margin: 12px 0; font-size: 0.95rem; line-height: 1.4;">
-        Payment complete karne ke baad **Payment Screenshot** Instagram par DM karein taaki aapka **Room ID & Password** mil sake!
+    <!-- PAGE 3: Direct Instagram DM Redirect Page -->
+    <div class="insta-box" id="instaPage">
+      <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #00ff66; margin-bottom: 12px;"></i>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">PAYMENT VERIFICATION</h2>
+      <p style="color: #ddd; margin: 12px 0; font-size: 0.95rem; line-height: 1.5;">
+        Payment complete ho chuki hai! Ab niche diye gaye button par click karke **Payment ka Screenshot** hamare Instagram (**@sikariesport**) par DM karein taaki Room ID & Password mil sake.
       </p>
 
-      <!-- Apna Instagram Link Yahan Replace Karein -->
-      <a href="https://instagram.com/YOUR_ESPORT_ID" target="_blank" class="btn-insta">
-        <i class="fa-brands fa-instagram" style="font-size: 1.4rem;"></i> SEND SCREENSHOT ON INSTA
+      <!-- Sikari Esports Official Instagram Direct Link -->
+      <a href="https://instagram.com/sikariesport" target="_blank" class="btn-insta">
+        <i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i> DM SCREENSHOT ON INSTAGRAM
       </a>
     </div>
 
   </div>
 
   <script>
-    function goToPayment() {
+    function openPaymentPage() {
       const name = document.getElementById("name").value.trim();
       const uid = document.getElementById("uid").value.trim();
       const insta = document.getElementById("insta").value.trim();
 
       if (!name || !uid || !insta) {
-        alert("Kripya Game Name, UID aur Insta Account saare details bharein!");
+        alert("Kripya saari details (Name, UID, Insta Username) dhyan se bharein!");
         return;
       }
 
-      document.getElementById("formSection").style.display = "none";
-      document.getElementById("qrSection").style.display = "block";
+      // Hide Form Page and Show QR Page
+      document.getElementById("formPage").style.display = "none";
+      document.getElementById("qrPage").style.display = "block";
     }
 
-    function paymentDone() {
-      document.getElementById("qrSection").style.display = "none";
-      document.getElementById("instaSection").style.display = "block";
+    function openInstaPage() {
+      // Hide QR Page and Show Insta Final Page
+      document.getElementById("qrPage").style.display = "none";
+      document.getElementById("instaPage").style.display = "block";
     }
   </script>
 

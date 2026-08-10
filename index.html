@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔥 Khatarnaak Sikari Esports 🔥</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #ff0066;
+      text-shadow: 0 0 15px #ff0066;
+      margin-top: 20px;
+    }
+    .form-box {
+      margin: 30px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 20px #ff0066;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    button {
+      background: #ff0066;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #ff3399;
+    }
+    .qr-box {
+      margin-top: 20px;
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+    }
+    .qr-box img {
+      width: 200px;
+      border: 3px solid #ff0066;
+      border-radius: 10px;
+    }
+    .insta-link {
+      margin-top: 20px;
+      display: none;
+    }
+    .insta-link a {
+      color: #ff0066;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Khatarnaak Sikari Esports 🔥</h1>
+  <p>Join 1v1 CS Custom Match</p>
+
+  <div class="form-box">
+    <input type="text" id="name" placeholder="Game Name">
+    <input type="text" id="uid" placeholder="Game UID">
+    <input type="text" id="insta" placeholder="Instagram Account">
+    <button onclick="showQR()">Proceed to Payment</button>
+  </div>
+
+  <div class="qr-box" id="qrBox">
+    <h2>Scan & Pay Entry Fee</h2>
+    <!-- Apna QR code image yaha dalna -->
+    <img src="qr.png" alt="Payment QR">
+    <p>Entry Fee: ₹30</p>
+    <button onclick="paymentDone()">Payment Complete ✅</button>
+  </div>
+
+  <div class="insta-link" id="instaBox">
+    <p>Payment karne ke baad apna screenshot bhejna mandatory hai 👇</p>
+    <a href="https://instagram.com/YOUR_ESPORT_ID" target="_blank">Official Esports Instagram</a>
+  </div>
+
+<script>
+  function showQR(){
+    document.getElementById("qrBox").style.display = "block";
+  }
+  function paymentDone(){
+    document.getElementById("instaBox").style.display = "block";
+  }
+</script>
+</body>
+</html>

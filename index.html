@@ -350,7 +350,6 @@
       <p style="color: #00ff66; font-size: 1rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹30 | Win: ₹55</p>
 
       <div class="qr-frame">
-        <!-- Aapke QR Code ki Image (qr.jpeg) -->
         <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/210/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
       </div>
 
@@ -358,22 +357,22 @@
         ⚠️ Paytm / PhonePe / Google Pay se QR scan karke ₹30 pay karein!
       </div>
 
-      <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #00b09b, #96c93d); box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);">
-        <i class="fa-solid fa-circle-check"></i> PAYMENT COMPLETE
+      <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #ff0066, #ff5500);">
+        <i class="fa-solid fa-upload"></i> VERIFY PAYMENT VIA INSTA DM
       </button>
     </div>
 
-    <!-- PAGE 3: Direct Instagram DM Redirect Page -->
+    <!-- PAGE 3: Direct Instagram Verification Page -->
     <div class="insta-box" id="instaPage">
-      <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #00ff66; margin-bottom: 12px;"></i>
-      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">PAYMENT VERIFICATION</h2>
+      <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #ffcc00; margin-bottom: 12px;"></i>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">VERIFICATION REQUIRED</h2>
       <p style="color: #ddd; margin: 12px 0; font-size: 0.95rem; line-height: 1.5;">
-        Payment complete ho chuki hai! Ab niche diye gaye button par click karke **Payment ka Screenshot** hamare Instagram (**@sikariesport**) par DM karein taaki Room ID & Password mil sake.
+        Payment verify karne ke liye niche diye gaye button par click karke **Payment ka Screenshot** hamare Instagram (**@sikariesport**) par DM karein. Payment confirmation ke baad hi aapko **Room ID & Password** diya jayega!
       </p>
 
-      <!-- Sikari Esports Official Instagram Direct Link -->
-      <a href="https://instagram.com/sikariesport" target="_blank" class="btn-insta">
-        <i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i> DM SCREENSHOT ON INSTAGRAM
+      <!-- Exact Instagram Profile Link -->
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta">
+        <i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i> SEND SCREENSHOT FOR VERIFICATION
       </a>
     </div>
 
@@ -390,13 +389,11 @@
         return;
       }
 
-      // Hide Form Page and Show QR Page
       document.getElementById("formPage").style.display = "none";
       document.getElementById("qrPage").style.display = "block";
     }
 
     function openInstaPage() {
-      // Hide QR Page and Show Insta Final Page
       document.getElementById("qrPage").style.display = "none";
       document.getElementById("instaPage").style.display = "block";
     }

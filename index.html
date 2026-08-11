@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🔥 SIKARI ESPORTS - Win Unlimited Cash Daily 🔥</title>
+  <title>🔥 SIKARI ESPORTS - Free Fire MAX Esports Portal 🔥</title>
 
   <!-- Gaming Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
   <style>
     * {
@@ -19,7 +22,7 @@
     }
 
     body {
-      background: #030305;
+      background: #020204;
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -27,10 +30,10 @@
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
-      padding: 12px 10px 30px 10px;
+      padding: 12px 10px 40px 10px;
     }
 
-    /* Cyberpunk Background Animation */
+    /* Free Fire MAX Cyberpunk Background */
     .bg-animation {
       position: fixed;
       top: 0;
@@ -39,14 +42,14 @@
       height: 100%;
       background: 
         radial-gradient(circle at 50% 20%, rgba(255, 0, 102, 0.45), transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(0, 255, 102, 0.2), transparent 50%),
-        linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(3, 3, 5, 0.98)),
+        radial-gradient(circle at 80% 80%, rgba(0, 255, 102, 0.25), transparent 50%),
+        linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(2, 2, 4, 0.98)),
         url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
       z-index: -1;
       filter: brightness(0.65);
     }
 
-    /* Main Container Wrapper */
+    /* Main Mobile Container */
     .main-wrapper {
       width: 100%;
       max-width: 450px;
@@ -55,7 +58,7 @@
       gap: 18px;
     }
 
-    /* Top Logo & Title */
+    /* Top Logo & Title Header */
     .hero {
       text-align: center;
       margin-top: 5px;
@@ -100,20 +103,20 @@
       margin-top: 2px;
     }
 
-    /* Casino-Style Jackpot Banner */
+    /* Casino-Style Glowing Banner */
     .jackpot-banner {
-      background: linear-gradient(135deg, rgba(255,0,102,0.25), rgba(255,204,0,0.25));
+      background: linear-gradient(135deg, rgba(255,0,102,0.3), rgba(255,204,0,0.3));
       border: 2px solid #ffcc00;
       border-radius: 14px;
       padding: 12px;
       text-align: center;
-      box-shadow: 0 0 25px rgba(255,204,0,0.3);
+      box-shadow: 0 0 25px rgba(255,204,0,0.35);
       animation: pulseGlow 1.5s infinite alternate;
     }
 
     @keyframes pulseGlow {
       0% { box-shadow: 0 0 15px rgba(255,204,0,0.3); }
-      100% { box-shadow: 0 0 30px rgba(0,255,102,0.5); border-color: #00ff66; }
+      100% { box-shadow: 0 0 30px rgba(0,255,102,0.6); border-color: #00ff66; }
     }
 
     .jackpot-banner h2 {
@@ -160,7 +163,7 @@
       text-transform: uppercase;
     }
 
-    /* Section Title */
+    /* Section Header */
     .section-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.05rem;
@@ -184,43 +187,57 @@
       justify-content: space-between;
       text-decoration: none;
       color: #fff;
-      transition: all 0.25s ease;
+      transition: all 0.3s ease;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
       backdrop-filter: blur(10px);
     }
 
-    .mode-card:active {
-      transform: scale(0.98);
+    .mode-card:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.5);
     }
 
     .mode-info h3 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #fff;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .mode-info p {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #aaa;
-      margin-top: 3px;
+      margin-top: 4px;
       font-weight: 600;
+    }
+
+    .headshot-badge {
+      display: inline-block;
+      background: rgba(255, 0, 85, 0.25);
+      border: 1px solid #ff0055;
+      color: #ff99bb;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 4px;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .badge-price {
       background: linear-gradient(45deg, #ff0066, #ff5500);
-      padding: 7px 10px;
+      padding: 8px 10px;
       border-radius: 8px;
       font-family: 'Orbitron', sans-serif;
       font-size: 0.8rem;
       font-weight: 800;
       text-align: center;
-      box-shadow: 0 0 10px rgba(255,0,102,0.4);
+      box-shadow: 0 0 12px rgba(255,0,102,0.4);
     }
 
-    /* Trust & Fair Play Article Section */
+    /* Article Box Section */
     .trust-article-box {
       background: rgba(12, 12, 20, 0.95);
       border: 1.5px solid #00ccff;
@@ -316,22 +333,22 @@
   <div class="main-wrapper">
 
     <!-- Hero Header -->
-    <div class="hero">
+    <div class="hero" data-aos="zoom-in" data-aos-duration="1000">
       <div class="logo-frame">
         <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/110/ff0066/ffffff?text=SIKARI'">
       </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
-      <p class="sub-title">⚡ PLAY GAMES & WIN REAL CASH DAILY ⚡</p>
+      <p class="sub-title">⚡ OFFICIAL FREE FIRE MAX PORTAL ⚡</p>
     </div>
 
     <!-- Casino-Style Jackpot Banner -->
-    <div class="jackpot-banner">
+    <div class="jackpot-banner" data-aos="flip-up" data-aos-duration="900">
       <h2>🔥 PLAY • KILL • WIN REAL CASH 🔥</h2>
       <p>Instant Direct Bank Transfer & UPI Payouts Guaranteed!</p>
     </div>
 
     <!-- Trust Stats Grid -->
-    <div class="trust-stats">
+    <div class="trust-stats" data-aos="fade-down" data-aos-duration="800">
       <div class="stat-card">
         <div class="val">100%</div>
         <div class="lbl">SAFE & TRUSTED</div>
@@ -347,42 +364,46 @@
     </div>
 
     <!-- SELECT MATCH MODE SECTION -->
-    <div class="section-title"><i class="fa-solid fa-gamepad" style="color:#ff0066;"></i> SELECT YOUR BATTLE MODE</div>
+    <div class="section-title" data-aos="fade-right"><i class="fa-solid fa-gamepad" style="color:#ff0066;"></i> SELECT YOUR BATTLE MODE</div>
 
     <div style="display:flex; flex-direction:column; gap:12px;">
 
-      <!-- 1v1 CS CUSTOM -->
-      <a href="1v1.html" class="mode-card" style="border-color: #ff0066;">
+      <!-- 1v1 CS CUSTOM (HEADSHOT ONLY) -->
+      <a href="1v1.html" class="mode-card" style="border-color: #ff0066;" data-aos="fade-up" data-aos-duration="800">
         <div class="mode-info">
           <h3><i class="fa-solid fa-crosshairs" style="color:#ff0066;"></i> 1v1 CS CUSTOM</h3>
-          <p>Headshot Mode | Unlimited Gloowall</p>
+          <p>Unlimited Gloowall | Fast Action</p>
+          <span class="headshot-badge">🎯 HEADSHOT ONLY MODE</span>
         </div>
         <div class="badge-price">ENTRY ₹30<br><span style="color:#00ff66; font-size:0.7rem;">WIN ₹55</span></div>
       </a>
 
-      <!-- 2v2 CS CUSTOM -->
-      <a href="2v2.html" class="mode-card" style="border-color: #ffcc00;">
+      <!-- 2v2 CS CUSTOM (HEADSHOT ONLY) -->
+      <a href="2v2.html" class="mode-card" style="border-color: #ffcc00;" data-aos="fade-up" data-aos-duration="900">
         <div class="mode-info">
           <h3><i class="fa-solid fa-user-group" style="color:#ffcc00;"></i> 2v2 TEAM CS</h3>
           <p>Duo Battle | Loadout Allowed</p>
+          <span class="headshot-badge">🎯 HEADSHOT ONLY MODE</span>
         </div>
         <div class="badge-price" style="background: linear-gradient(45deg, #ffaa00, #ff5500);">ENTRY ₹60<br><span style="color:#00ff66; font-size:0.7rem;">WIN ₹110</span></div>
       </a>
 
-      <!-- 4v4 SQUAD CS CUSTOM -->
-      <a href="4v4.html" class="mode-card" style="border-color: #00ff66;">
+      <!-- 4v4 SQUAD CS CUSTOM (HEADSHOT ONLY) -->
+      <a href="4v4.html" class="mode-card" style="border-color: #00ff66;" data-aos="fade-up" data-aos-duration="1000">
         <div class="mode-info">
           <h3><i class="fa-solid fa-users-gear" style="color:#00ff66;"></i> 4v4 SQUAD WAR</h3>
           <p>Full Squad Clash | Anti-Hack Protection</p>
+          <span class="headshot-badge">🎯 HEADSHOT ONLY MODE</span>
         </div>
         <div class="badge-price" style="background: linear-gradient(45deg, #00b09b, #96c93d);">ENTRY ₹120<br><span style="color:#fff; font-size:0.7rem;">WIN ₹220</span></div>
       </a>
 
       <!-- SOLO FULL MAP BATTLE ROYALE -->
-      <a href="solofullmap.html" class="mode-card" style="border-color: #00ccff;">
+      <a href="solofullmap.html" class="mode-card" style="border-color: #00ccff;" data-aos="fade-up" data-aos-duration="1100">
         <div class="mode-info">
           <h3><i class="fa-solid fa-parachute-box" style="color:#00ccff;"></i> SOLO FULL MAP BR</h3>
           <p>50 Players Solo BR | Per Kill ₹6</p>
+          <span class="headshot-badge" style="background:rgba(0,204,255,0.2); border-color:#00ccff; color:#00ccff;">🪂 SURVIVAL & KILLS MODE</span>
         </div>
         <div class="badge-price" style="background: linear-gradient(45deg, #00ccff, #0055ff);">ENTRY ₹8<br><span style="color:#fff; font-size:0.7rem;">BOOYAH +₹20</span></div>
       </a>
@@ -390,7 +411,7 @@
     </div>
 
     <!-- WHY SIKARI ESPORTS (TRUST & FAIR PLAY ARTICLE) -->
-    <div class="trust-article-box">
+    <div class="trust-article-box" data-aos="zoom-in" data-aos-duration="900">
       <h3><i class="fa-solid fa-shield-halved"></i> WHY PLAY ON SIKARI ESPORTS?</h3>
       <ul class="feature-list">
         <li>
@@ -413,7 +434,7 @@
     </div>
 
     <!-- SUPPORT & CONTACT BOX -->
-    <div class="support-box">
+    <div class="support-box" data-aos="fade-up" data-aos-duration="1000">
       <h4 style="font-family:'Orbitron'; color:#ffcc00; font-size:0.9rem;"><i class="fa-solid fa-headset"></i> NEED HELP & SUPPORT?</h4>
       <p style="font-size:0.8rem; color:#ccc; margin-top:3px;">Kisi bhi query, payment ya match issue ke liye contact karein:</p>
       <div class="support-links">
@@ -434,5 +455,13 @@
 
   </div>
 
+  <!-- AOS (Animate On Scroll) JS Library -->
+  <script src="https://cdnjs.cloudflare.com/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      easing: 'ease-out-back'
+    });
+  </script>
 </body>
 </html>

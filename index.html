@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🔥 SIKARI ESPORTS - Win Unlimited Cash Daily 🔥</title>
+  <title>🔥 SIKARI ESPORTS - Free Fire MAX Esports Portal 🔥</title>
 
   <!-- Gaming Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
@@ -52,7 +52,7 @@
       max-width: 450px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 16px;
     }
 
     /* Scroll Animation Base Class */
@@ -112,50 +112,77 @@
       margin-top: 2px;
     }
 
+    /* INSTAGRAM ID & PASS NOTICE BOX */
+    .insta-notice-box {
+      background: linear-gradient(45deg, rgba(225, 48, 108, 0.25), rgba(253, 29, 29, 0.25), rgba(245, 133, 41, 0.25));
+      border: 2px solid #e1306c;
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(225, 48, 108, 0.4);
+    }
+
+    .insta-notice-box h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .insta-notice-box p {
+      font-size: 0.82rem;
+      color: #ddd;
+      margin: 6px 0 10px 0;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .btn-insta-join {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
+      transition: transform 0.2s;
+    }
+
+    .btn-insta-join:active {
+      transform: scale(0.97);
+    }
+
     /* Jackpot High-Reward Banner */
     .jackpot-banner {
       background: linear-gradient(135deg, rgba(255,0,102,0.35), rgba(255,204,0,0.35));
       border: 2px solid #ffcc00;
       border-radius: 14px;
-      padding: 14px 10px;
+      padding: 12px 10px;
       text-align: center;
       box-shadow: 0 0 25px rgba(255,204,0,0.35);
-      animation: pulseGlow 1.5s infinite alternate;
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 15px rgba(255,204,0,0.35); }
-      100% { box-shadow: 0 0 35px rgba(0,255,102,0.6); border-color: #00ff66; }
     }
 
     .jackpot-banner h2 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: #00ff66;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     .jackpot-banner p {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #fff;
       font-weight: 700;
-      margin-top: 3px;
-    }
-
-    /* Live Payout Ticker */
-    .payout-ticker {
-      background: rgba(0, 255, 102, 0.12);
-      border: 1px solid #00ff66;
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 0.78rem;
-      color: #00ff66;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      margin-top: 2px;
     }
 
     /* Trust Stats Grid */
@@ -215,13 +242,10 @@
       transition: all 0.3s ease;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
       backdrop-filter: blur(10px);
-      position: relative;
-      overflow: hidden;
     }
 
-    .mode-card:hover, .mode-card:active {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 0 30px rgba(255, 0, 102, 0.5);
+    .mode-card:active {
+      transform: scale(0.97);
     }
 
     .mode-info h3 {
@@ -338,11 +362,6 @@
       gap: 6px;
     }
 
-    .btn-support:active {
-      background: #ff0066;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       font-size: 0.78rem;
@@ -368,15 +387,19 @@
       <p class="sub-title">⚡ OFFICIAL FREE FIRE MAX PORTAL ⚡</p>
     </div>
 
-    <!-- Casino-Style Reward Banner -->
+    <!-- INSTAGRAM ROOM ID & PASS NOTICE BOX -->
+    <div class="insta-notice-box scroll-animate active">
+      <h3><i class="fa-brands fa-instagram" style="color:#ff0066; font-size:1.3rem;"></i> ROOM ID & PASS UPDATES</h3>
+      <p>📢 Match Start hone se 3-10 minutes pehle Room ID & Password humare <b>Official Instagram DM / Story</b> par milega. Abhi Join Karein!</p>
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta-join">
+        <i class="fa-brands fa-instagram" style="font-size:1.2rem;"></i> JOIN OFFICIAL INSTAGRAM
+      </a>
+    </div>
+
+    <!-- Jackpot Banner -->
     <div class="jackpot-banner scroll-animate active">
       <h2>💸 PLAY & WIN REAL CASH DAILY 💸</h2>
       <p>Instant UPI / Bank Transfer • 100% Guaranteed Winning Payouts!</p>
-    </div>
-
-    <!-- Payout Ticker -->
-    <div class="payout-ticker scroll-animate active">
-      <i class="fa-solid fa-bolt"></i> ⚡ LAST MATCH WINNINGS PAID INSTANTLY VIA UPI!
     </div>
 
     <!-- Trust Stats Grid -->
@@ -400,7 +423,7 @@
 
     <div style="display:flex; flex-direction:column; gap:12px;">
 
-      <!-- 1v1 CS CUSTOM (HEADSHOT ONLY) -->
+      <!-- 1v1 CS CUSTOM -->
       <a href="1v1.html" class="mode-card scroll-animate" style="border-color: #ff0066;">
         <div class="mode-info">
           <h3><i class="fa-solid fa-crosshairs" style="color:#ff0066;"></i> 1v1 CS CUSTOM</h3>
@@ -410,7 +433,7 @@
         <div class="badge-price">ENTRY ₹30<br><span style="color:#00ff66; font-size:0.7rem;">WIN ₹55</span></div>
       </a>
 
-      <!-- 2v2 CS CUSTOM (HEADSHOT ONLY) -->
+      <!-- 2v2 CS CUSTOM -->
       <a href="2v2.html" class="mode-card scroll-animate" style="border-color: #ffcc00;">
         <div class="mode-info">
           <h3><i class="fa-solid fa-user-group" style="color:#ffcc00;"></i> 2v2 TEAM CS</h3>
@@ -420,7 +443,7 @@
         <div class="badge-price" style="background: linear-gradient(45deg, #ffaa00, #ff5500);">ENTRY ₹60<br><span style="color:#00ff66; font-size:0.7rem;">WIN ₹110</span></div>
       </a>
 
-      <!-- 4v4 SQUAD CS CUSTOM (HEADSHOT ONLY) -->
+      <!-- 4v4 SQUAD CS CUSTOM -->
       <a href="4v4.html" class="mode-card scroll-animate" style="border-color: #00ff66;">
         <div class="mode-info">
           <h3><i class="fa-solid fa-users-gear" style="color:#00ff66;"></i> 4v4 SQUAD WAR</h3>
@@ -442,7 +465,7 @@
 
     </div>
 
-    <!-- WHY SIKARI ESPORTS (TRUST & FAIR PLAY ARTICLE) -->
+    <!-- WHY SIKARI ESPORTS ARTICLE -->
     <div class="trust-article-box scroll-animate">
       <h3><i class="fa-solid fa-shield-halved"></i> WHY PLAY ON SIKARI ESPORTS?</h3>
       <ul class="feature-list">
@@ -457,10 +480,6 @@
         <li>
           <i class="fa-solid fa-ban"></i>
           <div><b>STRICT ANTI-HACK SYSTEM:</b> Panel aur Hackers ke liye ZERO tolerance! Cheater pakde jane par instant permanent ban aur clean player ko Full Refund.</div>
-        </li>
-        <li>
-          <i class="fa-solid fa-trophy"></i>
-          <div><b>UNLIMITED EARNING OPPORTUNITY:</b> Rozana multiple matches khelein aur hazaron rupey jeetein. Apni gaming skill se real cash earn karein!</div>
         </li>
       </ul>
     </div>
@@ -487,7 +506,6 @@
 
   </div>
 
-  <!-- Pure Lightweight Scroll Animation Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const animatedElements = document.querySelectorAll(".scroll-animate");
@@ -504,7 +522,7 @@
       }
 
       window.addEventListener("scroll", checkScroll);
-      checkScroll(); // Trigger initial view check
+      checkScroll();
     });
   </script>
 </body>

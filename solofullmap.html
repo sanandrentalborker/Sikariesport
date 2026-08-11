@@ -27,10 +27,10 @@
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
-      padding: 12px 10px 30px 10px;
+      padding: 15px 12px 40px 12px;
     }
 
-    /* Cyberpunk Background */
+    /* Cyberpunk Background Effect */
     .bg-animation {
       position: fixed;
       top: 0;
@@ -39,22 +39,22 @@
       height: 100%;
       background: 
         radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.35), transparent 70%),
-        linear-gradient(to bottom, rgba(10, 10, 15, 0.9), rgba(5, 5, 8, 0.98)),
+        linear-gradient(to bottom, rgba(10, 10, 15, 0.92), rgba(5, 5, 8, 0.98)),
         url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
       z-index: -1;
-      filter: brightness(0.7);
+      filter: brightness(0.65);
     }
 
-    /* Main Container (Mobile Full Width) */
+    /* Main Mobile Layout Wrapper */
     .main-wrapper {
       width: 100%;
-      max-width: 440px;
+      max-width: 450px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
 
-    /* Header Section */
+    /* Header / Logo */
     .hero {
       text-align: center;
       margin-top: 5px;
@@ -67,11 +67,11 @@
     }
 
     .logo-img {
-      width: 95px;
-      height: 95px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      border: 3px solid #ff0066;
-      box-shadow: 0 0 25px #ff0066, inset 0 0 12px #ff0066;
+      border: 3.5px solid #ff0066;
+      box-shadow: 0 0 30px #ff0066, inset 0 0 15px #ff0066;
       object-fit: cover;
       animation: logoGlow 2s infinite alternate;
     }
@@ -83,40 +83,41 @@
 
     .main-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.75rem;
+      font-size: 1.85rem;
       font-weight: 900;
       letter-spacing: 1.5px;
       color: #fff;
-      text-shadow: 0 0 12px #ff0066;
+      text-shadow: 0 0 15px #ff0066;
     }
 
     .sub-title {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #ffcc00;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
       margin-top: 2px;
     }
 
-    /* Match Info Grid */
+    /* Match Info Grid Cards */
     .match-info-grid {
       display: flex;
-      gap: 8px;
+      gap: 10px;
     }
 
     .info-card {
       flex: 1;
-      background: rgba(25, 25, 38, 0.92);
+      background: rgba(25, 25, 38, 0.95);
       border: 1.5px solid #ff0066;
-      border-radius: 10px;
-      padding: 8px 3px;
+      border-radius: 12px;
+      padding: 10px 4px;
       text-align: center;
       backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
     }
 
     .info-card .label {
-      font-size: 0.65rem;
+      font-size: 0.68rem;
       color: #aaa;
       font-weight: 700;
       text-transform: uppercase;
@@ -124,64 +125,88 @@
 
     .info-card .val {
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 800;
       color: #00ff66;
       margin-top: 2px;
     }
 
-    /* Cards Layout */
-    .settings-box, .rules-box, .registration-box, .timing-box {
-      background: rgba(12, 12, 20, 0.94);
-      border-radius: 14px;
-      padding: 15px;
-      backdrop-filter: blur(10px);
+    /* SEPARATE BOX STYLES */
+    .timing-box, .details-box, .rules-box, .registration-box {
+      background: rgba(12, 12, 20, 0.95);
+      border-radius: 16px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
-    .timing-box {
-      border: 1.5px solid #ff6600;
-      background: rgba(255, 102, 0, 0.15);
-      text-align: left;
-    }
-
-    .settings-box {
-      border: 1.5px solid #ffcc00;
-      box-shadow: 0 0 20px rgba(255, 204, 0, 0.15);
-    }
-
-    .rules-box {
-      border: 1.5px solid #ff0055;
-      text-align: left;
-      box-shadow: 0 0 20px rgba(255, 0, 85, 0.2);
-    }
-
-    .registration-box {
-      border: 2px solid #00ff66;
-      box-shadow: 0 0 25px rgba(0, 255, 102, 0.25);
-    }
-
+    /* Box Header Titles */
     .box-header {
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.9rem;
-      color: #ffcc00;
-      margin-bottom: 10px;
+      font-size: 0.98rem;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px dashed rgba(255,255,255,0.15);
+      padding-bottom: 8px;
     }
 
-    .settings-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px;
+    /* 1. ROOM TIMING BOX */
+    .timing-box {
+      border: 2px solid #ff6600;
+      background: rgba(255, 102, 0, 0.12);
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.25);
+    }
+    
+    .timing-box .box-header {
+      color: #ffaa00;
+      border-bottom-color: rgba(255, 170, 0, 0.3);
     }
 
-    .setting-item {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 7px 8px;
-      border-radius: 6px;
-      font-size: 0.78rem;
+    .timing-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    .timing-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .timing-list li i {
+      color: #ffaa00;
+      margin-top: 3px;
+    }
+
+    /* 2. MATCH DETAILS BOX */
+    .details-box {
+      border: 2px solid #ffcc00;
+      box-shadow: 0 0 25px rgba(255, 204, 0, 0.2);
+    }
+
+    .details-box .box-header {
+      color: #ffcc00;
+      border-bottom-color: rgba(255, 204, 0, 0.3);
+    }
+
+    .details-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .detail-row {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -189,54 +214,75 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .badge-no {
-      background: #ff0055;
-      color: #fff;
-      padding: 2px 5px;
+    .badge-setting {
+      padding: 3px 8px;
       border-radius: 4px;
-      font-size: 0.68rem;
+      font-size: 0.72rem;
       font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
     }
 
-    .badge-yes {
-      background: #00ff66;
-      color: #000;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-size: 0.68rem;
-      font-family: 'Orbitron', sans-serif;
+    .badge-yes { background: #00ff66; color: #000; }
+    .badge-no { background: #ff0055; color: #fff; }
+    .badge-info { background: #00ccff; color: #000; }
+
+    /* 3. IMPORTANT RULES BOX */
+    .rules-box {
+      border: 2px solid #ff0055;
+      box-shadow: 0 0 25px rgba(255, 0, 85, 0.25);
+    }
+
+    .rules-box .box-header {
+      color: #ff0055;
+      border-bottom-color: rgba(255, 0, 85, 0.3);
     }
 
     .rules-list {
       list-style: none;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: #eee;
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     .rules-list li {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       display: flex;
       align-items: flex-start;
-      gap: 6px;
+      gap: 10px;
+      background: rgba(255, 0, 85, 0.06);
+      padding: 8px 10px;
+      border-radius: 8px;
+      border-left: 3px solid #ff0055;
     }
 
     .rules-list li i {
       color: #ff0055;
-      margin-top: 2px;
-      font-size: 0.85rem;
+      margin-top: 3px;
+      font-size: 0.95rem;
+    }
+
+    /* 4. REGISTRATION FORM BOX */
+    .registration-box {
+      border: 2.5px solid #00ff66;
+      box-shadow: 0 0 35px rgba(0, 255, 102, 0.3);
+    }
+
+    .registration-box .box-header {
+      color: #00ff66;
+      justify-content: center;
+      border-bottom-color: rgba(0, 255, 102, 0.3);
     }
 
     .input-group {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       text-align: left;
     }
 
     .input-group label {
       display: block;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: #ccc;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       font-weight: 700;
     }
 
@@ -248,19 +294,19 @@
 
     .input-wrapper i {
       position: absolute;
-      left: 12px;
+      left: 14px;
       color: #00ff66;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .input-field {
       width: 100%;
-      padding: 11px 12px 11px 38px;
+      padding: 12px 12px 12px 42px;
       background: #08080e;
       border: 1.5px solid #2a2a3a;
-      border-radius: 7px;
+      border-radius: 8px;
       color: #fff;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 700;
       outline: none;
       transition: all 0.2s ease;
@@ -268,41 +314,43 @@
 
     .input-field:focus {
       border-color: #00ff66;
-      box-shadow: 0 0 10px rgba(0, 255, 102, 0.4);
+      box-shadow: 0 0 12px rgba(0, 255, 102, 0.4);
     }
 
     .btn-main {
       width: 100%;
-      padding: 13px;
+      padding: 15px;
       background: linear-gradient(45deg, #00b09b, #96c93d);
       border: none;
-      border-radius: 7px;
+      border-radius: 8px;
       color: #fff;
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       cursor: pointer;
-      box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+      box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      margin-top: 6px;
     }
 
     .btn-main:active {
       transform: scale(0.98);
     }
 
+    /* Step Views (QR & Insta DM) */
     .qr-box, .insta-box {
       display: none;
       text-align: center;
       background: rgba(15, 15, 25, 0.95);
       border: 2px solid #ff0066;
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 0 30px rgba(255, 0, 102, 0.35);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
     }
 
     .qr-frame {
@@ -310,14 +358,14 @@
       padding: 10px;
       border-radius: 12px;
       display: inline-block;
-      border: 3px solid #ff0066;
+      border: 3.5px solid #ff0066;
       box-shadow: 0 0 25px rgba(255, 0, 102, 0.7);
-      margin: 12px 0;
+      margin: 14px 0;
     }
 
     .qr-frame img {
-      width: 190px;
-      height: 190px;
+      width: 200px;
+      height: 200px;
       display: block;
       object-fit: contain;
     }
@@ -326,38 +374,37 @@
       background: rgba(255, 0, 102, 0.15);
       border: 1px dashed #ff0066;
       border-radius: 8px;
-      padding: 8px;
-      font-size: 0.8rem;
+      padding: 10px;
+      font-size: 0.82rem;
       color: #ffcc00;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       font-weight: 600;
     }
 
     .info-card-dm {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 204, 0, 0.4);
-      border-radius: 8px;
-      padding: 10px;
-      margin: 12px 0;
+      border-radius: 10px;
+      padding: 12px;
+      margin: 14px 0;
       text-align: left;
-      font-size: 0.82rem;
-      line-height: 1.4;
+      font-size: 0.85rem;
+      line-height: 1.5;
     }
 
     .btn-insta {
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
       color: #fff;
       text-decoration: none;
-      padding: 12px 16px;
-      border-radius: 7px;
+      padding: 14px 18px;
+      border-radius: 8px;
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 0 15px rgba(220, 39, 67, 0.5);
-      margin-top: 8px;
+      box-shadow: 0 0 20px rgba(220, 39, 67, 0.5);
       width: 100%;
       justify-content: center;
     }
@@ -394,65 +441,88 @@
       </div>
     </div>
 
-    <!-- PAGE 1: ALL CONTENT BOXES -->
-    <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
+    <!-- PAGE 1: ALL CONTENT SECTIONS -->
+    <div id="formPage" style="display: flex; flex-direction: column; gap: 20px;">
 
-      <!-- BOX 1: TIMING RULES -->
+      <!-- BOX 1: ROOM TIMING RULES -->
       <div class="timing-box">
-        <h4 style="color:#ffaa00; font-family:'Orbitron'; font-size:0.85rem; margin-bottom:5px;"><i class="fa-solid fa-clock"></i> ROOM TIMING & WAITING POLICY</h4>
-        <p style="font-size:0.78rem; color:#ddd;">• Room Info (ID & Pass) match start hone se <b>3 to 10 Minutes prior</b> update kar diya jayega.</p>
-        <p style="font-size:0.78rem; color:#ddd; margin-top:3px;">• Maximum Waiting Time: <b>5 Minutes</b>. Time par nahi aane wale players ke liye hum responsible nahi honge aur <b>Refund nahi milega</b>.</p>
+        <div class="box-header">
+          <i class="fa-solid fa-clock"></i> ROOM TIMING & WAITING POLICY
+        </div>
+        <ul class="timing-list">
+          <li><i class="fa-solid fa-bullhorn"></i> Room Info (ID & Password) match start hone se <b>3 to 10 Minutes prior</b> update kar diya jayega.</li>
+          <li><i class="fa-solid fa-user-clock"></i> Maximum Waiting Time: <b>5 Minutes</b>. Time par room join na karne wale players ke liye hum responsible nahi honge aur <b>Refund nahi milega</b>.</li>
+        </ul>
       </div>
 
       <!-- BOX 2: MATCH DETAILS -->
-      <div class="settings-box">
-        <div class="box-header"><i class="fa-solid fa-sliders"></i> MATCH DETAILS</div>
-        <div class="settings-grid">
-          <div class="setting-item">
-            <span>Limited Ammo</span>
-            <span class="badge-yes">YES</span>
+      <div class="details-box">
+        <div class="box-header">
+          <i class="fa-solid fa-sliders"></i> MATCH DETAILS & SETTINGS
+        </div>
+        <div class="details-grid">
+          <div class="detail-row">
+            <span>LIMITED AMMO</span>
+            <span class="badge-setting badge-yes">YES</span>
           </div>
-          <div class="setting-item">
-            <span>Loadout</span>
-            <span class="badge-yes">YES</span>
+          <div class="detail-row">
+            <span>LOADOUT</span>
+            <span class="badge-setting badge-yes">YES</span>
           </div>
-          <div class="setting-item">
-            <span>Gun Attributes</span>
-            <span class="badge-yes">ACCORDING TITLE</span>
+          <div class="detail-row">
+            <span>GUN ATTRIBUTES</span>
+            <span class="badge-setting badge-info">ACCORDING MATCH TITLE</span>
           </div>
-          <div class="setting-item">
-            <span>Character Skill</span>
-            <span class="badge-yes">ACCORDING TITLE</span>
+          <div class="detail-row">
+            <span>CHARACTER SKILL</span>
+            <span class="badge-setting badge-info">ACCORDING MATCH TITLE</span>
           </div>
-          <div class="setting-item" style="grid-column: span 2;">
-            <span>Throwables (Grenades/Gloo)</span>
-            <span class="badge-yes">ALLOWED IN BR MATCHES</span>
+          <div class="detail-row">
+            <span>THROWABLES (Gloo / Grenades)</span>
+            <span class="badge-setting badge-yes">ALLOWED IN BR MATCHES</span>
           </div>
-          <div class="setting-item" style="grid-column: span 2;">
-            <span>Ryden Character</span>
-            <span class="badge-no">NOT ALLOWED</span>
-          </div>
-          <div class="setting-item" style="grid-column: span 2;">
-            <span>Height Advantage</span>
-            <span class="badge-yes">ALLOWED</span>
+          <div class="detail-row">
+            <span>RYDEN CHARACTER</span>
+            <span class="badge-setting badge-no">NOT ALLOWED</span>
           </div>
         </div>
       </div>
 
       <!-- BOX 3: IMPORTANT RULES -->
       <div class="rules-box">
-        <div class="box-header" style="color: #ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> IMPORTANT RULES</div>
+        <div class="box-header">
+          <i class="fa-solid fa-triangle-exclamation"></i> IMPORTANT RULES & POLICIES
+        </div>
         <ul class="rules-list">
-          <li><i class="fa-solid fa-shield"></i> <b>Level Limit:</b> Minimum Game Level <b>45+</b> hona mandatory hai.</li>
-          <li><i class="fa-solid fa-skull"></i> <b>Hacker Policy:</b> Hacker dwaara maare gaye players ko full proof hone par refund milega. Cheating hone par video proof submit karein.</li>
-          <li><i class="fa-solid fa-user-plus"></i> <b>Unregistered Entry Penalty:</b> Room me unregistered bande ko invite karne par account se <b>₹20 Winnings deduction</b> hoga.</li>
-          <li><i class="fa-solid fa-comment-slash"></i> <b>Abusive Language:</b> Room chat me galat words use karne par instant Ban aur <b>₹20 Penalty</b> lagegi.</li>
+          <li>
+            <i class="fa-solid fa-shield"></i>
+            <div><b>MINIMUM GAME LEVEL 45+:</b> Player ka minimum game level 45+ hona mandatory hai. Low level accounts not allowed.</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-skull"></i>
+            <div><b>ANTI-HACK & REFUND POLICY:</b> Hacker dwaara maare gaye players ko video proof hone par **Refund** diya jayega. Cheating hum bilkul tolerate nahi karte.</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-xmark"></i>
+            <div><b>NON-ATTENDANCE:</b> Agar koi player room me time par nahi aata hai, toh uske liye hum responsible nahi honge aur koi **Refund nahi milega**.</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-user-slash"></i>
+            <div><b>UNREGISTERED ENTRY PENALTY:</b> Room me unregistered bande ko invite karne par account se **₹20 Winnings Penalty** cut ki jayegi.</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-comment-slash"></i>
+            <div><b>ABUSIVE LANGUAGE:</b> Room chat me galat ya abusive words use karne par player immediately **Ban** hoga aur **₹20 Fine** lagega.</div>
+          </li>
         </ul>
       </div>
 
       <!-- BOX 4: SOLO REGISTRATION FORM -->
       <div class="registration-box">
-        <div class="box-header" style="color:#00ff66; justify-content:center;"><i class="fa-solid fa-user-plus"></i> SOLO REGISTRATION</div>
+        <div class="box-header">
+          <i class="fa-solid fa-user-plus"></i> SOLO PLAYER REGISTRATION
+        </div>
+        
         <form id="registrationForm" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="🔥 NEW SOLO FULL MAP FREE FIRE REGISTRATION">
@@ -481,7 +551,9 @@
             </div>
           </div>
 
-          <button type="submit" class="btn-main" id="submitBtn">PROCEED TO PAY ₹8 <i class="fa-solid fa-qrcode"></i></button>
+          <button type="submit" class="btn-main" id="submitBtn">
+            PROCEED TO PAY ₹8 <i class="fa-solid fa-qrcode"></i>
+          </button>
         </form>
       </div>
 
@@ -490,21 +562,32 @@
     <!-- PAGE 2: QR Payment Box -->
     <div class="qr-box" id="qrPage">
       <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.15rem;">SCAN & PAY ENTRY FEE</h2>
-      <p style="color: #00ff66; font-size: 0.9rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹8 | Per Kill: ₹6 | Booyah: +₹20</p>
-      <div class="qr-frame"><img src="qr.jpeg" alt="Payment QR Code"></div>
+      <p style="color: #00ff66; font-size: 0.88rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹8 | Per Kill: ₹6 | Booyah Extra: ₹20</p>
+      
+      <div class="qr-frame">
+        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/200/000000/ffffff?text=Scan+QR+To+Pay+₹8'">
+      </div>
+      
       <div class="pay-instruction">⚠️ Paytm / PhonePe / Google Pay se QR scan karke ₹8 pay karein!</div>
-      <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #ff0066, #ff5500);"><i class="fa-solid fa-upload"></i> VERIFY PAYMENT VIA INSTA DM</button>
+      
+      <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #ff0066, #ff5500); box-shadow: 0 0 20px rgba(255, 0, 102, 0.6);">
+        <i class="fa-solid fa-upload"></i> VERIFY PAYMENT VIA INSTA DM
+      </button>
     </div>
 
     <!-- PAGE 3: Instagram Verification Box -->
     <div class="insta-box" id="instaPage">
       <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #ffcc00; margin-bottom: 10px;"></i>
       <h2 style="font-family: 'Orbitron'; font-size: 1.25rem; color: #fff;">PAYMENT VERIFICATION</h2>
+      
       <div class="info-card-dm">
-        <p style="margin-bottom: 6px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Match start hone se 3-10 minutes pehle aapko <b>Direct Instagram DM</b> me Room ID & Password bhej diya jayega.</p>
-        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 6px; margin-top: 6px;">💰 <b>Refund Policy:</b><br>Agar match slots poore nahi hote, toh verified players ko 15 Minutes ke andar Full Refund mil jayega.</p>
+        <p style="margin-bottom: 8px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Match start hone se <b>3-10 minutes prior</b> aapko direct <b>Instagram DM</b> me Room ID & Password bhej diya jayega.</p>
+        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 8px; margin-top: 8px;">💰 <b>Refund Policy:</b><br>Agar kisi reason se match slots poore nahi hote, toh verified players ko <b>15 Minutes ke andar Full Refund</b> mil jayega.</p>
       </div>
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta"><i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> SEND SCREENSHOT ON INSTA</a>
+      
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta">
+        <i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> SEND SCREENSHOT ON INSTA
+      </a>
     </div>
 
   </div>

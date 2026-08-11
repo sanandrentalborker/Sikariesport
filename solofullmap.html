@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>🔥 SIKARI ESPORTS - Solo Full Map BR 🔥</title>
   
   <!-- Gaming Fonts & FontAwesome Icons -->
@@ -15,6 +15,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Rajdhani', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -26,10 +27,10 @@
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
-      padding: 15px 10px 40px 10px;
+      padding: 12px 10px 30px 10px;
     }
 
-    /* Cyberpunk Animated Background */
+    /* Cyberpunk Background */
     .bg-animation {
       position: fixed;
       top: 0;
@@ -38,84 +39,84 @@
       height: 100%;
       background: 
         radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.35), transparent 70%),
-        linear-gradient(to bottom, rgba(10, 10, 15, 0.88), rgba(5, 5, 8, 0.98)),
+        linear-gradient(to bottom, rgba(10, 10, 15, 0.9), rgba(5, 5, 8, 0.98)),
         url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
       z-index: -1;
       filter: brightness(0.7);
     }
 
-    /* Layout Wrapper */
+    /* Main Container (Mobile Full Width) */
     .main-wrapper {
       width: 100%;
-      max-width: 450px;
+      max-width: 440px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
     }
 
     /* Header Section */
     .hero {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     .logo-frame {
       position: relative;
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .logo-img {
-      width: 110px;
-      height: 110px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
-      border: 3.5px solid #ff0066;
-      box-shadow: 0 0 30px #ff0066, inset 0 0 15px #ff0066;
+      border: 3px solid #ff0066;
+      box-shadow: 0 0 25px #ff0066, inset 0 0 12px #ff0066;
       object-fit: cover;
       animation: logoGlow 2s infinite alternate;
     }
 
     @keyframes logoGlow {
       0% { box-shadow: 0 0 15px #ff0066; transform: scale(1); }
-      100% { box-shadow: 0 0 40px #ff0066, 0 0 60px #ff5500; transform: scale(1.05); }
+      100% { box-shadow: 0 0 35px #ff0066, 0 0 50px #ff5500; transform: scale(1.04); }
     }
 
     .main-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       color: #fff;
-      text-shadow: 0 0 12px #ff0066, 0 0 25px #ff0066;
+      text-shadow: 0 0 12px #ff0066;
     }
 
     .sub-title {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       color: #ffcc00;
       font-weight: 800;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     /* Match Info Grid */
     .match-info-grid {
       display: flex;
-      gap: 10px;
+      gap: 8px;
     }
 
     .info-card {
       flex: 1;
-      background: rgba(25, 25, 38, 0.9);
+      background: rgba(25, 25, 38, 0.92);
       border: 1.5px solid #ff0066;
-      border-radius: 12px;
-      padding: 10px 4px;
+      border-radius: 10px;
+      padding: 8px 3px;
       text-align: center;
       backdrop-filter: blur(8px);
     }
 
     .info-card .label {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: #aaa;
       font-weight: 700;
       text-transform: uppercase;
@@ -123,63 +124,64 @@
 
     .info-card .val {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 800;
       color: #00ff66;
+      margin-top: 2px;
     }
 
-    /* Box Containers */
+    /* Cards Layout */
     .settings-box, .rules-box, .registration-box, .timing-box {
-      background: rgba(12, 12, 20, 0.92);
-      border-radius: 16px;
-      padding: 18px;
-      backdrop-filter: blur(12px);
+      background: rgba(12, 12, 20, 0.94);
+      border-radius: 14px;
+      padding: 15px;
+      backdrop-filter: blur(10px);
     }
 
     .timing-box {
-      border: 2px solid #ff6600;
+      border: 1.5px solid #ff6600;
       background: rgba(255, 102, 0, 0.15);
       text-align: left;
     }
 
     .settings-box {
-      border: 2px solid #ffcc00;
-      box-shadow: 0 0 25px rgba(255, 204, 0, 0.2);
+      border: 1.5px solid #ffcc00;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.15);
     }
 
     .rules-box {
-      border: 2px solid #ff0055;
+      border: 1.5px solid #ff0055;
       text-align: left;
-      box-shadow: 0 0 25px rgba(255, 0, 85, 0.25);
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.2);
     }
 
     .registration-box {
-      border: 2.5px solid #00ff66;
-      box-shadow: 0 0 35px rgba(0, 255, 102, 0.3);
+      border: 2px solid #00ff66;
+      box-shadow: 0 0 25px rgba(0, 255, 102, 0.25);
     }
 
     .box-header {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #ffcc00;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       text-transform: uppercase;
     }
 
     .settings-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 6px;
     }
 
     .setting-item {
       background: rgba(255, 255, 255, 0.05);
-      padding: 8px 10px;
+      padding: 7px 8px;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -190,50 +192,51 @@
     .badge-no {
       background: #ff0055;
       color: #fff;
-      padding: 2px 6px;
+      padding: 2px 5px;
       border-radius: 4px;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-family: 'Orbitron', sans-serif;
     }
 
     .badge-yes {
       background: #00ff66;
       color: #000;
-      padding: 2px 6px;
+      padding: 2px 5px;
       border-radius: 4px;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-family: 'Orbitron', sans-serif;
     }
 
     .rules-list {
       list-style: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #eee;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .rules-list li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: flex;
       align-items: flex-start;
-      gap: 8px;
+      gap: 6px;
     }
 
     .rules-list li i {
       color: #ff0055;
-      margin-top: 3px;
+      margin-top: 2px;
+      font-size: 0.85rem;
     }
 
     .input-group {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-align: left;
     }
 
     .input-group label {
       display: block;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: #ccc;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       font-weight: 700;
     }
 
@@ -245,52 +248,51 @@
 
     .input-wrapper i {
       position: absolute;
-      left: 14px;
+      left: 12px;
       color: #00ff66;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .input-field {
       width: 100%;
-      padding: 12px 15px 12px 45px;
+      padding: 11px 12px 11px 38px;
       background: #08080e;
       border: 1.5px solid #2a2a3a;
-      border-radius: 8px;
+      border-radius: 7px;
       color: #fff;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       outline: none;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     }
 
     .input-field:focus {
       border-color: #00ff66;
-      box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.4);
     }
 
     .btn-main {
       width: 100%;
-      padding: 15px;
+      padding: 13px;
       background: linear-gradient(45deg, #00b09b, #96c93d);
       border: none;
-      border-radius: 8px;
+      border-radius: 7px;
       color: #fff;
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);
+      box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
     }
 
-    .btn-main:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(0, 255, 102, 0.8);
+    .btn-main:active {
+      transform: scale(0.98);
     }
 
     .qr-box, .insta-box {
@@ -298,24 +300,24 @@
       text-align: center;
       background: rgba(15, 15, 25, 0.95);
       border: 2px solid #ff0066;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.35);
     }
 
     .qr-frame {
       background: #fff;
-      padding: 12px;
-      border-radius: 14px;
+      padding: 10px;
+      border-radius: 12px;
       display: inline-block;
-      border: 3.5px solid #ff0066;
-      box-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
-      margin: 15px 0;
+      border: 3px solid #ff0066;
+      box-shadow: 0 0 25px rgba(255, 0, 102, 0.7);
+      margin: 12px 0;
     }
 
     .qr-frame img {
-      width: 210px;
-      height: 210px;
+      width: 190px;
+      height: 190px;
       display: block;
       object-fit: contain;
     }
@@ -324,37 +326,38 @@
       background: rgba(255, 0, 102, 0.15);
       border: 1px dashed #ff0066;
       border-radius: 8px;
-      padding: 10px;
-      font-size: 0.85rem;
+      padding: 8px;
+      font-size: 0.8rem;
       color: #ffcc00;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       font-weight: 600;
     }
 
     .info-card-dm {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 204, 0, 0.4);
-      border-radius: 10px;
-      padding: 12px;
-      margin: 15px 0;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 12px 0;
       text-align: left;
-      font-size: 0.88rem;
-      line-height: 1.5;
+      font-size: 0.82rem;
+      line-height: 1.4;
     }
 
     .btn-insta {
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
       color: #fff;
       text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 8px;
+      padding: 12px 16px;
+      border-radius: 7px;
       font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
-      margin-top: 10px;
+      gap: 8px;
+      box-shadow: 0 0 15px rgba(220, 39, 67, 0.5);
+      margin-top: 8px;
       width: 100%;
       justify-content: center;
     }
@@ -369,7 +372,7 @@
     <!-- Header Section -->
     <div class="hero">
       <div class="logo-frame">
-        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/ff0066/ffffff?text=SIKARI'">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/ff0066/ffffff?text=SIKARI'">
       </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
       <p class="sub-title">🪂 SOLO FULL MAP BATTLE ROYALE 🪂</p>
@@ -391,17 +394,17 @@
       </div>
     </div>
 
-    <!-- PAGE 1: SEPARATE BOXES -->
-    <div id="formPage" style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- PAGE 1: ALL CONTENT BOXES -->
+    <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
 
-      <!-- BOX 1: MATCH TIMING & ROOM INFO -->
+      <!-- BOX 1: TIMING RULES -->
       <div class="timing-box">
-        <h4 style="color:#ffaa00; font-family:'Orbitron'; margin-bottom:6px;"><i class="fa-solid fa-clock"></i> ROOM TIMING & WAITING POLICY</h4>
-        <p style="font-size:0.85rem; color:#ddd;">• Room Info (ID & Pass) match start hone se <b>3 to 10 Minutes prior</b> update kar diya jayega.</p>
-        <p style="font-size:0.85rem; color:#ddd;">• Maximum Waiting Time: <b>5 Minutes</b>. Time par nahi aane wale players ke liye hum responsible nahi honge aur **Refund nahi milega**.</p>
+        <h4 style="color:#ffaa00; font-family:'Orbitron'; font-size:0.85rem; margin-bottom:5px;"><i class="fa-solid fa-clock"></i> ROOM TIMING & WAITING POLICY</h4>
+        <p style="font-size:0.78rem; color:#ddd;">• Room Info (ID & Pass) match start hone se <b>3 to 10 Minutes prior</b> update kar diya jayega.</p>
+        <p style="font-size:0.78rem; color:#ddd; margin-top:3px;">• Maximum Waiting Time: <b>5 Minutes</b>. Time par nahi aane wale players ke liye hum responsible nahi honge aur <b>Refund nahi milega</b>.</p>
       </div>
 
-      <!-- BOX 2: MATCH DETAILS / SETTINGS -->
+      <!-- BOX 2: MATCH DETAILS -->
       <div class="settings-box">
         <div class="box-header"><i class="fa-solid fa-sliders"></i> MATCH DETAILS</div>
         <div class="settings-grid">
@@ -442,8 +445,8 @@
         <ul class="rules-list">
           <li><i class="fa-solid fa-shield"></i> <b>Level Limit:</b> Minimum Game Level <b>45+</b> hona mandatory hai.</li>
           <li><i class="fa-solid fa-skull"></i> <b>Hacker Policy:</b> Hacker dwaara maare gaye players ko full proof hone par refund milega. Cheating hone par video proof submit karein.</li>
-          <li><i class="fa-solid fa-user-plus"></i> <b>Unregistered Entry Penalty:</b> Room me unregistered bande ko invite karne par account se **₹20 Winnings deduction** hoga.</li>
-          <li><i class="fa-solid fa-comment-slash"></i> <b>Abusive Language:</b> Room chat me galat words use karne par instant Ban aur **₹20 Penalty** lagegi.</li>
+          <li><i class="fa-solid fa-user-plus"></i> <b>Unregistered Entry Penalty:</b> Room me unregistered bande ko invite karne par account se <b>₹20 Winnings deduction</b> hoga.</li>
+          <li><i class="fa-solid fa-comment-slash"></i> <b>Abusive Language:</b> Room chat me galat words use karne par instant Ban aur <b>₹20 Penalty</b> lagegi.</li>
         </ul>
       </div>
 
@@ -486,8 +489,8 @@
 
     <!-- PAGE 2: QR Payment Box -->
     <div class="qr-box" id="qrPage">
-      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.3rem;">SCAN & PAY ENTRY FEE</h2>
-      <p style="color: #00ff66; font-size: 1rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹8 | Per Kill: ₹6 | Booyah: +₹20</p>
+      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.15rem;">SCAN & PAY ENTRY FEE</h2>
+      <p style="color: #00ff66; font-size: 0.9rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹8 | Per Kill: ₹6 | Booyah: +₹20</p>
       <div class="qr-frame"><img src="qr.jpeg" alt="Payment QR Code"></div>
       <div class="pay-instruction">⚠️ Paytm / PhonePe / Google Pay se QR scan karke ₹8 pay karein!</div>
       <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #ff0066, #ff5500);"><i class="fa-solid fa-upload"></i> VERIFY PAYMENT VIA INSTA DM</button>
@@ -495,13 +498,13 @@
 
     <!-- PAGE 3: Instagram Verification Box -->
     <div class="insta-box" id="instaPage">
-      <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #ffcc00; margin-bottom: 12px;"></i>
-      <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">PAYMENT VERIFICATION</h2>
+      <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #ffcc00; margin-bottom: 10px;"></i>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.25rem; color: #fff;">PAYMENT VERIFICATION</h2>
       <div class="info-card-dm">
-        <p style="margin-bottom: 8px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Match start hone se 3-10 minutes pehle aapko **Direct Instagram DM** me Room ID & Password bhej diya jayega.</p>
-        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 8px; margin-top: 8px;">💰 <b>Refund Policy:</b><br>Agar match slots poore nahi hote, toh verified players ko 15 Minutes ke andar Full Refund mil jayega.</p>
+        <p style="margin-bottom: 6px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Match start hone se 3-10 minutes pehle aapko <b>Direct Instagram DM</b> me Room ID & Password bhej diya jayega.</p>
+        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 6px; margin-top: 6px;">💰 <b>Refund Policy:</b><br>Agar match slots poore nahi hote, toh verified players ko 15 Minutes ke andar Full Refund mil jayega.</p>
       </div>
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta"><i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i> SEND SCREENSHOT ON INSTA</a>
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta"><i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> SEND SCREENSHOT ON INSTA</a>
     </div>
 
   </div>

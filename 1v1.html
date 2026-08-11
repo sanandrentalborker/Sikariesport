@@ -52,6 +52,22 @@
       gap: 16px;
     }
 
+    /* Pure CSS Animation - Smooth Slide & Fade */
+    .fade-box {
+      animation: fadeInSlide 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .hero {
       text-align: center;
       margin-top: 5px;
@@ -129,6 +145,11 @@
       border-radius: 14px;
       padding: 16px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .timing-box:hover, .details-box:hover, .rules-box:hover, .registration-box:hover {
+      transform: translateY(-2px);
     }
 
     .box-header {
@@ -234,6 +255,12 @@
       font-size: 0.9rem;
       font-weight: 700;
       outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .input-field:focus {
+      border-color: #00ff66;
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.4);
     }
 
     .btn-main {
@@ -253,6 +280,11 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-main:active {
+      transform: scale(0.98);
     }
 
     .qr-box, .insta-box {
@@ -328,7 +360,7 @@
   <div class="main-wrapper">
 
     <!-- Header Section -->
-    <div class="hero">
+    <div class="hero fade-box">
       <div class="logo-frame">
         <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/ff0066/ffffff?text=SIKARI'">
       </div>
@@ -337,7 +369,7 @@
     </div>
 
     <!-- Match Info Grid -->
-    <div class="match-info-grid">
+    <div class="match-info-grid fade-box">
       <div class="info-card">
         <div class="label">ENTRY FEE</div>
         <div class="val" style="color:#ffcc00;">₹30</div>
@@ -352,7 +384,7 @@
     <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
 
       <!-- BOX 1: TIMING RULES -->
-      <div class="timing-box">
+      <div class="timing-box fade-box">
         <div class="box-header" style="color:#ffaa00;">
           <i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES
         </div>
@@ -361,7 +393,7 @@
       </div>
 
       <!-- BOX 2: ROOM SETTINGS -->
-      <div class="details-box">
+      <div class="details-box fade-box">
         <div class="box-header" style="color:#ffcc00;">
           <i class="fa-solid fa-sliders"></i> CUSTOM ROOM SETTINGS
         </div>
@@ -390,7 +422,7 @@
       </div>
 
       <!-- BOX 3: RULES -->
-      <div class="rules-box">
+      <div class="rules-box fade-box">
         <div class="box-header" style="color:#ff0055;">
           <i class="fa-solid fa-triangle-exclamation"></i> STRICT MATCH RULES
         </div>
@@ -403,7 +435,7 @@
       </div>
 
       <!-- BOX 4: REGISTRATION FORM -->
-      <div class="registration-box">
+      <div class="registration-box fade-box">
         <div class="box-header" style="color:#00ff66; justify-content:center;">
           <i class="fa-solid fa-user-plus"></i> PLAYER REGISTRATION
         </div>

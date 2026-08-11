@@ -4,37 +4,360 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🔥 SIKARI ESPORTS - Solo Full Map BR 🔥</title>
+  
+  <!-- Gaming Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rajdhani', sans-serif; }
-    body { background: #050508; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 15px 10px 40px 10px; overflow-x: hidden; }
-    .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.35), transparent 70%), linear-gradient(to bottom, rgba(10, 10, 15, 0.88), rgba(5, 5, 8, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat; z-index: -1; filter: brightness(0.7); }
-    .main-wrapper { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 20px; }
-    .hero { text-align: center; margin-top: 10px; }
-    .logo-img { width: 110px; height: 110px; border-radius: 50%; border: 3.5px solid #ff0066; box-shadow: 0 0 30px #ff0066; object-fit: cover; }
-    .main-title { font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900; letter-spacing: 2px; text-shadow: 0 0 12px #ff0066; }
-    .sub-title { font-size: 1.1rem; color: #ffcc00; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 3px; }
-    .match-info-grid { display: flex; gap: 10px; }
-    .info-card { flex: 1; background: rgba(25, 25, 38, 0.9); border: 1.5px solid #ff0066; border-radius: 12px; padding: 10px 4px; text-align: center; }
-    .info-card .label { font-size: 0.7rem; color: #aaa; font-weight: 700; text-transform: uppercase; }
-    .info-card .val { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 800; color: #00ff66; }
-    .settings-box, .rules-box, .registration-box, .timing-box { background: rgba(12, 12, 20, 0.92); border-radius: 16px; padding: 18px; backdrop-filter: blur(12px); }
-    .settings-box { border: 2px solid #ffcc00; }
-    .rules-box { border: 2px solid #ff0055; text-align: left; }
-    .registration-box { border: 2.5px solid #00ff66; }
-    .timing-box { border: 2px solid #ff6600; background: rgba(255, 102, 0, 0.15); text-align: left; }
-    .box-header { font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #ffcc00; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-    .input-group { margin-bottom: 14px; text-align: left; }
-    .input-group label { display: block; font-size: 0.82rem; color: #ccc; margin-bottom: 5px; font-weight: 700; }
-    .input-field { width: 100%; padding: 12px 15px 12px 40px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 8px; color: #fff; font-size: 0.95rem; font-weight: 700; outline: none; }
-    .input-wrapper { position: relative; display: flex; align-items: center; }
-    .input-wrapper i { position: absolute; left: 14px; color: #00ff66; }
-    .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #00b09b, #96c93d); border: none; border-radius: 8px; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
-    .qr-box, .insta-box { display: none; text-align: center; background: rgba(15, 15, 25, 0.95); border: 2px solid #ff0066; border-radius: 18px; padding: 22px; }
-    .qr-frame img { width: 210px; height: 210px; border: 3.5px solid #ff0066; border-radius: 14px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    body {
+      background: #050508;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: hidden;
+      padding: 15px 10px 40px 10px;
+    }
+
+    /* Cyberpunk Animated Background */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.35), transparent 70%),
+        linear-gradient(to bottom, rgba(10, 10, 15, 0.88), rgba(5, 5, 8, 0.98)),
+        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
+      z-index: -1;
+      filter: brightness(0.7);
+    }
+
+    /* Layout Wrapper */
+    .main-wrapper {
+      width: 100%;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Header Section */
+    .hero {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .logo-frame {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .logo-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3.5px solid #ff0066;
+      box-shadow: 0 0 30px #ff0066, inset 0 0 15px #ff0066;
+      object-fit: cover;
+      animation: logoGlow 2s infinite alternate;
+    }
+
+    @keyframes logoGlow {
+      0% { box-shadow: 0 0 15px #ff0066; transform: scale(1); }
+      100% { box-shadow: 0 0 40px #ff0066, 0 0 60px #ff5500; transform: scale(1.05); }
+    }
+
+    .main-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 0 12px #ff0066, 0 0 25px #ff0066;
+    }
+
+    .sub-title {
+      font-size: 1.1rem;
+      color: #ffcc00;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* Match Info Grid */
+    .match-info-grid {
+      display: flex;
+      gap: 10px;
+    }
+
+    .info-card {
+      flex: 1;
+      background: rgba(25, 25, 38, 0.9);
+      border: 1.5px solid #ff0066;
+      border-radius: 12px;
+      padding: 10px 4px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .info-card .label {
+      font-size: 0.7rem;
+      color: #aaa;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .info-card .val {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #00ff66;
+    }
+
+    /* Box Containers */
+    .settings-box, .rules-box, .registration-box, .timing-box {
+      background: rgba(12, 12, 20, 0.92);
+      border-radius: 16px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .timing-box {
+      border: 2px solid #ff6600;
+      background: rgba(255, 102, 0, 0.15);
+      text-align: left;
+    }
+
+    .settings-box {
+      border: 2px solid #ffcc00;
+      box-shadow: 0 0 25px rgba(255, 204, 0, 0.2);
+    }
+
+    .rules-box {
+      border: 2px solid #ff0055;
+      text-align: left;
+      box-shadow: 0 0 25px rgba(255, 0, 85, 0.25);
+    }
+
+    .registration-box {
+      border: 2.5px solid #00ff66;
+      box-shadow: 0 0 35px rgba(0, 255, 102, 0.3);
+    }
+
+    .box-header {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      color: #ffcc00;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+    }
+
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .setting-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .badge-no {
+      background: #ff0055;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .badge-yes {
+      background: #00ff66;
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .rules-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    .rules-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .rules-list li i {
+      color: #ff0055;
+      margin-top: 3px;
+    }
+
+    .input-group {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.82rem;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper i {
+      position: absolute;
+      left: 14px;
+      color: #00ff66;
+      font-size: 1.1rem;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px 15px 12px 45px;
+      background: #08080e;
+      border: 1.5px solid #2a2a3a;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-field:focus {
+      border-color: #00ff66;
+      box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+    }
+
+    .btn-main {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(45deg, #00b09b, #96c93d);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0, 255, 102, 0.8);
+    }
+
+    .qr-box, .insta-box {
+      display: none;
+      text-align: center;
+      background: rgba(15, 15, 25, 0.95);
+      border: 2px solid #ff0066;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
+    }
+
+    .qr-frame {
+      background: #fff;
+      padding: 12px;
+      border-radius: 14px;
+      display: inline-block;
+      border: 3.5px solid #ff0066;
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
+      margin: 15px 0;
+    }
+
+    .qr-frame img {
+      width: 210px;
+      height: 210px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .pay-instruction {
+      background: rgba(255, 0, 102, 0.15);
+      border: 1px dashed #ff0066;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 0.85rem;
+      color: #ffcc00;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .info-card-dm {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 204, 0, 0.4);
+      border-radius: 10px;
+      padding: 12px;
+      margin: 15px 0;
+      text-align: left;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .btn-insta {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
+      margin-top: 10px;
+      width: 100%;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
@@ -42,14 +365,18 @@
   <div class="bg-animation"></div>
 
   <div class="main-wrapper">
-    <div class="hero" data-aos="zoom-in">
-      <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/ff0066/ffffff?text=SIKARI'">
+
+    <!-- Header Section -->
+    <div class="hero">
+      <div class="logo-frame">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/ff0066/ffffff?text=SIKARI'">
+      </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
-      <p class="sub-title">AG SOLO FULL MAP BATTLE ROYALE 🪂</p>
+      <p class="sub-title">🪂 SOLO FULL MAP BATTLE ROYALE 🪂</p>
     </div>
 
     <!-- Match Info Grid -->
-    <div class="match-info-grid" data-aos="fade-down">
+    <div class="match-info-grid">
       <div class="info-card">
         <div class="label">ENTRY FEE</div>
         <div class="val" style="color:#ffcc00;">₹8</div>
@@ -64,38 +391,71 @@
       </div>
     </div>
 
+    <!-- PAGE 1: SEPARATE BOXES -->
     <div id="formPage" style="display: flex; flex-direction: column; gap: 20px;">
-      <!-- Timing Box -->
-      <div class="timing-box" data-aos="fade-up">
-        <h4 style="color:#ffaa00; font-family:'Orbitron'; margin-bottom:6px;"><i class="fa-solid fa-clock"></i> MATCH TIMING RULES</h4>
-        <p style="font-size:0.88rem; color:#ddd;">• Total 50 Players Max Per Room (Solo Mode).</p>
-        <p style="font-size:0.88rem; color:#ddd;">• Maximum Waiting Time: <b>5 Minutes</b>. Time khatam hote hi room start ho jayega. Late aane par refund nahi milega.</p>
+
+      <!-- BOX 1: MATCH TIMING & ROOM INFO -->
+      <div class="timing-box">
+        <h4 style="color:#ffaa00; font-family:'Orbitron'; margin-bottom:6px;"><i class="fa-solid fa-clock"></i> ROOM TIMING & WAITING POLICY</h4>
+        <p style="font-size:0.85rem; color:#ddd;">• Room Info (ID & Pass) match start hone se <b>3 to 10 Minutes prior</b> update kar diya jayega.</p>
+        <p style="font-size:0.85rem; color:#ddd;">• Maximum Waiting Time: <b>5 Minutes</b>. Time par nahi aane wale players ke liye hum responsible nahi honge aur **Refund nahi milega**.</p>
       </div>
 
-      <!-- Settings Box -->
-      <div class="settings-box" data-aos="zoom-in-up">
-        <div class="box-header"><i class="fa-solid fa-sliders"></i> FULL MAP SETTINGS</div>
-        <p style="font-size: 0.9rem; color:#bbb;">• Mode: <b>Solo Battle Royale (50 Players)</b></p>
-        <p style="font-size: 0.9rem; color:#bbb;">• Map: <b>Bermuda / Purgatory</b></p>
-        <p style="font-size: 0.9rem; color:#bbb;">• Gun Attributes: <b>YES</b> | Revival: <b>DEFAULT</b></p>
+      <!-- BOX 2: MATCH DETAILS / SETTINGS -->
+      <div class="settings-box">
+        <div class="box-header"><i class="fa-solid fa-sliders"></i> MATCH DETAILS</div>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <span>Limited Ammo</span>
+            <span class="badge-yes">YES</span>
+          </div>
+          <div class="setting-item">
+            <span>Loadout</span>
+            <span class="badge-yes">YES</span>
+          </div>
+          <div class="setting-item">
+            <span>Gun Attributes</span>
+            <span class="badge-yes">ACCORDING TITLE</span>
+          </div>
+          <div class="setting-item">
+            <span>Character Skill</span>
+            <span class="badge-yes">ACCORDING TITLE</span>
+          </div>
+          <div class="setting-item" style="grid-column: span 2;">
+            <span>Throwables (Grenades/Gloo)</span>
+            <span class="badge-yes">ALLOWED IN BR MATCHES</span>
+          </div>
+          <div class="setting-item" style="grid-column: span 2;">
+            <span>Ryden Character</span>
+            <span class="badge-no">NOT ALLOWED</span>
+          </div>
+          <div class="setting-item" style="grid-column: span 2;">
+            <span>Height Advantage</span>
+            <span class="badge-yes">ALLOWED</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Rules Box -->
-      <div class="rules-box" data-aos="flip-up">
-        <div class="box-header" style="color: #ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> STRICT RULES</div>
-        <p style="font-size: 0.88rem; color:#ddd;">• <b>No Teaming Up:</b> Teaming karne par dono players permanently ban honge.</p>
-        <p style="font-size: 0.88rem; color:#ddd;">• <b>Anti-Hack & Panel:</b> Hacker/Panel milne par full video proof ke saath report karein. Permaban guarantee.</p>
+      <!-- BOX 3: IMPORTANT RULES -->
+      <div class="rules-box">
+        <div class="box-header" style="color: #ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> IMPORTANT RULES</div>
+        <ul class="rules-list">
+          <li><i class="fa-solid fa-shield"></i> <b>Level Limit:</b> Minimum Game Level <b>45+</b> hona mandatory hai.</li>
+          <li><i class="fa-solid fa-skull"></i> <b>Hacker Policy:</b> Hacker dwaara maare gaye players ko full proof hone par refund milega. Cheating hone par video proof submit karein.</li>
+          <li><i class="fa-solid fa-user-plus"></i> <b>Unregistered Entry Penalty:</b> Room me unregistered bande ko invite karne par account se **₹20 Winnings deduction** hoga.</li>
+          <li><i class="fa-solid fa-comment-slash"></i> <b>Abusive Language:</b> Room chat me galat words use karne par instant Ban aur **₹20 Penalty** lagegi.</li>
+        </ul>
       </div>
 
-      <!-- Form Box -->
-      <div class="registration-box" data-aos="fade-up">
+      <!-- BOX 4: SOLO REGISTRATION FORM -->
+      <div class="registration-box">
         <div class="box-header" style="color:#00ff66; justify-content:center;"><i class="fa-solid fa-user-plus"></i> SOLO REGISTRATION</div>
         <form id="registrationForm" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="🔥 NEW SOLO FULL MAP REGISTRATION">
+          <input type="hidden" name="_subject" value="🔥 NEW SOLO FULL MAP FREE FIRE REGISTRATION">
 
           <div class="input-group">
-            <label for="name">FREE FIRE GAME NAME</label>
+            <label for="name"><i class="fa-solid fa-user-ninja"></i> FREE FIRE GAME NAME</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-gamepad"></i>
               <input type="text" id="name" name="Game_Name" class="input-field" placeholder="In-Game Name..." required>
@@ -103,7 +463,7 @@
           </div>
 
           <div class="input-group">
-            <label for="uid">FREE FIRE UID</label>
+            <label for="uid"><i class="fa-solid fa-hashtag"></i> FREE FIRE GAME ID (UID)</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-id-card"></i>
               <input type="number" id="uid" name="Free_Fire_UID" class="input-field" placeholder="10-Digit Game UID..." required>
@@ -111,7 +471,7 @@
           </div>
 
           <div class="input-group">
-            <label for="insta">INSTAGRAM USERNAME</label>
+            <label for="insta"><i class="fa-brands fa-instagram"></i> INSTAGRAM USERNAME</label>
             <div class="input-wrapper">
               <i class="fa-brands fa-instagram"></i>
               <input type="text" id="insta" name="Instagram_Handle" class="input-field" placeholder="@your_instagram_id" required>
@@ -121,36 +481,61 @@
           <button type="submit" class="btn-main" id="submitBtn">PROCEED TO PAY ₹8 <i class="fa-solid fa-qrcode"></i></button>
         </form>
       </div>
+
     </div>
 
-    <!-- QR Page -->
+    <!-- PAGE 2: QR Payment Box -->
     <div class="qr-box" id="qrPage">
       <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.3rem;">SCAN & PAY ENTRY FEE</h2>
       <p style="color: #00ff66; font-size: 1rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹8 | Per Kill: ₹6 | Booyah: +₹20</p>
       <div class="qr-frame"><img src="qr.jpeg" alt="Payment QR Code"></div>
+      <div class="pay-instruction">⚠️ Paytm / PhonePe / Google Pay se QR scan karke ₹8 pay karein!</div>
       <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #ff0066, #ff5500);"><i class="fa-solid fa-upload"></i> VERIFY PAYMENT VIA INSTA DM</button>
     </div>
 
-    <!-- Insta Page -->
+    <!-- PAGE 3: Instagram Verification Box -->
     <div class="insta-box" id="instaPage">
       <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #ffcc00; margin-bottom: 12px;"></i>
       <h2 style="font-family: 'Orbitron'; font-size: 1.4rem; color: #fff;">PAYMENT VERIFICATION</h2>
-      <p style="color: #ddd; margin: 12px 0; font-size: 0.9rem;">Payment screenshot send karein. Room ID & Password match se 10-15 mins pehle Instagram DM par milega. Single slot fail hone par 15 mins me Refund!</p>
+      <div class="info-card-dm">
+        <p style="margin-bottom: 8px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Match start hone se 3-10 minutes pehle aapko **Direct Instagram DM** me Room ID & Password bhej diya jayega.</p>
+        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 8px; margin-top: 8px;">💰 <b>Refund Policy:</b><br>Agar match slots poore nahi hote, toh verified players ko 15 Minutes ke andar Full Refund mil jayega.</p>
+      </div>
       <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta"><i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i> SEND SCREENSHOT ON INSTA</a>
     </div>
 
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init({ once: true });
     function handleFormSubmit(e) {
       e.preventDefault();
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting... <i class="fa-solid fa-spinner fa-spin"></i>';
+
       const form = e.target;
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-      .then(() => { document.getElementById("formPage").style.display = "none"; document.getElementById("qrPage").style.display = "block"; window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        document.getElementById("formPage").style.display = "none";
+        document.getElementById("qrPage").style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }).catch(() => {
+        document.getElementById("formPage").style.display = "none";
+        document.getElementById("qrPage").style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     }
-    function openInstaPage() { document.getElementById("qrPage").style.display = "none"; document.getElementById("instaPage").style.display = "block"; window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+    function openInstaPage() {
+      document.getElementById("qrPage").style.display = "none";
+      document.getElementById("instaPage").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 </body>
 </html>

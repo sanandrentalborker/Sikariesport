@@ -54,6 +54,18 @@
       gap: 20px;
     }
 
+    /* Smooth Scroll Animation Engine */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .scroll-animate.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* Header / Logo */
     .hero {
       text-align: center;
@@ -417,7 +429,7 @@
   <div class="main-wrapper">
 
     <!-- Header Section -->
-    <div class="hero">
+    <div class="hero scroll-animate active">
       <div class="logo-frame">
         <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/ff0066/ffffff?text=SIKARI'">
       </div>
@@ -426,7 +438,7 @@
     </div>
 
     <!-- Match Info Grid -->
-    <div class="match-info-grid">
+    <div class="match-info-grid scroll-animate active">
       <div class="info-card">
         <div class="label">ENTRY FEE</div>
         <div class="val" style="color:#ffcc00;">₹8</div>
@@ -445,7 +457,7 @@
     <div id="formPage" style="display: flex; flex-direction: column; gap: 20px;">
 
       <!-- BOX 1: ROOM TIMING RULES -->
-      <div class="timing-box">
+      <div class="timing-box scroll-animate">
         <div class="box-header">
           <i class="fa-solid fa-clock"></i> ROOM TIMING & WAITING POLICY
         </div>
@@ -456,7 +468,7 @@
       </div>
 
       <!-- BOX 2: MATCH DETAILS -->
-      <div class="details-box">
+      <div class="details-box scroll-animate">
         <div class="box-header">
           <i class="fa-solid fa-sliders"></i> MATCH DETAILS & SETTINGS
         </div>
@@ -489,7 +501,7 @@
       </div>
 
       <!-- BOX 3: IMPORTANT RULES -->
-      <div class="rules-box">
+      <div class="rules-box scroll-animate">
         <div class="box-header">
           <i class="fa-solid fa-triangle-exclamation"></i> IMPORTANT RULES & POLICIES
         </div>
@@ -500,25 +512,25 @@
           </li>
           <li>
             <i class="fa-solid fa-skull"></i>
-            <div><b>ANTI-HACK & REFUND POLICY:</b> Hacker dwaara maare gaye players ko video proof hone par **Refund** diya jayega. Cheating hum bilkul tolerate nahi karte.</div>
+            <div><b>ANTI-HACK & REFUND POLICY:</b> Hacker dwaara maare gaye players ko video proof hone par <b>Refund</b> diya jayega. Cheating hum bilkul tolerate nahi karte.</div>
           </li>
           <li>
             <i class="fa-solid fa-circle-xmark"></i>
-            <div><b>NON-ATTENDANCE:</b> Agar koi player room me time par nahi aata hai, toh uske liye hum responsible nahi honge aur koi **Refund nahi milega**.</div>
+            <div><b>NON-ATTENDANCE:</b> Agar koi player room me time par nahi aata hai, toh uske liye hum responsible nahi honge aur koi <b>Refund nahi milega</b>.</div>
           </li>
           <li>
             <i class="fa-solid fa-user-slash"></i>
-            <div><b>UNREGISTERED ENTRY PENALTY:</b> Room me unregistered bande ko invite karne par account se **₹20 Winnings Penalty** cut ki jayegi.</div>
+            <div><b>UNREGISTERED ENTRY PENALTY:</b> Room me unregistered bande ko invite karne par account se <b>₹20 Winnings Penalty</b> cut ki jayegi.</div>
           </li>
           <li>
             <i class="fa-solid fa-comment-slash"></i>
-            <div><b>ABUSIVE LANGUAGE:</b> Room chat me galat ya abusive words use karne par player immediately **Ban** hoga aur **₹20 Fine** lagega.</div>
+            <div><b>ABUSIVE LANGUAGE:</b> Room chat me galat ya abusive words use karne par player immediately <b>Ban</b> hoga aur <b>₹20 Fine</b> lagega.</div>
           </li>
         </ul>
       </div>
 
       <!-- BOX 4: SOLO REGISTRATION FORM -->
-      <div class="registration-box">
+      <div class="registration-box scroll-animate">
         <div class="box-header">
           <i class="fa-solid fa-user-plus"></i> SOLO PLAYER REGISTRATION
         </div>
@@ -592,7 +604,26 @@
 
   </div>
 
+  <!-- Pure Lightweight Scroll Animation Script -->
   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const animatedElements = document.querySelectorAll(".scroll-animate");
+
+      function checkScroll() {
+        const triggerBottom = window.innerHeight * 0.92;
+
+        animatedElements.forEach(el => {
+          const elTop = el.getBoundingClientRect().top;
+          if (elTop < triggerBottom) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkScroll);
+      checkScroll(); // Initial view check
+    });
+
     function handleFormSubmit(e) {
       e.preventDefault();
       const submitBtn = document.getElementById("submitBtn");

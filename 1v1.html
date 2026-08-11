@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🔥 SIKARI ESPORTS - 1v1 CS Custom 🔥</title>
+  
+  <!-- Gaming Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Rajdhani', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: #050508;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: hidden;
+      padding: 12px 10px 40px 10px;
+    }
+
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.35), transparent 70%),
+        linear-gradient(to bottom, rgba(10, 10, 15, 0.92), rgba(5, 5, 8, 0.98)),
+        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
+      z-index: -1;
+      filter: brightness(0.65);
+    }
+
+    .main-wrapper {
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .logo-frame {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .logo-img {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      border: 3px solid #ff0066;
+      box-shadow: 0 0 25px #ff0066, inset 0 0 12px #ff0066;
+      object-fit: cover;
+      animation: logoGlow 2s infinite alternate;
+    }
+
+    @keyframes logoGlow {
+      0% { box-shadow: 0 0 15px #ff0066; transform: scale(1); }
+      100% { box-shadow: 0 0 35px #ff0066, 0 0 50px #ff5500; transform: scale(1.04); }
+    }
+
+    .main-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      color: #fff;
+      text-shadow: 0 0 12px #ff0066;
+    }
+
+    .sub-title {
+      font-size: 0.95rem;
+      color: #ffcc00;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .match-info-grid {
+      display: flex;
+      gap: 10px;
+    }
+
+    .info-card {
+      flex: 1;
+      background: rgba(25, 25, 38, 0.92);
+      border: 1.5px solid #ff0066;
+      border-radius: 10px;
+      padding: 10px 4px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
+    }
+
+    .info-card .label {
+      font-size: 0.68rem;
+      color: #aaa;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .info-card .val {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .timing-box, .details-box, .rules-box, .registration-box {
+      background: rgba(12, 12, 20, 0.95);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .box-header {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.92rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      border-bottom: 1px dashed rgba(255,255,255,0.15);
+      padding-bottom: 6px;
+    }
+
+    .timing-box {
+      border: 1.5px solid #ff6600;
+      background: rgba(255, 102, 0, 0.12);
+    }
+
+    .details-box {
+      border: 1.5px solid #ffcc00;
+    }
+
+    .rules-box {
+      border: 1.5px solid #ff0055;
+    }
+
+    .registration-box {
+      border: 2px solid #00ff66;
+      box-shadow: 0 0 25px rgba(0, 255, 102, 0.25);
+    }
+
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .setting-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 7px 8px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .badge-no { background: #ff0055; color: #fff; padding: 2px 5px; border-radius: 4px; font-size: 0.68rem; font-family: 'Orbitron'; }
+    .badge-yes { background: #00ff66; color: #000; padding: 2px 5px; border-radius: 4px; font-size: 0.68rem; font-family: 'Orbitron'; }
+
+    .rules-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: #eee;
+      line-height: 1.4;
+    }
+
+    .rules-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .rules-list li i { color: #ff0055; margin-top: 2px; }
+
+    .input-group {
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.78rem;
+      color: #ccc;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper i {
+      position: absolute;
+      left: 12px;
+      color: #00ff66;
+      font-size: 1rem;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 11px 12px 11px 38px;
+      background: #08080e;
+      border: 1.5px solid #2a2a3a;
+      border-radius: 7px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      outline: none;
+    }
+
+    .btn-main {
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(45deg, #00b09b, #96c93d);
+      border: none;
+      border-radius: 7px;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .qr-box, .insta-box {
+      display: none;
+      text-align: center;
+      background: rgba(15, 15, 25, 0.95);
+      border: 2px solid #ff0066;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.35);
+    }
+
+    .qr-frame {
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      display: inline-block;
+      border: 3px solid #ff0066;
+      margin: 12px 0;
+    }
+
+    .qr-frame img {
+      width: 190px;
+      height: 190px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .pay-instruction {
+      background: rgba(255, 0, 102, 0.15);
+      border: 1px dashed #ff0066;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 0.8rem;
+      color: #ffcc00;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .info-card-dm {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 204, 0, 0.4);
+      border-radius: 8px;
+      padding: 10px;
+      margin: 12px 0;
+      text-align: left;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+
+    .btn-insta {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 7px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 0 15px rgba(220, 39, 67, 0.5);
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-animation"></div>
+
+  <div class="main-wrapper">
+
+    <!-- Header Section -->
+    <div class="hero">
+      <div class="logo-frame">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/ff0066/ffffff?text=SIKARI'">
+      </div>
+      <h1 class="main-title">SIKARI ESPORTS</h1>
+      <p class="sub-title">⚔️ 1v1 CS Custom Match ⚔️</p>
+    </div>
+
+    <!-- Match Info Grid -->
+    <div class="match-info-grid">
+      <div class="info-card">
+        <div class="label">ENTRY FEE</div>
+        <div class="val" style="color:#ffcc00;">₹30</div>
+      </div>
+      <div class="info-card">
+        <div class="label">WINNING PRIZE</div>
+        <div class="val" style="color:#00ff66;">₹55</div>
+      </div>
+    </div>
+
+    <!-- PAGE 1: CONTENT BOXES -->
+    <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
+
+      <!-- BOX 1: TIMING RULES -->
+      <div class="timing-box">
+        <div class="box-header" style="color:#ffaa00;">
+          <i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES
+        </div>
+        <p style="font-size:0.78rem; color:#ddd;">• Match exact scheduled time par chalu kar diya jayega.</p>
+        <p style="font-size:0.78rem; color:#ddd; margin-top:3px;">• Maximum Waiting Time: <b>5 Minutes</b>. Late hone par room start ho jayega aur <b>Refund nahi milega</b>.</p>
+      </div>
+
+      <!-- BOX 2: ROOM SETTINGS -->
+      <div class="details-box">
+        <div class="box-header" style="color:#ffcc00;">
+          <i class="fa-solid fa-sliders"></i> CUSTOM ROOM SETTINGS
+        </div>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <span>Limited Ammo</span>
+            <span class="badge-no">NO</span>
+          </div>
+          <div class="setting-item">
+            <span>Character Skill</span>
+            <span class="badge-no">NO</span>
+          </div>
+          <div class="setting-item">
+            <span>Loadout</span>
+            <span class="badge-yes">YES</span>
+          </div>
+          <div class="setting-item">
+            <span>Gloowall</span>
+            <span class="badge-yes">UNLIMITED</span>
+          </div>
+          <div class="setting-item" style="grid-column: span 2;">
+            <span>Headshot Only Mode</span>
+            <span class="badge-yes">YES</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOX 3: RULES -->
+      <div class="rules-box">
+        <div class="box-header" style="color:#ff0055;">
+          <i class="fa-solid fa-triangle-exclamation"></i> STRICT MATCH RULES
+        </div>
+        <ul class="rules-list">
+          <li><i class="fa-solid fa-ban"></i> <b>No Roof Climbing:</b> Ghar ke upar chadh ke marna allowed nahi hai.</li>
+          <li><i class="fa-solid fa-ban"></i> <b>No Enemy Trapping:</b> Gloowall me samne wale enemy ko pack nahi karna hai.</li>
+          <li><i class="fa-solid fa-ban"></i> <b>Banned Weapon:</b> Double Vector chalana strict BANNED hai.</li>
+          <li><i class="fa-solid fa-skull"></i> <b>Anti-Hack Policy:</b> Cheater pakde jane par instant Permanent Ban!</li>
+        </ul>
+      </div>
+
+      <!-- BOX 4: REGISTRATION FORM -->
+      <div class="registration-box">
+        <div class="box-header" style="color:#00ff66; justify-content:center;">
+          <i class="fa-solid fa-user-plus"></i> PLAYER REGISTRATION
+        </div>
+        
+        <form id="registrationForm" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="🔥 NEW 1v1 FREE FIRE CUSTOM REGISTRATION">
+
+          <div class="input-group">
+            <label for="name"><i class="fa-solid fa-user-ninja"></i> FREE FIRE GAME NAME</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-gamepad"></i>
+              <input type="text" id="name" name="Game_Name" class="input-field" placeholder="In-Game Name..." required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="uid"><i class="fa-solid fa-hashtag"></i> FREE FIRE UID</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-id-card"></i>
+              <input type="number" id="uid" name="Free_Fire_UID" class="input-field" placeholder="10-Digit Game UID..." required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="insta"><i class="fa-brands fa-instagram"></i> INSTAGRAM USERNAME</label>
+            <div class="input-wrapper">
+              <i class="fa-brands fa-instagram"></i>
+              <input type="text" id="insta" name="Instagram_Handle" class="input-field" placeholder="@your_instagram_id" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-main" id="submitBtn">
+            PROCEED TO PAY ₹30 <i class="fa-solid fa-qrcode"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- PAGE 2: QR Payment Box -->
+    <div class="qr-box" id="qrPage">
+      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.15rem;">SCAN & PAY ENTRY FEE</h2>
+      <p style="color: #00ff66; font-size: 0.88rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹30 | Win: ₹55</p>
+      
+      <div class="qr-frame">
+        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/190/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
+      </div>
+      
+      <div class="pay-instruction">⚠️ Paytm / PhonePe / Google Pay se QR scan karke ₹30 pay karein!</div>
+      
+      <button class="btn-main" onclick="openInstaPage()" style="background: linear-gradient(45deg, #ff0066, #ff5500);">
+        <i class="fa-solid fa-upload"></i> VERIFY PAYMENT VIA INSTA DM
+      </button>
+    </div>
+
+    <!-- PAGE 3: Instagram Verification Box -->
+    <div class="insta-box" id="instaPage">
+      <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #ffcc00; margin-bottom: 10px;"></i>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.25rem; color: #fff;">PAYMENT VERIFICATION</h2>
+      
+      <div class="info-card-dm">
+        <p style="margin-bottom: 6px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Payment screenshot verify hone ke baad, match start hone se <b>10-15 minutes pehle</b> aapko direct <b>Instagram DM</b> me Room ID & Password bhej diya jayega.</p>
+        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 6px; margin-top: 6px;">💰 <b>Refund Policy:</b><br>Agar match slots poore nahi hote, toh verified players ko <b>15 Minutes ke andar Full Refund</b> mil jayega.</p>
+      </div>
+      
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta">
+        <i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> SEND SCREENSHOT ON INSTA
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting... <i class="fa-solid fa-spinner fa-spin"></i>';
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        document.getElementById("formPage").style.display = "none";
+        document.getElementById("qrPage").style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }).catch(() => {
+        document.getElementById("formPage").style.display = "none";
+        document.getElementById("qrPage").style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    function openInstaPage() {
+      document.getElementById("qrPage").style.display = "none";
+      document.getElementById("instaPage").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

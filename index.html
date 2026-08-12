@@ -35,16 +35,42 @@
     }
     .jackpot-card:active { transform: scale(0.98); }
 
-    .card-duo { border: 2px solid #ffcc00; box-shadow: 0 0 25px rgba(255, 204, 0, 0.35); }
-    .card-squad { border: 2px solid #00ff66; box-shadow: 0 0 25px rgba(0, 255, 102, 0.35); }
-    .card-solo { border: 2px solid #ff0055; box-shadow: 0 0 30px rgba(255, 0, 85, 0.45); }
+    .card-solo { border: 2.5px solid #ff0055; box-shadow: 0 0 30px rgba(255, 0, 85, 0.45); }
+    .card-duo { border: 2.5px solid #00ccff; box-shadow: 0 0 25px rgba(0, 204, 255, 0.35); }
+    .card-squad { border: 2.5px solid #00ff66; box-shadow: 0 0 25px rgba(0, 255, 102, 0.35); }
 
     .multiplier-tag { font-family: 'Orbitron', sans-serif; font-size: 1.7rem; font-weight: 900; text-transform: uppercase; }
-    .tag-duo { color: #ffcc00; text-shadow: 0 0 15px #ffcc00; }
-    .tag-squad { color: #00ff66; text-shadow: 0 0 15px #00ff66; }
     .tag-solo { color: #ff0055; text-shadow: 0 0 15px #ff0055; }
+    .tag-duo { color: #00ccff; text-shadow: 0 0 15px #00ccff; }
+    .tag-squad { color: #00ff66; text-shadow: 0 0 15px #00ff66; }
 
     .prize-highlight { font-family: 'Orbitron', sans-serif; font-size: 1.35rem; font-weight: 900; color: #fff; margin: 6px 0; }
+
+    /* TRUST ARTICLE BOX */
+    .trust-article-box {
+      background: rgba(12, 12, 20, 0.95);
+      border: 1.5px solid #00ccff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 0 20px rgba(0,204,255,0.2);
+    }
+
+    .trust-article-box h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.98rem;
+      color: #00ccff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-list { list-style: none; font-size: 0.82rem; color: #ddd; line-height: 1.5; }
+    .feature-list li {
+      margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;
+      background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px; border-left: 2.5px solid #00ccff;
+    }
+    .feature-list li i { color: #00ccff; margin-top: 2px; }
 
     .promo-section-title { font-family: 'Orbitron', sans-serif; font-size: 1.05rem; color: #ffcc00; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; margin-top: 10px; }
 
@@ -79,27 +105,46 @@
     <!-- MEGA BOOYAH PRIZE SHOWCASE -->
     <div class="jackpot-container">
       
-      <!-- DUO 8X SHOWCASE -->
-      <div class="jackpot-card card-duo scroll-animate active">
-        <div class="multiplier-tag tag-duo">⚡ 1 KA 8 GUNA ⚡</div>
-        <div class="prize-highlight">BR DUO: ENTRY ₹50 ➔ WIN ₹400</div>
-        <p style="font-size:0.82rem; color:#ccc;">Only Booyah Team Takes The Full Prize Pool!</p>
-      </div>
-
-      <!-- SQUAD 16X SHOWCASE -->
-      <div class="jackpot-card card-squad scroll-animate active">
-        <div class="multiplier-tag tag-squad">💥 1 KA 16 GUNA 💥</div>
-        <div class="prize-highlight">BR SQUAD: ENTRY ₹50 ➔ WIN ₹800</div>
-        <p style="font-size:0.82rem; color:#ccc;">Booyah Squad Wins Mega ₹800 Prize Pool!</p>
-      </div>
-
       <!-- SOLO 32X SHOWCASE -->
-      <div class="jackpot-card card-solo scroll-animate active">
+      <a href="soloboooyah.html" style="text-decoration:none;" class="jackpot-card card-solo scroll-animate active">
         <div class="multiplier-tag tag-solo">🚀 1 KA 32 GUNA 🚀</div>
         <div class="prize-highlight">BR SOLO: ENTRY ₹50 ➔ WIN ₹1600</div>
-        <p style="font-size:0.82rem; color:#ccc;">Ultimate Booyah King Wins Mega ₹1600 Cash!</p>
-      </div>
+        <p style="font-size:0.82rem; color:#ccc;">Booyah King Takes Mega ₹1600 Cash Prize!</p>
+      </a>
 
+      <!-- DUO 16X SHOWCASE -->
+      <a href="brduo.html" style="text-decoration:none;" class="jackpot-card card-duo scroll-animate active">
+        <div class="multiplier-tag tag-duo">⚡ 1 KA 16 GUNA ⚡</div>
+        <div class="prize-highlight">BR DUO: ENTRY ₹50 ➔ WIN ₹800</div>
+        <p style="font-size:0.82rem; color:#ccc;">Winning Duo Takes ₹800 Prize Pool!</p>
+      </a>
+
+      <!-- SQUAD 8X SHOWCASE -->
+      <a href="brsquad.html" style="text-decoration:none;" class="jackpot-card card-squad scroll-animate active">
+        <div class="multiplier-tag tag-squad">💥 1 KA 8 GUNA 💥</div>
+        <div class="prize-highlight">BR SQUAD: ENTRY ₹50 ➔ WIN ₹400</div>
+        <p style="font-size:0.82rem; color:#ccc;">Winning Squad Takes ₹400 Prize Pool!</p>
+      </a>
+
+    </div>
+
+    <!-- TRUST & OFFICE PROOF ARTICLE -->
+    <div class="trust-article-box scroll-animate">
+      <h3><i class="fa-solid fa-shield-halved"></i> WHY TRUST SIKARI ESPORTS?</h3>
+      <ul class="feature-list">
+        <li>
+          <i class="fa-solid fa-bolt"></i>
+          <div><b>INSTANT PAYMENT GUARANTEE:</b> Match Booyah hote hi Winning Amount aapke direct Bank / UPI me transfer ho jata hai.</div>
+        </li>
+        <li>
+          <i class="fa-solid fa-ban"></i>
+          <div><b>ZERO HACKERS & PANEL USERS:</b> Strict Anti-Hack Monitoring. Cheater milne par Permanent Ban & Clean players ko Full Refund!</div>
+        </li>
+        <li>
+          <i class="fa-solid fa-building"></i>
+          <div><b>OFFICIAL REGISTERED ORGANIZERS:</b> Proper Office Managed Platform. Bina kisi rukawat ke aap jitna chahein utna jeet sakte hain.</div>
+        </li>
+      </ul>
     </div>
 
     <!-- PROMOTION SOCIAL LINKS SECTION -->
@@ -108,7 +153,7 @@
     <div style="display:flex; flex-direction:column; gap:12px;">
 
       <!-- INSTAGRAM BUTTON -->
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="social-btn btn-insta scroll-animate">
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" rel="noopener noreferrer" class="social-btn btn-insta scroll-animate">
         <div class="social-left">
           <i class="fa-brands fa-instagram"></i>
           <div>
@@ -120,24 +165,24 @@
       </a>
 
       <!-- YOUTUBE BUTTON -->
-      <a href="https://youtube.com/@sikariesports" target="_blank" class="social-btn btn-youtube scroll-animate">
+      <a href="https://youtube.com/@sikariesport?si=ooacqqoAL_F0hMb8" target="_blank" rel="noopener noreferrer" class="social-btn btn-youtube scroll-animate">
         <div class="social-left">
           <i class="fa-brands fa-youtube"></i>
           <div>
             <div>YOUTUBE CHANNEL</div>
-            <div style="font-size:0.72rem; color:#ffe6e6; font-family:'Rajdhani';">Live Streaming & Match Highlights</div>
+            <div style="font-size:0.72rem; color:#ffe6e6; font-family:'Rajdhani';">Live Streams & Tournaments</div>
           </div>
         </div>
         <i class="fa-solid fa-chevron-right"></i>
       </a>
 
       <!-- TELEGRAM BUTTON -->
-      <a href="https://t.me/sikariesports" target="_blank" class="social-btn btn-telegram scroll-animate">
+      <a href="https://t.me/sikariesport" target="_blank" rel="noopener noreferrer" class="social-btn btn-telegram scroll-animate">
         <div class="social-left">
           <i class="fa-brands fa-telegram"></i>
           <div>
             <div>TELEGRAM GROUP</div>
-            <div style="font-size:0.72rem; color:#e6f7ff; font-family:'Rajdhani';">Instant Alerts & Daily Payment Proofs</div>
+            <div style="font-size:0.72rem; color:#e6f7ff; font-family:'Rajdhani';">Instant Alerts & Payment Proofs</div>
           </div>
         </div>
         <i class="fa-solid fa-chevron-right"></i>

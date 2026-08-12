@@ -30,7 +30,6 @@
     .main-title { font-family: 'Orbitron', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 1.5px; color: #fff; text-shadow: 0 0 15px #00ccff; }
     .sub-title { font-size: 0.95rem; color: #00ff66; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
 
-    /* Mega 16X Duo Banner */
     .jackpot-banner {
       background: linear-gradient(135deg, rgba(0, 204, 255, 0.4), rgba(255, 0, 102, 0.4));
       border: 2.5px solid #00ccff; border-radius: 14px; padding: 16px 10px; text-align: center; box-shadow: 0 0 35px rgba(0, 204, 255, 0.5);
@@ -59,6 +58,20 @@
     .rules-list { list-style: none; font-size: 0.82rem; color: #eee; line-height: 1.45; }
     .rules-list li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; background: rgba(255, 0, 85, 0.06); padding: 8px; border-radius: 6px; border-left: 3px solid #ff0055; }
     .rules-list li i { color: #ff0055; margin-top: 2px; }
+
+    .no-per-kill-notice {
+      background: rgba(255, 204, 0, 0.15); border: 1.5px dashed #ffcc00; border-radius: 8px; padding: 10px; font-size: 0.82rem; color: #ffcc00; font-weight: 700; text-align: center; margin-bottom: 12px; line-height: 1.4;
+    }
+
+    .verification-info-notice {
+      background: rgba(0, 204, 255, 0.12); border: 1.5px solid #00ccff; border-radius: 8px; padding: 10px; font-size: 0.82rem; color: #fff; text-align: left; margin-top: 14px; line-height: 1.4;
+    }
+
+    .checkbox-container {
+      display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
+    }
+    .checkbox-container input[type="checkbox"] { width: 20px; height: 20px; accent-color: #00ff66; cursor: pointer; margin-top: 2px; }
+    .checkbox-container label { font-size: 0.8rem; color: #ddd; font-weight: 700; cursor: pointer; line-height: 1.3; }
 
     .input-group { margin-bottom: 12px; text-align: left; }
     .input-group label { display: block; font-size: 0.78rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
@@ -140,6 +153,11 @@
       <div class="registration-box scroll-animate">
         <div class="box-header" style="color:#00ff66; justify-content:center;"><i class="fa-solid fa-user-plus"></i> DUO TEAM REGISTRATION</div>
         
+        <!-- NO PER KILL NOTICE -->
+        <div class="no-per-kill-notice">
+          ⚠️ <b>IMPORTANT NOTE:</b> Ye Match PER KILL par paise NAHI deta. Sirf **Booyah** karne wali Duo Team ko hi **₹800 Cash** milega!
+        </div>
+
         <form id="registrationForm" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="🔥 NEW BR DUO MATCH REGISTRATION">
@@ -169,8 +187,21 @@
             <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@captain_insta_id" required></div>
           </div>
 
+          <!-- MANDATORY TICK CHECKBOX POLICY -->
+          <div class="checkbox-container">
+            <input type="checkbox" id="rulesCheck" required>
+            <label for="rulesCheck">Maine Sikari Esports ke saare Rules padh liye hain aur main Anti-Hack/No-Refund Policy se agree karta hoon. Payment ka screenshot Insta DM me bhejna zaroori hai.</label>
+          </div>
+
           <button type="submit" class="btn-main" id="submitBtn">PROCEED TO PAY ₹50 <i class="fa-solid fa-qrcode"></i></button>
         </form>
+
+        <!-- VERIFICATION NOTICE BELOW FORM -->
+        <div class="verification-info-notice">
+          📩 <b>PAYMENT VERIFICATION RULE:</b><br>
+          Payment karne ke baad payment ka screenshot hamare **Official Instagram (@sikariesport)** par DM karna compulsory hai. Screenshot verify hone ke baad hi aapko Instagram DM par Room ID & Password bhej diya jayega!
+        </div>
+
       </div>
 
     </div>
@@ -180,6 +211,7 @@
       <h2 style="font-family: 'Orbitron'; color: #00ccff;">SCAN & PAY TEAM ENTRY</h2>
       <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹50 | Winning Prize: ₹800</p>
       <div class="qr-frame"><img src="qr.jpeg" alt="QR Code"></div>
+      <div style="font-size:0.8rem; color:#ffcc00; margin-bottom:10px;">⚠️ QR Pay karne ke baad screenshot Insta DM par bhejein!</div>
       <button class="btn-main" onclick="openInstaPage()"><i class="fa-solid fa-upload"></i> VERIFY VIA INSTA DM</button>
     </div>
 
@@ -187,7 +219,7 @@
     <div class="insta-box" id="instaPage">
       <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #00ccff;"></i>
       <h2 style="font-family: 'Orbitron';">PAYMENT VERIFICATION</h2>
-      <p style="font-size:0.85rem; color:#ccc; margin: 10px 0;">Screenshot verify hone ke baad match start hone se 3-10 mins pehle Captain ke Instagram DM par Room ID & Password bhej diya jayega.</p>
+      <p style="font-size:0.85rem; color:#ccc; margin: 10px 0;">Payment Screenshot hamare **Instagram DM** par bhejein. Verification ke baad match start hone se 3-10 mins pehle Room ID & Password mil jayega!</p>
       
       <!-- SOCIAL JOIN BUTTONS -->
       <div class="social-join-box">
@@ -197,7 +229,7 @@
       </div>
     </div>
 
-    <footer style="text-align:center; font-size:0.78rem; color:#777; margin-top:15px;" class="scroll-animate">
+    <footer class="scroll-animate">
       © 2026 SIKARI ESPORTS. All Rights Reserved.
     </footer>
 
@@ -218,6 +250,11 @@
 
     function handleFormSubmit(e) {
       e.preventDefault();
+      const check = document.getElementById("rulesCheck");
+      if(!check.checked) {
+        alert("Kripya Rules aur Policy ko Checkbox par Tick karke Accept karein!");
+        return;
+      }
       const submitBtn = document.getElementById("submitBtn");
       submitBtn.disabled = true; submitBtn.innerHTML = 'Submitting...';
       fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' } })

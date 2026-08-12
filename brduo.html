@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🔥 SIKARI ESPORTS - BR Duo 8X Battle 🔥</title>
+  <title>🔥 SIKARI ESPORTS - BR Duo Battle Royale 🔥</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,32 +24,31 @@
     .scroll-animate.active { opacity: 1; transform: translateY(0); }
 
     .hero { text-align: center; margin-top: 5px; }
-    .logo-img { width: 100px; height: 100px; border-radius: 50%; border: 3.5px solid #ffcc00; box-shadow: 0 0 35px #ffcc00, inset 0 0 15px #ffcc00; object-fit: cover; animation: logoGlow 2s infinite alternate; }
-    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #ffcc00; } 100% { transform: scale(1.05); box-shadow: 0 0 45px #ff0066; } }
+    .logo-img { width: 100px; height: 100px; border-radius: 50%; border: 3.5px solid #ffcc00; box-shadow: 0 0 35px #ffcc00; object-fit: cover; animation: logoGlow 2s infinite alternate; }
+    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #ffcc00; } 100% { transform: scale(1.04); box-shadow: 0 0 45px #ff0066; } }
 
     .main-title { font-family: 'Orbitron', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 1.5px; color: #fff; text-shadow: 0 0 15px #ffcc00; }
     .sub-title { font-size: 0.95rem; color: #00ff66; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
 
-    /* Mega 8X Jackpot Banner */
+    /* Ultra Mega Booyah 8X Banner */
     .jackpot-banner {
-      background: linear-gradient(135deg, rgba(255, 204, 0, 0.45), rgba(255, 0, 102, 0.35));
-      border: 3px solid #ffcc00; border-radius: 16px; padding: 16px; text-align: center; box-shadow: 0 0 40px rgba(255, 204, 0, 0.5);
+      background: linear-gradient(135deg, rgba(255, 204, 0, 0.4), rgba(255, 0, 102, 0.4));
+      border: 2.5px solid #ffcc00; border-radius: 14px; padding: 16px 10px; text-align: center; box-shadow: 0 0 35px rgba(255, 204, 0, 0.5);
       animation: pulseGlow 1.5s infinite alternate;
     }
-    @keyframes pulseGlow { 0% { box-shadow: 0 0 20px rgba(255,204,0,0.4); } 100% { box-shadow: 0 0 45px rgba(0,255,102,0.8); border-color: #00ff66; } }
+    @keyframes pulseGlow { 0% { box-shadow: 0 0 20px rgba(255,204,0,0.4); } 100% { box-shadow: 0 0 40px rgba(0,255,102,0.8); border-color: #00ff66; } }
 
-    .jackpot-banner h2 { font-family: 'Orbitron', sans-serif; font-size: 1.35rem; color: #00ff66; text-transform: uppercase; }
-    .jackpot-banner .prize-text { font-family: 'Orbitron'; font-size: 2.2rem; color: #ffcc00; font-weight: 900; text-shadow: 0 0 20px #ffcc00; margin: 4px 0; }
+    .jackpot-banner h2 { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: #00ff66; text-transform: uppercase; text-shadow: 0 0 12px #ffcc00; }
+    .jackpot-banner p { font-size: 0.95rem; color: #fff; font-weight: 800; margin-top: 4px; }
 
     .match-info-grid { display: flex; gap: 8px; }
-    .info-card { flex: 1; background: rgba(25, 25, 38, 0.95); border: 2px solid #ffcc00; border-radius: 12px; padding: 10px 4px; text-align: center; }
+    .info-card { flex: 1; background: rgba(25, 25, 38, 0.95); border: 2px solid #ffcc00; border-radius: 10px; padding: 12px 4px; text-align: center; box-shadow: 0 0 20px rgba(255,204,0,0.25); }
     .info-card .label { font-size: 0.65rem; color: #aaa; font-weight: 700; text-transform: uppercase; }
-    .info-card .val { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 900; color: #00ff66; }
+    .info-card .val { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 900; color: #00ff66; }
 
     .timing-box, .details-box, .rules-box, .registration-box { background: rgba(12, 12, 20, 0.95); border-radius: 14px; padding: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
     .box-header { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; }
 
-    .timing-box { border: 1.5px solid #ffaa00; background: rgba(255, 170, 0, 0.12); }
     .details-box { border: 1.5px solid #00ccff; }
     .rules-box { border: 1.5px solid #ff0055; }
     .registration-box { border: 2.5px solid #00ff66; box-shadow: 0 0 30px rgba(0, 255, 102, 0.35); }
@@ -68,11 +67,17 @@
     .input-field { width: 100%; padding: 11px 12px 11px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.9rem; font-weight: 700; outline: none; }
 
     .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #ffcc00, #ff5500); border: none; border-radius: 8px; color: #000; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(255, 204, 0, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
-    
+
     .qr-box, .insta-box { display: none; text-align: center; background: rgba(15, 15, 25, 0.95); border: 2px solid #ffcc00; border-radius: 16px; padding: 18px; }
     .qr-frame { background: #fff; padding: 10px; border-radius: 12px; display: inline-block; border: 3px solid #ffcc00; margin: 12px 0; }
     .qr-frame img { width: 190px; height: 190px; display: block; object-fit: contain; }
-    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; text-decoration: none; padding: 12px; border-radius: 7px; font-family: 'Orbitron'; font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 10px; }
+
+    /* SOCIAL JOIN BUTTONS SECTION */
+    .social-join-box { margin-top: 15px; display: flex; flex-direction: column; gap: 8px; text-align: center; }
+    .social-join-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; font-family: 'Orbitron'; font-size: 0.82rem; font-weight: 800; }
+    .sj-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .sj-yt { background: #ff0000; }
+    .sj-tg { background: #0088cc; }
   </style>
 </head>
 <body>
@@ -87,20 +92,19 @@
         <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/ffcc00/ffffff?text=SIKARI'">
       </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
-      <p class="sub-title">⚔️ BR DUO 8X BATTLE ⚔️</p>
+      <p class="sub-title">⚔️ BR DUO BATTLE ROYALE ⚔️</p>
     </div>
 
     <!-- Mega 8X Banner -->
     <div class="jackpot-banner scroll-animate active">
       <h2>🔥 BOOYAH = 8 GUNA PRIZE 🔥</h2>
-      <div class="prize-text">WIN ₹400 CASH</div>
-      <p style="font-size:0.85rem; color:#fff; font-weight:700;">NO PER KILL • NO EXTRA RULES • ONLY BOOYAH WINS ALL!</p>
+      <p>NO PER KILL • ENTRY ₹50 ➔ WINNING ₹400!</p>
     </div>
 
     <!-- Match Info Grid -->
     <div class="match-info-grid scroll-animate active">
       <div class="info-card">
-        <div class="label">DUO TEAM ENTRY</div>
+        <div class="label">TEAM ENTRY</div>
         <div class="val" style="color:#ffcc00;">₹50</div>
       </div>
       <div class="info-card">
@@ -124,10 +128,10 @@
       <div class="rules-box scroll-animate">
         <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> STRICT DUO RULES & POLICY</div>
         <ul class="rules-list">
-          <li><i class="fa-solid fa-user-shield"></i> <b>ONLY REGISTERED DUO:</b> Room me wahi 2 players aayenge jinka form bhara hai. Teesri entry par instant kick & zero refund!</li>
-          <li><i class="fa-solid fa-users"></i> <b>PLAYER NON-ATTENDANCE:</b> Agar aapka teammate time par nahi aata, toh captain ko solo ya bina uske khelna hoga. No new player & no refund!</li>
-          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar Duo me se 1 bhi player Hacker/Panel User nikla, toh poora Duo Sikari Esports se PERMANENTLY BAN!</li>
-          <li><i class="fa-solid fa-trophy"></i> <b>WINNER PROOF:</b> Match Booyah hone ke baad winning team ko Booyah ka Screenshot lekar Insta DM par bhejna hoga!</li>
+          <li><i class="fa-solid fa-user-shield"></i> <b>ONLY REGISTERED DUO:</b> Room me wahi 2 players aayenge jinka form bhara hai. Teesri ya unknown entry par instant kick & zero refund!</li>
+          <li><i class="fa-solid fa-users"></i> <b>PLAYER NON-ATTENDANCE:</b> Agar aapka teammate time par nahi aata, toh captain ko solo ya bina uske khelna hoga. No refund & no new entry!</li>
+          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar Duo me se 1 bhi player Hacker/Panel User nikla, toh poora Duo PERMANENTLY BAN ho jayega!</li>
+          <li><i class="fa-solid fa-trophy"></i> <b>WINNER PROOF:</b> Match Booyah hone ke baad winning team ko Booyah ka Screenshot Insta DM par bhejna hoga!</li>
         </ul>
       </div>
 
@@ -172,7 +176,7 @@
 
     <!-- QR Page -->
     <div class="qr-box" id="qrPage">
-      <h2 style="font-family: 'Orbitron'; color: #ffcc00;">SCAN & PAY DUO ENTRY</h2>
+      <h2 style="font-family: 'Orbitron'; color: #ffcc00;">SCAN & PAY TEAM ENTRY</h2>
       <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹50 | Winning Prize: ₹400</p>
       <div class="qr-frame"><img src="qr.jpeg" alt="QR Code"></div>
       <button class="btn-main" onclick="openInstaPage()"><i class="fa-solid fa-upload"></i> VERIFY VIA INSTA DM</button>
@@ -183,8 +187,18 @@
       <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #ffcc00;"></i>
       <h2 style="font-family: 'Orbitron';">PAYMENT VERIFICATION</h2>
       <p style="font-size:0.85rem; color:#ccc; margin: 10px 0;">Screenshot verify hone ke baad match start hone se 3-10 mins pehle Captain ke Instagram DM par Room ID & Password bhej diya jayega.</p>
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-insta"><i class="fa-brands fa-instagram"></i> SEND SCREENSHOT ON INSTA</a>
+      
+      <!-- SOCIAL JOIN BUTTONS AFTER REGISTRATION -->
+      <div class="social-join-box">
+        <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> JOIN OFFICIAL INSTAGRAM</a>
+        <a href="https://youtube.com/@sikariesports" target="_blank" class="social-join-btn sj-yt"><i class="fa-brands fa-youtube"></i> SUBSCRIBE YOUTUBE CHANNEL</a>
+        <a href="https://t.me/sikariesports" target="_blank" class="social-join-btn sj-tg"><i class="fa-brands fa-telegram"></i> JOIN TELEGRAM GROUP</a>
+      </div>
     </div>
+
+    <footer style="text-align:center; font-size:0.75rem; color:#777; margin-top:15px;" class="scroll-animate">
+      © 2026 SIKARI ESPORTS. All Rights Reserved.
+    </footer>
 
   </div>
 

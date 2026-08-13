@@ -45,6 +45,8 @@
     .details-box, .rules-box, .registration-box { background: rgba(12, 12, 20, 0.95); border-radius: 14px; padding: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
     .box-header { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; }
 
+    .player-section-title { font-family: 'Orbitron', sans-serif; font-size: 0.82rem; color: #ffcc00; margin: 10px 0 6px 0; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+
     .details-box { border: 1.5px solid #00ccff; }
     .rules-box { border: 1.5px solid #ff0055; }
     .registration-box { border: 2.5px solid #00ff66; box-shadow: 0 0 30px rgba(0, 255, 102, 0.35); }
@@ -62,11 +64,11 @@
     .checkbox-container input[type="checkbox"] { width: 20px; height: 20px; accent-color: #00ff66; cursor: pointer; margin-top: 2px; }
     .checkbox-container label { font-size: 0.8rem; color: #ddd; font-weight: 700; cursor: pointer; line-height: 1.3; }
 
-    .input-group { margin-bottom: 12px; text-align: left; }
-    .input-group label { display: block; font-size: 0.78rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
+    .input-group { margin-bottom: 10px; text-align: left; }
+    .input-group label { display: block; font-size: 0.75rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
     .input-wrapper { position: relative; display: flex; align-items: center; }
     .input-wrapper i { position: absolute; left: 12px; color: #00ccff; }
-    .input-field { width: 100%; padding: 11px 12px 11px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.9rem; font-weight: 700; outline: none; }
+    .input-field { width: 100%; padding: 10px 12px 10px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.88rem; font-weight: 700; outline: none; }
 
     .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #00ccff, #0072ff); border: none; border-radius: 8px; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(0, 204, 255, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
 
@@ -133,14 +135,14 @@
         <div class="detail-row"><span>Loadout & Throwables</span><span class="badge-yes">ALLOWED</span></div>
       </div>
 
-      <!-- Rules Box -->
+      <!-- Strict Squad Rules -->
       <div class="rules-box scroll-animate">
-        <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> SQUAD RULES & POLICY</div>
+        <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> STRICT SQUAD RULES & POLICY</div>
         <ul class="rules-list">
           <li><i class="fa-solid fa-desktop"></i> <b>ONLY MOBILE PLAYERS:</b> PC / Emulator / Panel players strictly NOT ALLOWED! Emulator detected hone par instantly kick aur zero refund!</li>
-          <li><i class="fa-solid fa-users"></i> <b>REGISTERED PLAYERS ONLY:</b> Squad ke sabhi 4 players ki details accurate fill karein. External entry kick!</li>
-          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Hacker/Panel User milne par squad ban aur clean players ko refund!</li>
-          <li><i class="fa-solid fa-trophy"></i> <b>WINNER PROOF:</b> Match Booyah hone ke baad winning squad ko Booyah ka Screenshot Insta DM par bhejna hoga!</li>
+          <li><i class="fa-solid fa-user-check"></i> <b>ONLY REGISTERED PLAYERS ALLOWED:</b> Room me sirf wahi players khel payenge jinka registration hua hai. Unregistered/new player aane par usko instantly KICK kar diya jayega!</li>
+          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar Squad me se 1 bhi player Hacker ya Panel User nikla, toh poori Squad SIKARI ESPORTS se PERMANENTLY BAN kar di jayegi!</li>
+          <li><i class="fa-solid fa-trophy"></i> <b>BOOYAH WINNER PROOF:</b> Match Booyah hone ke baad winning squad ko **Last Booyah Screen ka Screenshot** Instagram DM par bhejna zaroori hai!</li>
         </ul>
       </div>
 
@@ -156,18 +158,54 @@
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="🔥 NEW BR SQUAD 8X REGISTRATION">
 
+          <!-- PLAYER 1 (LEADER) -->
+          <div class="player-section-title"><i class="fa-solid fa-crown" style="color:#ffcc00;"></i> PLAYER 1 (SQUAD LEADER)</div>
           <div class="input-group">
-            <label><i class="fa-solid fa-user-ninja"></i> SQUAD LEADER NAME & UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-crown"></i><input type="text" name="Leader_Details" class="input-field" placeholder="Leader Name & 10-Digit UID..." required></div>
+            <label>LEADER GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-user-ninja"></i><input type="text" name="P1_Name" class="input-field" placeholder="Leader In-Game Name..." required></div>
+          </div>
+          <div class="input-group">
+            <label>LEADER GAME UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P1_UID" class="input-field" placeholder="Leader 10-Digit UID..." required></div>
           </div>
 
+          <!-- PLAYER 2 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 2</div>
           <div class="input-group">
-            <label><i class="fa-solid fa-users"></i> OTHER 3 PLAYERS NAMES & UIDs</label>
-            <div class="input-wrapper"><i class="fa-solid fa-users"></i><input type="text" name="Squad_Members" class="input-field" placeholder="Player 2, 3, 4 Names & UIDs..." required></div>
+            <label>PLAYER 2 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P2_Name" class="input-field" placeholder="Player 2 In-Game Name..." required></div>
+          </div>
+          <div class="input-group">
+            <label>PLAYER 2 GAME UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P2_UID" class="input-field" placeholder="Player 2 10-Digit UID..." required></div>
           </div>
 
+          <!-- PLAYER 3 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 3</div>
           <div class="input-group">
-            <label><i class="fa-brands fa-instagram"></i> LEADER INSTAGRAM USERNAME</label>
+            <label>PLAYER 3 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P3_Name" class="input-field" placeholder="Player 3 In-Game Name..." required></div>
+          </div>
+          <div class="input-group">
+            <label>PLAYER 3 GAME UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P3_UID" class="input-field" placeholder="Player 3 10-Digit UID..." required></div>
+          </div>
+
+          <!-- PLAYER 4 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 4</div>
+          <div class="input-group">
+            <label>PLAYER 4 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P4_Name" class="input-field" placeholder="Player 4 In-Game Name..." required></div>
+          </div>
+          <div class="input-group">
+            <label>PLAYER 4 GAME UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P4_UID" class="input-field" placeholder="Player 4 10-Digit UID..." required></div>
+          </div>
+
+          <!-- INSTAGRAM USERNAME -->
+          <div class="player-section-title"><i class="fa-brands fa-instagram" style="color:#ff0055;"></i> CONTACT INFO</div>
+          <div class="input-group">
+            <label>LEADER INSTAGRAM USERNAME</label>
             <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@leader_instagram_id" required></div>
           </div>
 

@@ -74,6 +74,12 @@
 
     .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #ff0055, #ffcc00); border: none; border-radius: 8px; color: #000; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(255, 0, 85, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
 
+    .share-trigger-box {
+      background: linear-gradient(45deg, rgba(255, 204, 0, 0.25), rgba(0, 255, 102, 0.25));
+      border: 2px dashed #ffcc00; border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 14px; cursor: pointer; transition: transform 0.2s;
+    }
+    .share-trigger-box:active { transform: scale(0.97); }
+
     .qr-box, .insta-box { display: none; text-align: center; background: rgba(15, 15, 25, 0.95); border: 2px solid #ff0055; border-radius: 16px; padding: 18px; }
     .qr-frame { background: #fff; padding: 10px; border-radius: 12px; display: inline-block; border: 3px solid #ff0055; margin: 12px 0; }
     .qr-frame img { width: 190px; height: 190px; display: block; object-fit: contain; }
@@ -82,6 +88,7 @@
     .social-join-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; font-family: 'Orbitron'; font-size: 0.82rem; font-weight: 800; }
     .sj-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
     .sj-group { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+    .sj-tg { background: #0088cc; }
 
     footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
   </style>
@@ -170,22 +177,15 @@
             <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@your_instagram_id" required></div>
           </div>
 
-          <!-- REFERRED BY INPUT FIELD -->
-          <div class="input-group">
-            <label><i class="fa-solid fa-gift" style="color:#ffcc00;"></i> REFERRED BY (FRIEND'S INSTA USERNAME) - OPTIONAL</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-user-plus" style="color:#ffcc00;"></i>
-              <input type="text" name="Referred_By" class="input-field" placeholder="E.g. @friend_insta (If anyone referred you)">
+          <!-- MULTI-OPTION REFERRAL SHARE BOX (NATIVE PHONE SHARE) -->
+          <div class="share-trigger-box" onclick="shareReferral()">
+            <div style="font-size:0.95rem; color:#ffcc00; font-family:'Orbitron'; font-weight:800; display:flex; align-items:center; justify-content:center; gap:8px;">
+              <i class="fa-solid fa-share-nodes" style="font-size:1.2rem; color:#00ff66;"></i> SHARE TOURNAMENT WITH FRIENDS
+            </div>
+            <div style="font-size:0.78rem; color:#fff; margin-top:4px; font-weight:600;">
+              Click here to share via <b style="color:#25D366;">WhatsApp</b>, <b style="color:#E1306C;">Instagram</b>, <b style="color:#0088cc;">Telegram</b> or Any App! 🚀
             </div>
           </div>
-
-          <!-- REFER 5 FRIENDS BANNER LINK -->
-          <a href="referral.html" style="text-decoration:none; display:block; margin-bottom:12px;">
-            <div style="background: linear-gradient(45deg, rgba(255, 204, 0, 0.2), rgba(0, 255, 102, 0.2)); border: 1.5px dashed #ffcc00; border-radius: 8px; padding: 10px; font-size: 0.8rem; color: #ffcc00; font-weight: 700; text-align: center; line-height: 1.4;">
-              🎁 <b>BRING 5 FRIENDS = GET 1 FREE TICKET!</b><br>
-              <span style="color:#00ff66; text-decoration:underline;">Click Here To Claim Free Entry Now ➔</span>
-            </div>
-          </a>
 
           <!-- CHECKBOX -->
           <div class="checkbox-container">
@@ -202,8 +202,9 @@
         </div>
 
         <div class="social-join-box">
-          <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> FOLLOW OFFICIAL INSTAGRAM</a>
+          <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> JOIN OFFICIAL INSTAGRAM</a>
           <a href="https://ig.me/j/AbZh7Yi-DubnF9-J/" target="_blank" class="social-join-btn sj-group"><i class="fa-solid fa-users"></i> JOIN INSTAGRAM BROADCAST GROUP</a>
+          <a href="https://t.me/sikariesport" target="_blank" class="social-join-btn sj-tg"><i class="fa-brands fa-telegram"></i> JOIN TELEGRAM GROUP</a>
         </div>
 
       </div>
@@ -250,6 +251,23 @@
       window.addEventListener("scroll", checkScroll);
       checkScroll();
     });
+
+    // NATIVE MULTI-APP SHARE FUNCTIONALITY
+    function shareReferral() {
+      const shareTitle = "🔥 SIKARI ESPORTS - Free Fire Tournaments";
+      const shareText = `🔥 Bhai SIKARI ESPORTS par Custom Matches chal rahe hain! 🏆\n\n🎁 Solo BR me ₹10 lagao ➔ ₹320 (32X) Cash Jeeto!\n\n👇 Register & Join Group Now:\nhttps://sikariesport.github.io/Sikariesport/index.html`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: 'https://sikariesport.github.io/Sikariesport/index.html'
+        }).catch((err) => console.log('Share canceled'));
+      } else {
+        navigator.clipboard.writeText(shareText);
+        alert("Referral Text & Link copied to clipboard! Share it with your friends on WhatsApp or Instagram.");
+      }
+    }
 
     function handleFormSubmit(e) {
       e.preventDefault();

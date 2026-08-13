@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🔥 SIKARI ESPORTS - BR Squad Warfare 🔥</title>
+  <title>🔥 SIKARI ESPORTS - BR Squad 8X Warfare 🔥</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
     
     .bg-animation {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: radial-gradient(circle at 50% 20%, rgba(0, 255, 102, 0.45), transparent 60%), radial-gradient(circle at 80% 80%, rgba(255, 0, 102, 0.25), transparent 50%), linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(2, 2, 4, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
+      background: radial-gradient(circle at 50% 20%, rgba(0, 204, 255, 0.45), transparent 60%), radial-gradient(circle at 80% 80%, rgba(255, 204, 0, 0.3), transparent 50%), linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(2, 2, 4, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
       z-index: -1; filter: brightness(0.65);
     }
 
@@ -24,28 +24,25 @@
     .scroll-animate.active { opacity: 1; transform: translateY(0); }
 
     .hero { text-align: center; margin-top: 5px; }
-    .logo-img { width: 100px; height: 100px; border-radius: 50%; border: 3.5px solid #00ff66; box-shadow: 0 0 35px #00ff66; object-fit: cover; animation: logoGlow 2s infinite alternate; }
-    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #00ff66; } 100% { transform: scale(1.04); box-shadow: 0 0 45px #ff0066; } }
+    .logo-img { width: 105px; height: 105px; border-radius: 50%; border: 3.5px solid #00ccff; box-shadow: 0 0 35px #00ccff; object-fit: cover; }
 
-    .main-title { font-family: 'Orbitron', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 1.5px; color: #fff; text-shadow: 0 0 15px #00ff66; }
+    .main-title { font-family: 'Orbitron', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 1.5px; color: #fff; text-shadow: 0 0 15px #00ccff; }
     .sub-title { font-size: 0.95rem; color: #ffcc00; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
 
     .jackpot-banner {
-      background: linear-gradient(135deg, rgba(0, 255, 102, 0.4), rgba(255, 0, 102, 0.4));
-      border: 2.5px solid #00ff66; border-radius: 14px; padding: 16px 10px; text-align: center; box-shadow: 0 0 35px rgba(0, 255, 102, 0.5);
-      animation: pulseGlow 1.5s infinite alternate;
+      background: linear-gradient(135deg, rgba(0, 204, 255, 0.4), rgba(255, 204, 0, 0.4));
+      border: 2.5px solid #00ccff; border-radius: 14px; padding: 16px 10px; text-align: center; box-shadow: 0 0 35px rgba(0, 204, 255, 0.5);
     }
-    @keyframes pulseGlow { 0% { box-shadow: 0 0 20px rgba(0,255,102,0.4); } 100% { box-shadow: 0 0 40px rgba(255,204,0,0.8); border-color: #ffcc00; } }
 
-    .jackpot-banner h2 { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: #ffcc00; text-transform: uppercase; text-shadow: 0 0 12px #00ff66; }
-    .jackpot-banner p { font-size: 0.95rem; color: #fff; font-weight: 800; margin-top: 4px; }
+    .jackpot-banner h2 { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: #ffcc00; text-transform: uppercase; text-shadow: 0 0 10px #00ccff; }
+    .jackpot-banner p { font-size: 0.9rem; color: #fff; font-weight: 800; margin-top: 4px; }
 
     .match-info-grid { display: flex; gap: 8px; }
-    .info-card { flex: 1; background: rgba(25, 25, 38, 0.95); border: 2px solid #00ff66; border-radius: 10px; padding: 12px 4px; text-align: center; box-shadow: 0 0 20px rgba(0,255,102,0.25); }
+    .info-card { flex: 1; background: rgba(25, 25, 38, 0.95); border: 2px solid #00ccff; border-radius: 10px; padding: 12px 4px; text-align: center; }
     .info-card .label { font-size: 0.65rem; color: #aaa; font-weight: 700; text-transform: uppercase; }
-    .info-card .val { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 900; color: #ffcc00; }
+    .info-card .val { font-family: 'Orbitron', sans-serif; font-size: 1.15rem; font-weight: 900; color: #ffcc00; }
 
-    .timing-box, .details-box, .rules-box, .registration-box { background: rgba(12, 12, 20, 0.95); border-radius: 14px; padding: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+    .details-box, .rules-box, .registration-box { background: rgba(12, 12, 20, 0.95); border-radius: 14px; padding: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
     .box-header { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; }
 
     .details-box { border: 1.5px solid #00ccff; }
@@ -59,37 +56,28 @@
     .rules-list li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; background: rgba(255, 0, 85, 0.06); padding: 8px; border-radius: 6px; border-left: 3px solid #ff0055; }
     .rules-list li i { color: #ff0055; margin-top: 2px; }
 
-    .no-per-kill-notice {
-      background: rgba(255, 204, 0, 0.15); border: 1.5px dashed #ffcc00; border-radius: 8px; padding: 10px; font-size: 0.82rem; color: #ffcc00; font-weight: 700; text-align: center; margin-bottom: 12px; line-height: 1.4;
-    }
+    .no-per-kill-notice { background: rgba(0, 204, 255, 0.15); border: 1.5px dashed #00ccff; border-radius: 8px; padding: 10px; font-size: 0.82rem; color: #00ccff; font-weight: 700; text-align: center; margin-bottom: 12px; line-height: 1.4; }
 
-    .verification-info-notice {
-      background: rgba(0, 204, 255, 0.12); border: 1.5px solid #00ccff; border-radius: 8px; padding: 10px; font-size: 0.82rem; color: #fff; text-align: left; margin-top: 14px; line-height: 1.4;
-    }
-
-    .checkbox-container {
-      display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
-    }
+    .checkbox-container { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); }
     .checkbox-container input[type="checkbox"] { width: 20px; height: 20px; accent-color: #00ff66; cursor: pointer; margin-top: 2px; }
     .checkbox-container label { font-size: 0.8rem; color: #ddd; font-weight: 700; cursor: pointer; line-height: 1.3; }
 
     .input-group { margin-bottom: 12px; text-align: left; }
     .input-group label { display: block; font-size: 0.78rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
     .input-wrapper { position: relative; display: flex; align-items: center; }
-    .input-wrapper i { position: absolute; left: 12px; color: #00ff66; }
+    .input-wrapper i { position: absolute; left: 12px; color: #00ccff; }
     .input-field { width: 100%; padding: 11px 12px 11px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.9rem; font-weight: 700; outline: none; }
 
-    .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #00b09b, #96c93d); border: none; border-radius: 8px; color: #000; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(0, 255, 102, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
-    
-    .qr-box, .insta-box { display: none; text-align: center; background: rgba(15, 15, 25, 0.95); border: 2px solid #00ff66; border-radius: 16px; padding: 18px; }
-    .qr-frame { background: #fff; padding: 10px; border-radius: 12px; display: inline-block; border: 3px solid #00ff66; margin: 12px 0; }
+    .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #00ccff, #0072ff); border: none; border-radius: 8px; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(0, 204, 255, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+    .qr-box, .insta-box { display: none; text-align: center; background: rgba(15, 15, 25, 0.95); border: 2px solid #00ccff; border-radius: 16px; padding: 18px; }
+    .qr-frame { background: #fff; padding: 10px; border-radius: 12px; display: inline-block; border: 3px solid #00ccff; margin: 12px 0; }
     .qr-frame img { width: 190px; height: 190px; display: block; object-fit: contain; }
 
     .social-join-box { margin-top: 15px; display: flex; flex-direction: column; gap: 8px; text-align: center; }
     .social-join-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; font-family: 'Orbitron'; font-size: 0.82rem; font-weight: 800; }
     .sj-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-    .sj-yt { background: #ff0000; }
-    .sj-tg { background: #0088cc; }
+    .sj-group { background: linear-gradient(45deg, #00c6ff, #0072ff); }
 
     footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
   </style>
@@ -103,22 +91,22 @@
     <!-- Header -->
     <div class="hero scroll-animate active">
       <div class="logo-frame">
-        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/00ff66/ffffff?text=SIKARI'">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/00ccff/ffffff?text=SIKARI'">
       </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
-      <p class="sub-title">⚔️ BR FULL SQUAD WARFARE ⚔️</p>
+      <p class="sub-title">💥 BR SQUAD 8X WARFARE 💥</p>
     </div>
 
-    <!-- Mega 8X Banner -->
+    <!-- Mega Banner -->
     <div class="jackpot-banner scroll-animate active">
-      <h2>🔥 BOOYAH = 8 GUNA PRIZE 🔥</h2>
-      <p>NO PER KILL • ENTRY ₹50 ➔ WINNING ₹400!</p>
+      <h2>🚀 SQUAD BOOYAH = ₹400 CASH (8X) 🚀</h2>
+      <p>NO PER KILL • SQUAD ENTRY ₹50 ➔ WIN ₹400!</p>
     </div>
 
     <!-- Match Info Grid -->
     <div class="match-info-grid scroll-animate active">
       <div class="info-card">
-        <div class="label">SQUAD ENTRY</div>
+        <div class="label">SQUAD ENTRY FEE</div>
         <div class="val" style="color:#ffcc00;">₹50</div>
       </div>
       <div class="info-card">
@@ -131,88 +119,79 @@
 
       <!-- Match Details -->
       <div class="details-box scroll-animate">
-        <div class="box-header" style="color:#00ccff;"><i class="fa-solid fa-gamepad"></i> BR SQUAD GAME SETTINGS</div>
-        <div class="detail-row"><span>Game Mode</span><span class="badge-yes">Normal BR Full Squad</span></div>
+        <div class="box-header" style="color:#00ccff;"><i class="fa-solid fa-gamepad"></i> SQUAD GAME SETTINGS</div>
+        <div class="detail-row"><span>Game Mode</span><span class="badge-yes">Normal BR Squad</span></div>
         <div class="detail-row"><span>Character Skill</span><span class="badge-yes">ALLOWED</span></div>
         <div class="detail-row"><span>Gun Attributes</span><span class="badge-yes">ALLOWED</span></div>
         <div class="detail-row"><span>Loadout & Throwables</span><span class="badge-yes">ALLOWED</span></div>
-        <div class="detail-row"><span>Total Slots Needed</span><span class="badge-yes">12 SQUAD TEAMS (48 Players)</span></div>
       </div>
 
-      <!-- Strict Squad Rules -->
+      <!-- Rules Box -->
       <div class="rules-box scroll-animate">
-        <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> STRICT SQUAD RULES & POLICY</div>
+        <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> SQUAD RULES & POLICY</div>
         <ul class="rules-list">
-          <li><i class="fa-solid fa-users"></i> <b>SLOT FILLING POLICY:</b> Jab tak match me poore <b>12 Squad Teams (48 Players)</b> nahi bharte, tab tak match create nahi kiya jayega. Slots na bharne par aapka paisa **Full Refund** ya **Agle Match** me jod diya jayega.</li>
-          <li><i class="fa-solid fa-user-shield"></i> <b>ONLY REGISTERED SQUAD:</b> Room me wahi 4 players aayenge jinka registration hua hai. Unregistered players ko kick kar diya jayega!</li>
-          <li><i class="fa-solid fa-users-slash"></i> <b>PLAYER NON-ATTENDANCE:</b> Agar koi player time par nahi aata, toh bache hue squad players se hi khelna padega. No refund & no external entry!</li>
-          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar Squad me se 1 bhi teammate Hacker/Panel User nikla, toh POORI SQUAD Sikari Esports se PERMANENTLY BAN ho jayegi!</li>
-          <li><i class="fa-solid fa-trophy"></i> <b>WINNER PROOF:</b> Match Booyah hone ke baad Captain ko winning screenshot Insta DM par bhejna hoga!</li>
+          <li><i class="fa-solid fa-desktop"></i> <b>ONLY MOBILE PLAYERS:</b> PC / Emulator / Panel players strictly NOT ALLOWED! Emulator detected hone par instantly kick aur zero refund!</li>
+          <li><i class="fa-solid fa-users"></i> <b>REGISTERED PLAYERS ONLY:</b> Squad ke sabhi 4 players ki details accurate fill karein. External entry kick!</li>
+          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Hacker/Panel User milne par squad ban aur clean players ko refund!</li>
         </ul>
       </div>
 
       <!-- Registration Form -->
       <div class="registration-box scroll-animate">
-        <div class="box-header" style="color:#00ff66; justify-content:center;"><i class="fa-solid fa-users-gear"></i> SQUAD REGISTRATION</div>
+        <div class="box-header" style="color:#00ff66; justify-content:center;"><i class="fa-solid fa-users"></i> SQUAD REGISTRATION FORM</div>
         
-        <!-- NO PER KILL NOTICE -->
         <div class="no-per-kill-notice">
-          ⚠️ <b>IMPORTANT NOTE:</b> Ye Match PER KILL par paise NAHI deta. Sirf **Booyah** karne wali Squad ko hi **₹400 Cash** milega!
+          ⚠️ <b>IMPORTANT NOTE:</b> Squad Entry Fee ₹50 hai. Only Booyah karne wali Squad ko **₹400 Cash** milega!
         </div>
 
         <form id="registrationForm" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="🔥 NEW BR SQUAD MATCH REGISTRATION">
+          <input type="hidden" name="_subject" value="🔥 NEW BR SQUAD 8X REGISTRATION">
 
           <div class="input-group">
-            <label><i class="fa-solid fa-user-ninja"></i> CAPTAIN (P1) GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P1_Name" class="input-field" placeholder="Player 1 Name..." required></div>
-          </div>
-          <div class="input-group">
-            <label><i class="fa-solid fa-hashtag"></i> CAPTAIN (P1) GAME UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P1_UID" class="input-field" placeholder="Player 1 UID..." required></div>
+            <label><i class="fa-solid fa-user-ninja"></i> SQUAD LEADER NAME & UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-crown"></i><input type="text" name="Leader_Details" class="input-field" placeholder="Leader Name & 10-Digit UID..." required></div>
           </div>
 
           <div class="input-group">
-            <label><i class="fa-solid fa-user-group"></i> PLAYER 2 GAME NAME & UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P2_Details" class="input-field" placeholder="Name & UID..." required></div>
+            <label><i class="fa-solid fa-users"></i> OTHER 3 PLAYERS NAMES & UIDs</label>
+            <div class="input-wrapper"><i class="fa-solid fa-users"></i><input type="text" name="Squad_Members" class="input-field" placeholder="Player 2, 3, 4 Names & UIDs..." required></div>
           </div>
 
           <div class="input-group">
-            <label><i class="fa-solid fa-user-group"></i> PLAYER 3 GAME NAME & UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P3_Details" class="input-field" placeholder="Name & UID..." required></div>
+            <label><i class="fa-brands fa-instagram"></i> LEADER INSTAGRAM USERNAME</label>
+            <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@leader_instagram_id" required></div>
           </div>
 
+          <!-- REFERRED BY INPUT FIELD -->
           <div class="input-group">
-            <label><i class="fa-solid fa-user-group"></i> PLAYER 4 GAME NAME & UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P4_Details" class="input-field" placeholder="Name & UID..." required></div>
+            <label><i class="fa-solid fa-gift" style="color:#ffcc00;"></i> REFERRED BY (FRIEND'S INSTA USERNAME) - OPTIONAL</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user-plus" style="color:#ffcc00;"></i>
+              <input type="text" name="Referred_By" class="input-field" placeholder="E.g. @friend_insta (If anyone referred you)">
+            </div>
           </div>
 
-          <div class="input-group">
-            <label><i class="fa-brands fa-instagram"></i> CAPTAIN INSTAGRAM USERNAME</label>
-            <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@captain_insta_id" required></div>
-          </div>
+          <!-- REFER 5 FRIENDS BANNER LINK -->
+          <a href="referral.html" style="text-decoration:none; display:block; margin-bottom:12px;">
+            <div style="background: linear-gradient(45deg, rgba(255, 204, 0, 0.2), rgba(0, 255, 102, 0.2)); border: 1.5px dashed #ffcc00; border-radius: 8px; padding: 10px; font-size: 0.8rem; color: #ffcc00; font-weight: 700; text-align: center; line-height: 1.4;">
+              🎁 <b>BRING 5 FRIENDS = GET 1 FREE TICKET!</b><br>
+              <span style="color:#00ff66; text-decoration:underline;">Click Here To Claim Free Entry Now ➔</span>
+            </div>
+          </a>
 
-          <!-- MANDATORY TICK CHECKBOX POLICY -->
+          <!-- CHECKBOX -->
           <div class="checkbox-container">
             <input type="checkbox" id="rulesCheck" required>
-            <label for="rulesCheck">Maine Sikari Esports ke saare Rules padh liye hain aur main Anti-Hack/No-Refund Policy se agree karta hoon. Payment ka screenshot Insta DM me bhejna zaroori hai.</label>
+            <label for="rulesCheck">Maine Sikari Esports ke saare Rules padh liye hain aur main Anti-Hack/Mobile-Only Policy se agree karta hoon.</label>
           </div>
 
-          <button type="submit" class="btn-main" id="submitBtn">PROCEED TO PAY ₹50 <i class="fa-solid fa-qrcode"></i></button>
+          <button type="submit" class="btn-main" id="submitBtn">PAY SQUAD FEE ₹50 <i class="fa-solid fa-qrcode"></i></button>
         </form>
 
-        <!-- VERIFICATION NOTICE BELOW FORM -->
-        <div class="verification-info-notice">
-          📩 <b>PAYMENT VERIFICATION RULE:</b><br>
-          Payment karne ke baad payment ka screenshot hamare **Official Instagram (@sikariesport)** par DM karna compulsory hai. Screenshot verify hone ke baad hi aapko Instagram DM par Room ID & Password bhej diya jayega!
-        </div>
-
-        <!-- SOCIAL JOIN BUTTONS BELOW REGISTRATION -->
         <div class="social-join-box">
-          <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> JOIN OFFICIAL INSTAGRAM</a>
-          <a href="https://youtube.com/@sikariesport?si=ooacqqoAL_F0hMb8" target="_blank" class="social-join-btn sj-yt"><i class="fa-brands fa-youtube"></i> SUBSCRIBE YOUTUBE CHANNEL</a>
-          <a href="https://t.me/sikariesport" target="_blank" class="social-join-btn sj-tg"><i class="fa-brands fa-telegram"></i> JOIN TELEGRAM GROUP</a>
+          <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> FOLLOW OFFICIAL INSTAGRAM</a>
+          <a href="https://ig.me/j/AbZh7Yi-DubnF9-J/" target="_blank" class="social-join-btn sj-group"><i class="fa-solid fa-users"></i> JOIN INSTAGRAM BROADCAST GROUP</a>
         </div>
 
       </div>
@@ -221,27 +200,27 @@
 
     <!-- QR Page -->
     <div class="qr-box" id="qrPage">
-      <h2 style="font-family: 'Orbitron'; color: #00ff66;">SCAN & PAY SQUAD ENTRY</h2>
-      <p style="color: #ffcc00; font-size: 0.95rem; font-weight: bold; margin-top: 3px;">Entry Fee: ₹50 | Winning Prize: ₹400</p>
+      <h2 style="font-family: 'Orbitron'; color: #ffcc00;">SCAN & PAY SQUAD ENTRY FEE</h2>
+      <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 3px;">Squad Fee: ₹50 | Winning Prize: ₹400</p>
       <div class="qr-frame"><img src="qr.jpeg" alt="QR Code"></div>
       <div style="font-size:0.82rem; color:#ffcc00; margin-bottom:10px; font-weight:bold;">⚠️ Pay karne ke baad screenshot sirf hamare Instagram DM par bhejein!</div>
       <button class="btn-main" onclick="openInstaPage()"><i class="fa-solid fa-upload"></i> VERIFY VIA INSTA DM</button>
     </div>
 
-    <!-- Insta DM Page (ONLY INSTAGRAM HERE) -->
+    <!-- Insta DM Page -->
     <div class="insta-box" id="instaPage">
-      <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #00ff66; margin-bottom:8px;"></i>
+      <i class="fa-solid fa-shield-halved" style="font-size: 3.5rem; color: #00ccff; margin-bottom:8px;"></i>
       <h2 style="font-family: 'Orbitron'; font-size: 1.3rem;">INSTAGRAM VERIFICATION</h2>
       <p style="font-size:0.85rem; color:#ccc; margin: 10px 0; line-height:1.4;">
         Payment Screenshot hamare **Official Instagram DM** par bhejein.<br>
-        Verification complete hone ke baad match start hone se 3-10 minutes pehle aapko direct **Instagram DM** par Room ID & Password bhej diya jayega!
+        Verification complete hone ke baad Squad Leader ko **Instagram DM** par Room ID & Password bhej diya jayega!
       </p>
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" class="btn-main" style="text-decoration:none; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; margin-top:12px;">
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="btn-main" style="text-decoration:none; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; margin-top:12px;">
         <i class="fa-brands fa-instagram" style="font-size:1.3rem;"></i> SEND SCREENSHOT ON INSTA DM
       </a>
     </div>
 
-    <footer class="scroll-animate">
+    <footer>
       © 2026 SIKARI ESPORTS. All Rights Reserved.
     </footer>
 

@@ -82,6 +82,42 @@
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; text-decoration: none; padding: 12px; border-radius: 8px; font-family: 'Orbitron'; font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin: 10px 0; box-shadow: 0 0 20px rgba(220,39,67,0.5);
     }
 
+    .share-trigger-box {
+      background: linear-gradient(45deg, rgba(255, 204, 0, 0.25), rgba(0, 255, 102, 0.25));
+      border: 2px dashed #ffcc00;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      margin-bottom: 14px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .share-trigger-box:active { transform: scale(0.97); }
+
+    .social-join-box {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+    .social-join-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      font-family: 'Orbitron';
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+    .sj-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .sj-group { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+    .sj-tg { background: #0088cc; }
+
     .verification-box { display: none; text-align: center; background: rgba(15, 15, 25, 0.95); border: 2px solid #00ff66; border-radius: 16px; padding: 18px; }
 
     footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
@@ -135,6 +171,7 @@
       <div class="rules-box scroll-animate">
         <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> FREE TOURNAMENT ENTRY RULES</div>
         <ul class="rules-list">
+          <li><i class="fa-solid fa-desktop"></i> <b>ONLY MOBILE PLAYERS:</b> PC / Emulator / Panel players strictly NOT ALLOWED! Emulator detected hone par instantly kick aur zero entry!</li>
           <li><i class="fa-solid fa-share-nodes"></i> <b>SHARE RULE (MANDATORY):</b> Free Match khelne ke liye aapko hamari Official Instagram Reel apne <b>5 Free Fire Dosto</b> ko Share karni hogi aur uska Screenshot Insta DM me bhejna padega!</li>
           <li><i class="fa-solid fa-users"></i> <b>SLOT FILLING POLICY:</b> Jab tak match me poore <b>50 Solo Slots</b> nahi bharte, tab tak Room ID nahi milega.</li>
           <li><i class="fa-solid fa-user-shield"></i> <b>ONLY REGISTERED PLAYERS:</b> Room me wahi player aayega jiska Name aur UID registered hai.</li>
@@ -176,6 +213,16 @@
             <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@your_instagram_id" required></div>
           </div>
 
+          <!-- MULTI-OPTION REFERRAL SHARE BOX (NATIVE PHONE SHARE) -->
+          <div class="share-trigger-box" onclick="shareReferral()">
+            <div style="font-size:0.95rem; color:#ffcc00; font-family:'Orbitron'; font-weight:800; display:flex; align-items:center; justify-content:center; gap:8px;">
+              <i class="fa-solid fa-share-nodes" style="font-size:1.2rem; color:#00ff66;"></i> SHARE TOURNAMENT WITH FRIENDS
+            </div>
+            <div style="font-size:0.78rem; color:#fff; margin-top:4px; font-weight:600;">
+              Click here to share via <b style="color:#25D366;">WhatsApp</b>, <b style="color:#E1306C;">Instagram</b>, <b style="color:#0088cc;">Telegram</b> or Any App! 🚀
+            </div>
+          </div>
+
           <!-- MANDATORY TICK CHECKBOX POLICY -->
           <div class="checkbox-container">
             <input type="checkbox" id="rulesCheck" required>
@@ -184,6 +231,12 @@
 
           <button type="submit" class="btn-main" id="submitBtn">CONFIRM FREE REGISTRATION <i class="fa-solid fa-circle-check"></i></button>
         </form>
+
+        <div class="social-join-box">
+          <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> JOIN OFFICIAL INSTAGRAM</a>
+          <a href="https://ig.me/j/AbZh7Yi-DubnF9-J/" target="_blank" class="social-join-btn sj-group"><i class="fa-solid fa-users"></i> JOIN INSTAGRAM BROADCAST GROUP</a>
+          <a href="https://t.me/sikariesport" target="_blank" class="social-join-btn sj-tg"><i class="fa-brands fa-telegram"></i> JOIN TELEGRAM GROUP</a>
+        </div>
 
       </div>
 
@@ -220,6 +273,23 @@
       window.addEventListener("scroll", checkScroll);
       checkScroll();
     });
+
+    // NATIVE MULTI-APP SHARE FUNCTIONALITY
+    function shareReferral() {
+      const shareTitle = "🔥 SIKARI ESPORTS - Free Fire Tournaments";
+      const shareText = `🔥 Bhai SIKARI ESPORTS par FREE Custom Match chal raha hai! 🏆\n\n🎁 ₹0 Entry Fee ➔ Booyah wins ₹50 Cash!\n\n👇 Register & Join Group Now:\nhttps://sikariesport.github.io/Sikariesport/index.html`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: 'https://sikariesport.github.io/Sikariesport/index.html'
+        }).catch((err) => console.log('Share canceled'));
+      } else {
+        navigator.clipboard.writeText(shareText);
+        alert("Referral Text & Link copied to clipboard! Share it with your friends on WhatsApp or Instagram.");
+      }
+    }
 
     function handleFormSubmit(e) {
       e.preventDefault();

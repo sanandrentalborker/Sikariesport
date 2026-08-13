@@ -88,6 +88,7 @@
     .social-join-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; font-family: 'Orbitron'; font-size: 0.82rem; font-weight: 800; }
     .sj-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
     .sj-group { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+    .sj-telegram { background: #0088cc; }
 
     footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
   </style>
@@ -178,19 +179,10 @@
             <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" id="instaHandleInput" class="input-field" placeholder="@your_instagram_id" required></div>
           </div>
 
-          <!-- REFERRED BY INPUT FIELD -->
-          <div class="input-group">
-            <label><i class="fa-solid fa-gift" style="color:#ffcc00;"></i> REFERRED BY (FRIEND'S INSTA USERNAME) - OPTIONAL</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-user-plus" style="color:#ffcc00;"></i>
-              <input type="text" name="Referred_By" class="input-field" placeholder="E.g. @friend_insta (If anyone referred you)">
-            </div>
-          </div>
-
           <!-- MULTI-OPTION REFERRAL SHARE BOX (NATIVE PHONE SHARE) -->
           <div class="share-trigger-box" onclick="shareReferral()">
             <div style="font-size:0.95rem; color:#ffcc00; font-family:'Orbitron'; font-weight:800; display:flex; align-items:center; justify-content:center; gap:8px;">
-              <i class="fa-solid fa-share-nodes" style="font-size:1.2rem; color:#00ff66;"></i> REFER 5 FRIENDS = GET FREE ENTRY!
+              <i class="fa-solid fa-share-nodes" style="font-size:1.2rem; color:#00ff66;"></i> SHARE TOURNAMENT WITH FRIENDS
             </div>
             <div style="font-size:0.78rem; color:#fff; margin-top:4px; font-weight:600;">
               Click here to share via <b style="color:#25D366;">WhatsApp</b>, <b style="color:#E1306C;">Instagram</b>, <b style="color:#0088cc;">Telegram</b> or Any App! 🚀
@@ -216,6 +208,7 @@
         <div class="social-join-box">
           <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="social-join-btn sj-insta"><i class="fa-brands fa-instagram"></i> JOIN OFFICIAL INSTAGRAM</a>
           <a href="https://ig.me/j/AbZh7Yi-DubnF9-J/" target="_blank" class="social-join-btn sj-group"><i class="fa-solid fa-users"></i> JOIN INSTAGRAM BROADCAST GROUP</a>
+          <a href="https://t.me/sikariesport" target="_blank" class="social-join-btn sj-telegram"><i class="fa-brands fa-telegram"></i> JOIN TELEGRAM GROUP</a>
         </div>
 
       </div>
@@ -265,9 +258,8 @@
 
     // NATIVE MULTI-APP SHARE FUNCTIONALITY
     function shareReferral() {
-      const userInsta = document.getElementById("instaHandleInput").value.trim() || "@your_id";
       const shareTitle = "🔥 SIKARI ESPORTS - Free Fire Tournaments";
-      const shareText = `🔥 Bhai SIKARI ESPORTS par Custom Matches chal rahe hain! 🏆\n\n🎁 ₹0 me ₹50 Cash aur Solo BR me ₹50 lagao ➔ ₹1600 (32X) Cash Jeeto!\n\n👉 Form bharete time "Referred By" me mera Insta Handle [ ${userInsta} ] daal dena!\n\n👇 Register & Join Group Now:\nhttps://sikariesport.github.io/Sikariesport/index.html`;
+      const shareText = `🔥 Bhai SIKARI ESPORTS par Custom Matches chal rahe hain! 🏆\n\n🎁 Solo BR me ₹50 lagao ➔ ₹1600 (32X) Cash Jeeto!\n\n👇 Register & Join Group Now:\nhttps://sikariesport.github.io/Sikariesport/index.html`;
 
       if (navigator.share) {
         navigator.share({
@@ -276,7 +268,6 @@
           url: 'https://sikariesport.github.io/Sikariesport/index.html'
         }).catch((err) => console.log('Share canceled'));
       } else {
-        // Fallback for browsers that don't support native share
         navigator.clipboard.writeText(shareText);
         alert("Referral Text & Link copied to clipboard! Share it with your friends on WhatsApp or Instagram.");
       }

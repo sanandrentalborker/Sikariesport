@@ -3,90 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🔥 SIKARI ESPORTS - Free Fire Mega Booyah Hub 🔥</title>
-
+  <title>🔥 SIKARI ESPORTS - Official Gaming Hub 🔥</title>
+  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rajdhani', sans-serif; -webkit-tap-highlight-color: transparent; }
-    body { background: #020204; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; overflow-x: hidden; padding: 12px 10px 40px 10px; }
+    body { background: #030305; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; overflow-x: hidden; padding: 12px 10px 40px 10px; }
+    
+    .bg-animation {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 0, 102, 0.45), transparent 60%), radial-gradient(circle at 80% 80%, rgba(0, 204, 255, 0.3), transparent 50%), linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(2, 2, 4, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
+      z-index: -1; filter: brightness(0.65);
+    }
 
-    .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 20%, rgba(255, 0, 102, 0.45), transparent 60%), radial-gradient(circle at 80% 80%, rgba(0, 255, 102, 0.25), transparent 50%), linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(2, 2, 4, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat; z-index: -1; filter: brightness(0.65); }
     .main-wrapper { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 16px; }
-
     .scroll-animate { opacity: 0; transform: translateY(25px); transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
     .scroll-animate.active { opacity: 1; transform: translateY(0); }
 
     .hero { text-align: center; margin-top: 5px; }
     .logo-img { width: 110px; height: 110px; border-radius: 50%; border: 3.5px solid #ff0066; box-shadow: 0 0 35px #ff0066; object-fit: cover; animation: logoGlow 2s infinite alternate; }
-    @keyframes logoGlow { 0% { transform: scale(1); } 100% { transform: scale(1.05); box-shadow: 0 0 50px #ff5500; } }
+    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #ff0066; } 100% { transform: scale(1.05); box-shadow: 0 0 50px #ff5500; } }
 
     .main-title { font-family: 'Orbitron', sans-serif; font-size: 2.1rem; font-weight: 900; letter-spacing: 2px; color: #fff; text-shadow: 0 0 15px #ff0066; }
-    .sub-title { font-size: 1rem; color: #ffcc00; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+    .sub-title { font-size: 0.95rem; color: #ffcc00; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
 
-    /* MEGA BOOYAH PRIZE SHOWCASE */
-    .jackpot-container { display: flex; flex-direction: column; gap: 12px; margin-top: 5px; }
-    
-    .jackpot-card {
-      background: linear-gradient(135deg, rgba(20, 20, 35, 0.95), rgba(10, 10, 20, 0.95));
-      border-radius: 14px; padding: 16px 12px; text-align: center; position: relative; overflow: hidden;
-      box-shadow: 0 0 25px rgba(0,0,0,0.8); transition: transform 0.2s;
-    }
-    .jackpot-card:active { transform: scale(0.98); }
+    /* REFERRAL PROMO CARD */
+    .referral-banner { background: linear-gradient(45deg, #ffcc00, #ff9900); border-radius: 12px; padding: 16px; text-align: center; color: #000; text-decoration: none; font-weight: 900; font-family: 'Orbitron'; display: block; box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); }
 
-    .card-solo { border: 2.5px solid #ff0055; box-shadow: 0 0 30px rgba(255, 0, 85, 0.45); }
-    .card-duo { border: 2.5px solid #00ccff; box-shadow: 0 0 25px rgba(0, 204, 255, 0.35); }
-    .card-squad { border: 2.5px solid #00ff66; box-shadow: 0 0 25px rgba(0, 255, 102, 0.35); }
+    /* MATCH CARDS */
+    .jackpot-card { background: rgba(18, 18, 28, 0.95); border-radius: 12px; padding: 14px; border: 1.5px solid #2a2a3d; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #fff; transition: transform 0.2s; }
+    .mc-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; }
+    .mc-title { font-family: 'Orbitron'; font-size: 0.95rem; font-weight: 800; }
+    .mc-prize { font-family: 'Orbitron'; font-size: 1.1rem; font-weight: 900; color: #ffcc00; }
 
-    .multiplier-tag { font-family: 'Orbitron', sans-serif; font-size: 1.7rem; font-weight: 900; text-transform: uppercase; }
-    .tag-solo { color: #ff0055; text-shadow: 0 0 15px #ff0055; }
-    .tag-duo { color: #00ccff; text-shadow: 0 0 15px #00ccff; }
-    .tag-squad { color: #00ff66; text-shadow: 0 0 15px #00ff66; }
+    /* TRUST SECTION */
+    .trust-box { background: rgba(12, 12, 20, 0.95); border: 1.5px solid #00ccff; border-radius: 14px; padding: 16px; }
+    .trust-box h3 { font-family: 'Orbitron'; font-size: 0.95rem; color: #00ccff; margin-bottom: 10px; }
+    .feature-list { list-style: none; font-size: 0.82rem; color: #ddd; }
+    .feature-list li { margin-bottom: 8px; display: flex; gap: 8px; }
+    .feature-list li i { color: #00ff66; margin-top: 3px; }
 
-    .prize-highlight { font-family: 'Orbitron', sans-serif; font-size: 1.35rem; font-weight: 900; color: #fff; margin: 6px 0; }
-
-    /* TRUST ARTICLE BOX */
-    .trust-article-box {
-      background: rgba(12, 12, 20, 0.95);
-      border: 1.5px solid #00ccff;
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: 0 0 20px rgba(0,204,255,0.2);
-    }
-
-    .trust-article-box h3 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.98rem;
-      color: #00ccff;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .feature-list { list-style: none; font-size: 0.82rem; color: #ddd; line-height: 1.5; }
-    .feature-list li {
-      margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;
-      background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px; border-left: 2.5px solid #00ccff;
-    }
-    .feature-list li i { color: #00ccff; margin-top: 2px; }
-
-    .promo-section-title { font-family: 'Orbitron', sans-serif; font-size: 1.05rem; color: #ffcc00; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; margin-top: 10px; }
-
-    .social-btn {
-      display: flex; align-items: center; justify-content: space-between; padding: 16px; border-radius: 14px; text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; font-weight: 800; font-size: 1rem; box-shadow: 0 0 20px rgba(0,0,0,0.6); transition: transform 0.2s;
-    }
-    .social-btn:active { transform: scale(0.97); }
-
-    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border: 1.5px solid #ff3388; box-shadow: 0 0 25px rgba(220, 39, 67, 0.5); }
-    .btn-youtube { background: linear-gradient(45deg, #ff0000, #cc0000, #990000); border: 1.5px solid #ff4d4d; box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); }
-    .btn-telegram { background: linear-gradient(45deg, #0088cc, #00aaff, #005580); border: 1.5px solid #33bbff; box-shadow: 0 0 25px rgba(0, 136, 204, 0.5); }
-
-    .social-left { display: flex; align-items: center; gap: 12px; }
-    .social-left i { font-size: 1.8rem; }
-
-    footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; padding-bottom: 10px; font-weight: 600; }
+    /* SOCIAL BUTTONS */
+    .social-btn { display: flex; align-items: center; justify-content: space-between; padding: 14px; border-radius: 12px; text-decoration: none; color: #fff; font-family: 'Orbitron'; font-weight: 800; font-size: 0.9rem; margin-bottom: 8px; }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .btn-youtube { background: #ff0000; }
+    .btn-telegram { background: #0088cc; }
+    .btn-broadcast { background: #6c5ce7; }
   </style>
 </head>
 <body>
@@ -95,120 +59,69 @@
 
   <div class="main-wrapper">
 
-    <!-- Hero Header -->
+    <!-- Header -->
     <div class="hero scroll-animate active">
-      <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/110/ff0066/ffffff?text=SIKARI'">
+      <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img">
       <h1 class="main-title">SIKARI ESPORTS</h1>
-      <p class="sub-title">⚡ FREE FIRE MEGA BOOYAH HUB ⚡</p>
+      <p class="sub-title">⚡ OFFICIAL GAMING HUB ⚡</p>
     </div>
 
-    <!-- MEGA BOOYAH PRIZE SHOWCASE -->
+    <!-- REFERRAL LINK -->
+    <a href="referral.html" class="referral-banner scroll-animate active">
+      🎁 SHARE & INVITE FRIENDS ➔ GET FREE ENTRIES!
+    </a>
+
+    <!-- MATCHES GRID -->
     <div class="jackpot-container">
-      
-      <!-- SOLO 32X SHOWCASE -->
-      <a href="soloboooyah.html" style="text-decoration:none;" class="jackpot-card card-solo scroll-animate active">
-        <div class="multiplier-tag tag-solo">🚀 1 KA 32 GUNA 🚀</div>
-        <div class="prize-highlight">BR SOLO: ENTRY ₹50 ➔ WIN ₹1600</div>
-        <p style="font-size:0.82rem; color:#ccc;">Booyah King Takes Mega ₹1600 Cash Prize!</p>
+      <a href="freesolo.html" class="jackpot-card scroll-animate active" style="border-color:#00ff66;">
+        <div class="mc-header"><span class="mc-title">SOLO FREE ENTRY</span><span class="mc-prize">WIN ₹50</span></div>
+        <p style="font-size:0.8rem; color:#aaa;">No Entry Fee! Practice & Win Cash.</p>
       </a>
 
-      <!-- DUO 16X SHOWCASE -->
-      <a href="brduo.html" style="text-decoration:none;" class="jackpot-card card-duo scroll-animate active">
-        <div class="multiplier-tag tag-duo">⚡ 1 KA 16 GUNA ⚡</div>
-        <div class="prize-highlight">BR DUO: ENTRY ₹50 ➔ WIN ₹800</div>
-        <p style="font-size:0.82rem; color:#ccc;">Winning Duo Takes ₹800 Prize Pool!</p>
+      <a href="soloboooyah.html" class="jackpot-card scroll-animate active" style="border-color:#ff0055;">
+        <div class="mc-header"><span class="mc-title">SOLO (1 KA 32 GUNA)</span><span class="mc-prize">WIN ₹320</span></div>
+        <p style="font-size:0.8rem; color:#aaa;">Entry ₹10 | Mega Prize Pool!</p>
       </a>
 
-      <!-- SQUAD 8X SHOWCASE -->
-      <a href="brsquad.html" style="text-decoration:none;" class="jackpot-card card-squad scroll-animate active">
-        <div class="multiplier-tag tag-squad">💥 1 KA 8 GUNA 💥</div>
-        <div class="prize-highlight">BR SQUAD: ENTRY ₹50 ➔ WIN ₹400</div>
-        <p style="font-size:0.82rem; color:#ccc;">Winning Squad Takes ₹400 Prize Pool!</p>
+      <a href="brduo.html" class="jackpot-card scroll-animate active" style="border-color:#00ccff;">
+        <div class="mc-header"><span class="mc-title">DUO (1 KA 16 GUNA)</span><span class="mc-prize">WIN ₹800</span></div>
+        <p style="font-size:0.8rem; color:#aaa;">Entry ₹50 | Duo Partner Battle!</p>
       </a>
 
+      <a href="brsquad.html" class="jackpot-card scroll-animate active" style="border-color:#00ff66;">
+        <div class="mc-header"><span class="mc-title">SQUAD (1 KA 8 GUNA)</span><span class="mc-prize">WIN ₹400</span></div>
+        <p style="font-size:0.8rem; color:#aaa;">Entry ₹50 | Squad Warfare!</p>
+      </a>
     </div>
 
-    <!-- TRUST & OFFICE PROOF ARTICLE -->
-    <div class="trust-article-box scroll-animate">
-      <h3><i class="fa-solid fa-shield-halved"></i> WHY TRUST SIKARI ESPORTS?</h3>
+    <!-- TRUST SECTION -->
+    <div class="trust-box scroll-animate active">
+      <h3><i class="fa-solid fa-shield-halved"></i> WHY PLAY WITH SIKARI?</h3>
       <ul class="feature-list">
-        <li>
-          <i class="fa-solid fa-bolt"></i>
-          <div><b>INSTANT PAYMENT GUARANTEE:</b> Match Booyah hote hi Winning Amount aapke direct Bank / UPI me transfer ho jata hai.</div>
-        </li>
-        <li>
-          <i class="fa-solid fa-ban"></i>
-          <div><b>ZERO HACKERS & PANEL USERS:</b> Strict Anti-Hack Monitoring. Cheater milne par Permanent Ban & Clean players ko Full Refund!</div>
-        </li>
-        <li>
-          <i class="fa-solid fa-building"></i>
-          <div><b>OFFICIAL REGISTERED ORGANIZERS:</b> Proper Office Managed Platform. Bina kisi rukawat ke aap jitna chahein utna jeet sakte hain.</div>
-        </li>
+        <li><i class="fa-solid fa-bolt"></i> <b>INSTANT PAYOUTS:</b> Jeetne par turant aapke Bank/UPI me payment ata hai.</li>
+        <li><i class="fa-solid fa-money-bill-transfer"></i> <b>INSTANT REFUND:</b> Match slots na bharne par turant paisa wapas milta hai.</li>
+        <li><i class="fa-solid fa-ban"></i> <b>NO HACKERS:</b> Strict Anti-Hack Policy for fair play.</li>
       </ul>
     </div>
 
-    <!-- PROMOTION SOCIAL LINKS SECTION -->
-    <div class="promo-section-title scroll-animate"><i class="fa-solid fa-bullhorn" style="color:#ff0066;"></i> JOIN OUR OFFICIAL CHANNELS</div>
-
-    <div style="display:flex; flex-direction:column; gap:12px;">
-
-      <!-- INSTAGRAM BUTTON -->
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg==" target="_blank" rel="noopener noreferrer" class="social-btn btn-insta scroll-animate">
-        <div class="social-left">
-          <i class="fa-brands fa-instagram"></i>
-          <div>
-            <div>INSTAGRAM</div>
-            <div style="font-size:0.72rem; color:#ffe6f0; font-family:'Rajdhani';">Room ID & Pass DM / Story Updates</div>
-          </div>
-        </div>
-        <i class="fa-solid fa-chevron-right"></i>
-      </a>
-
-      <!-- YOUTUBE BUTTON -->
-      <a href="https://youtube.com/@sikariesport?si=ooacqqoAL_F0hMb8" target="_blank" rel="noopener noreferrer" class="social-btn btn-youtube scroll-animate">
-        <div class="social-left">
-          <i class="fa-brands fa-youtube"></i>
-          <div>
-            <div>YOUTUBE CHANNEL</div>
-            <div style="font-size:0.72rem; color:#ffe6e6; font-family:'Rajdhani';">Live Streams & Tournaments</div>
-          </div>
-        </div>
-        <i class="fa-solid fa-chevron-right"></i>
-      </a>
-
-      <!-- TELEGRAM BUTTON -->
-      <a href="https://t.me/sikariesport" target="_blank" rel="noopener noreferrer" class="social-btn btn-telegram scroll-animate">
-        <div class="social-left">
-          <i class="fa-brands fa-telegram"></i>
-          <div>
-            <div>TELEGRAM GROUP</div>
-            <div style="font-size:0.72rem; color:#e6f7ff; font-family:'Rajdhani';">Instant Alerts & Payment Proofs</div>
-          </div>
-        </div>
-        <i class="fa-solid fa-chevron-right"></i>
-      </a>
-
+    <!-- SOCIALS -->
+    <div style="margin-top:10px;">
+      <a href="https://www.instagram.com/sikariesport" class="social-btn btn-insta"><div class="social-left"><i class="fa-brands fa-instagram"></i> INSTAGRAM</div><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="https://ig.me/j/AbZh7Yi-DubnF9-J/" class="social-btn btn-broadcast"><div class="social-left"><i class="fa-solid fa-users"></i> INSTA BROADCAST</div><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="https://t.me/sikariesport" class="social-btn btn-telegram"><div class="social-left"><i class="fa-brands fa-telegram"></i> TELEGRAM CHANNEL</div><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="https://youtube.com/@sikariesport" class="social-btn btn-youtube"><div class="social-left"><i class="fa-brands fa-youtube"></i> YOUTUBE CHANNEL</div><i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="scroll-animate">
-      © 2026 SIKARI ESPORTS. All Rights Reserved.<br>
-      <span style="font-size:0.72rem; color:#666;">Built for True Gamers ⚡ Safe, Fast & Fair Esports Platform</span>
-    </footer>
-
+    <footer>© 2026 SIKARI ESPORTS</footer>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const animatedElements = document.querySelectorAll(".scroll-animate");
-      function checkScroll() {
-        const triggerBottom = window.innerHeight * 0.92;
-        animatedElements.forEach(el => {
-          if (el.getBoundingClientRect().top < triggerBottom) el.classList.add("active");
-        });
-      }
-      window.addEventListener("scroll", checkScroll);
-      checkScroll();
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("active"); });
+      });
+      animatedElements.forEach(el => observer.observe(el));
     });
   </script>
 </body>

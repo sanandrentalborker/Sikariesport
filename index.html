@@ -20,32 +20,35 @@
     
     .main-wrapper { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 16px; }
 
-    .scroll-animate { opacity: 0; transform: translateY(25px); transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
-    .scroll-animate.active { opacity: 1; transform: translateY(0); }
+    /* Ultra-Smooth Scroll Animation */
+    .scroll-animate { opacity: 0; transform: translateY(35px) scale(0.96); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .scroll-animate.active { opacity: 1; transform: translateY(0) scale(1); }
 
     /* Hero Header */
     .hero { text-align: center; margin-top: 5px; }
     .logo-img { width: 115px; height: 110px; border-radius: 50%; border: 3.5px solid #ffcc00; box-shadow: 0 0 35px #ffcc00; object-fit: cover; animation: logoGlow 2s infinite alternate; }
-    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #ffcc00; } 100% { transform: scale(1.05); box-shadow: 0 0 50px #ff0066; } }
+    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #ffcc00; } 100% { transform: scale(1.06); box-shadow: 0 0 50px #ff0066; } }
 
     .main-title { font-family: 'Orbitron', sans-serif; font-size: 2.1rem; font-weight: 900; letter-spacing: 2px; color: #fff; text-shadow: 0 0 20px #ff0066; }
     .sub-title { font-size: 1rem; color: #ffcc00; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
 
-    /* Jackpot Ticker / Announcement */
+    /* Jackpot Ticker Banner */
     .jackpot-ticker {
       background: rgba(255, 204, 0, 0.12);
       border: 1.5px dashed #ffcc00;
       border-radius: 10px;
-      padding: 8px 12px;
+      padding: 9px 12px;
       text-align: center;
       font-size: 0.82rem;
       font-weight: 800;
       color: #ffcc00;
       font-family: 'Orbitron', sans-serif;
-      box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.25);
+      animation: tickerPulse 2s infinite alternate;
     }
+    @keyframes tickerPulse { 0% { box-shadow: 0 0 10px rgba(255, 204, 0, 0.2); } 100% { box-shadow: 0 0 25px rgba(255, 204, 0, 0.6); } }
 
-    /* REFERRAL SPONSOR BANNER */
+    /* REFERRAL BANNER */
     .referral-banner {
       background: linear-gradient(135deg, #00c6ff, #0072ff);
       border: 2px solid #00e5ff;
@@ -59,7 +62,9 @@
       display: block;
       box-shadow: 0 0 25px rgba(0, 198, 255, 0.5);
       animation: bannerPulse 1.8s infinite alternate;
+      transition: transform 0.2s;
     }
+    .referral-banner:active { transform: scale(0.97); }
     @keyframes bannerPulse { 0% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 198, 255, 0.4); } 100% { transform: scale(1.02); box-shadow: 0 0 35px rgba(0, 255, 102, 0.8); border-color: #00ff66; } }
 
     /* JACKPOT CARDS */
@@ -68,16 +73,16 @@
     .jackpot-card {
       background: linear-gradient(135deg, rgba(20, 20, 35, 0.95), rgba(10, 10, 20, 0.95));
       border-radius: 16px; padding: 18px 14px; text-align: center; position: relative; overflow: hidden;
-      box-shadow: 0 0 25px rgba(0,0,0,0.8); transition: transform 0.2s; text-decoration: none; color: #fff; display: block;
+      box-shadow: 0 0 25px rgba(0,0,0,0.8); transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none; color: #fff; display: block;
     }
-    .jackpot-card:active { transform: scale(0.97); }
+    .jackpot-card:active { transform: scale(0.96); }
 
     .card-solo { border: 2.5px solid #ff0055; box-shadow: 0 0 30px rgba(255, 0, 85, 0.45); }
     .card-duo { border: 2.5px solid #00ccff; box-shadow: 0 0 25px rgba(0, 204, 255, 0.35); }
     .card-squad { border: 2.5px solid #00ff66; box-shadow: 0 0 25px rgba(0, 255, 102, 0.35); }
     .card-free { border: 2.5px solid #ffcc00; box-shadow: 0 0 25px rgba(255, 204, 0, 0.4); }
 
-    .multiplier-tag { font-family: 'Orbitron', sans-serif; font-size: 1.7rem; font-weight: 900; text-transform: uppercase; }
+    .multiplier-tag { font-family: 'Orbitron', sans-serif; font-size: 1.65rem; font-weight: 900; text-transform: uppercase; }
     .tag-solo { color: #ff0055; text-shadow: 0 0 15px #ff0055; }
     .tag-duo { color: #00ccff; text-shadow: 0 0 15px #00ccff; }
     .tag-squad { color: #00ff66; text-shadow: 0 0 15px #00ff66; }
@@ -154,8 +159,8 @@
     <!-- MEGA BOOYAH CASINO-STYLE JACKPOT SHOWCASE -->
     <div class="jackpot-container">
       
-      <!-- SOLO 32X SHOWCASE -->
-      <a href="soloboooyah.html" class="jackpot-card card-solo scroll-animate active">
+      <!-- SOLO 32X SHOWCASE (DIRECT LINK TO BRSOLO.HTML) -->
+      <a href="brsolo.html" class="jackpot-card card-solo scroll-animate active">
         <div class="multiplier-tag tag-solo">🎰 1 KA 32 GUNA MEGA JACKPOT 👑</div>
         <div class="prize-highlight">BR SOLO: ENTRY ₹50 ➔ WIN ₹1600 CASH 💎</div>
         <p style="font-size:0.82rem; color:#ccc;">🔥 Winner Solo King Takes Direct ₹1600 Real Cash!</p>
@@ -240,8 +245,13 @@
     document.addEventListener("DOMContentLoaded", function() {
       const animatedElements = document.querySelectorAll(".scroll-animate");
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("active"); });
-      });
+        entries.forEach(entry => { 
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active"); 
+          }
+        });
+      }, { threshold: 0.1 });
+      
       animatedElements.forEach(el => observer.observe(el));
     });
   </script>

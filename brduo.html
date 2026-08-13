@@ -48,6 +48,8 @@
     .details-box, .rules-box, .registration-box { background: rgba(12, 12, 20, 0.95); border-radius: 14px; padding: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
     .box-header { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; }
 
+    .player-section-title { font-family: 'Orbitron', sans-serif; font-size: 0.82rem; color: #ffcc00; margin: 10px 0 6px 0; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+
     .details-box { border: 1.5px solid #00ccff; }
     .rules-box { border: 1.5px solid #ff0055; }
     .registration-box { border: 2.5px solid #00ff66; box-shadow: 0 0 30px rgba(0, 255, 102, 0.35); }
@@ -73,11 +75,11 @@
     .checkbox-container input[type="checkbox"] { width: 20px; height: 20px; accent-color: #00ff66; cursor: pointer; margin-top: 2px; }
     .checkbox-container label { font-size: 0.8rem; color: #ddd; font-weight: 700; cursor: pointer; line-height: 1.3; }
 
-    .input-group { margin-bottom: 12px; text-align: left; }
-    .input-group label { display: block; font-size: 0.78rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
+    .input-group { margin-bottom: 10px; text-align: left; }
+    .input-group label { display: block; font-size: 0.75rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
     .input-wrapper { position: relative; display: flex; align-items: center; }
     .input-wrapper i { position: absolute; left: 12px; color: #00ff66; }
-    .input-field { width: 100%; padding: 11px 12px 11px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.9rem; font-weight: 700; outline: none; }
+    .input-field { width: 100%; padding: 10px 12px 10px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.88rem; font-weight: 700; outline: none; }
 
     .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #00ccff, #0055ff); border: none; border-radius: 8px; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(0, 204, 255, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
 
@@ -150,11 +152,10 @@
         <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-triangle-exclamation"></i> STRICT DUO RULES & POLICY</div>
         <ul class="rules-list">
           <li><i class="fa-solid fa-desktop"></i> <b>ONLY MOBILE PLAYERS:</b> PC / Emulator / Panel players strictly NOT ALLOWED! Emulator detected hone par instantly kick aur zero refund!</li>
-          <li><i class="fa-solid fa-users"></i> <b>SLOT FILLING POLICY:</b> Jab tak match me poore <b>25 Duo Teams (50 Players)</b> nahi bharte, tab tak match create nahi kiya jayega. Slots na bharne par aapka paisa **Full Refund** ya **Agle Match** me jod diya jayega.</li>
-          <li><i class="fa-solid fa-user-shield"></i> <b>ONLY REGISTERED DUO:</b> Room me wahi 2 players aayenge jinka form bhara hai. Teesri ya unknown entry par instant kick & zero refund!</li>
-          <li><i class="fa-solid fa-users-slash"></i> <b>PLAYER NON-ATTENDANCE:</b> Agar aapka teammate time par nahi aata, toh captain ko solo ya bina uske khelna hoga. No refund & no new entry!</li>
-          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar Duo me se 1 bhi player Hacker/Panel User nikla, toh poora Duo PERMANENTLY BAN ho jayega!</li>
-          <li><i class="fa-solid fa-trophy"></i> <b>WINNER PROOF:</b> Match Booyah hone ke baad winning team ko Booyah ka Screenshot Insta DM par bhejna hoga!</li>
+          <li><i class="fa-solid fa-id-card"></i> <b>CAPTAIN DETAILS & PLAYER NAME:</b> Captain ki UID aur Player 2 ka In-Game Name accurate hona zaroori hai!</li>
+          <li><i class="fa-solid fa-user-check"></i> <b>ONLY REGISTERED DUO ALLOWED:</b> Room me sirf wahi 2 players khel payenge jinka registration hua hai. Unregistered/extra player aane par usko instantly KICK kar diya jayega!</li>
+          <li><i class="fa-solid fa-ban"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar Duo me se 1 bhi player Hacker ya Panel User nikla, toh poora Duo SIKARI ESPORTS se PERMANENTLY BAN kar diya jayega!</li>
+          <li><i class="fa-solid fa-trophy"></i> <b>BOOYAH WINNER PROOF:</b> Match Booyah hone ke baad winning duo ko **Last Booyah Screen ka Screenshot** Instagram DM par bhejna zaroori hai!</li>
         </ul>
       </div>
 
@@ -171,28 +172,28 @@
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="🔥 NEW BR DUO MATCH REGISTRATION">
 
+          <!-- PLAYER 1 (CAPTAIN) -->
+          <div class="player-section-title"><i class="fa-solid fa-crown" style="color:#ffcc00;"></i> PLAYER 1 (CAPTAIN)</div>
           <div class="input-group">
-            <label><i class="fa-solid fa-user-ninja"></i> PLAYER 1 (CAPTAIN) GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P1_Name" class="input-field" placeholder="Player 1 Name..." required></div>
+            <label>CAPTAIN GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-user-ninja"></i><input type="text" name="P1_Name" class="input-field" placeholder="Captain In-Game Name..." required></div>
+          </div>
+          <div class="input-group">
+            <label>CAPTAIN GAME UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P1_UID" class="input-field" placeholder="Captain 10-Digit UID..." required></div>
           </div>
 
+          <!-- PLAYER 2 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 2</div>
           <div class="input-group">
-            <label><i class="fa-solid fa-hashtag"></i> PLAYER 1 GAME UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P1_UID" class="input-field" placeholder="Player 1 UID..." required></div>
+            <label>PLAYER 2 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P2_Name" class="input-field" placeholder="Player 2 In-Game Name..." required></div>
           </div>
 
+          <!-- CONTACT INFO -->
+          <div class="player-section-title"><i class="fa-brands fa-instagram" style="color:#ff0055;"></i> CONTACT INFO</div>
           <div class="input-group">
-            <label><i class="fa-solid fa-user-group"></i> PLAYER 2 GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="P2_Name" class="input-field" placeholder="Player 2 Name..." required></div>
-          </div>
-
-          <div class="input-group">
-            <label><i class="fa-solid fa-hashtag"></i> PLAYER 2 GAME UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" name="P2_UID" class="input-field" placeholder="Player 2 UID..." required></div>
-          </div>
-
-          <div class="input-group">
-            <label><i class="fa-brands fa-instagram"></i> CAPTAIN INSTAGRAM USERNAME</label>
+            <label>CAPTAIN INSTAGRAM USERNAME</label>
             <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Insta_Handle" class="input-field" placeholder="@captain_insta_id" required></div>
           </div>
 
@@ -254,7 +255,7 @@
       </a>
     </div>
 
-    <footer class="scroll-animate">
+    <footer>
       © 2026 SIKARI ESPORTS. All Rights Reserved.
     </footer>
 

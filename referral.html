@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🔥 SIKARI ESPORTS - Refer 5 Friends & Get Free Ticket 🔥</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rajdhani', sans-serif; -webkit-tap-highlight-color: transparent; }
+    body { background: #030305; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; overflow-x: hidden; padding: 12px 10px 40px 10px; }
+    
+    .bg-animation {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 204, 0, 0.45), transparent 60%), radial-gradient(circle at 80% 80%, rgba(0, 255, 102, 0.3), transparent 50%), linear-gradient(to bottom, rgba(5, 5, 10, 0.92), rgba(2, 2, 4, 0.98)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
+      z-index: -1; filter: brightness(0.65);
+    }
+
+    .main-wrapper { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 16px; }
+
+    .scroll-animate { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .scroll-animate.active { opacity: 1; transform: translateY(0); }
+
+    .hero { text-align: center; margin-top: 5px; }
+    .logo-img { width: 105px; height: 105px; border-radius: 50%; border: 3.5px solid #ffcc00; box-shadow: 0 0 35px #ffcc00; object-fit: cover; animation: logoGlow 2s infinite alternate; }
+    @keyframes logoGlow { 0% { transform: scale(1); box-shadow: 0 0 20px #ffcc00; } 100% { transform: scale(1.05); box-shadow: 0 0 50px #00ff66; } }
+
+    .main-title { font-family: 'Orbitron', sans-serif; font-size: 1.85rem; font-weight: 900; letter-spacing: 1.5px; color: #fff; text-shadow: 0 0 15px #ffcc00; }
+    .sub-title { font-size: 0.95rem; color: #00ff66; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
+
+    .jackpot-banner {
+      background: linear-gradient(135deg, rgba(255, 204, 0, 0.4), rgba(0, 255, 102, 0.4));
+      border: 2.5px solid #ffcc00; border-radius: 14px; padding: 16px 10px; text-align: center; box-shadow: 0 0 35px rgba(255, 204, 0, 0.5);
+      animation: pulseGlow 1.5s infinite alternate;
+    }
+    @keyframes pulseGlow { 0% { box-shadow: 0 0 20px rgba(255,204,0,0.4); } 100% { box-shadow: 0 0 40px rgba(0,255,102,0.8); border-color: #00ff66; } }
+
+    .jackpot-banner h2 { font-family: 'Orbitron', sans-serif; font-size: 1.35rem; color: #00ff66; text-transform: uppercase; text-shadow: 0 0 10px #ffcc00; }
+    .jackpot-banner p { font-size: 0.9rem; color: #fff; font-weight: 800; margin-top: 4px; }
+
+    .steps-box, .rules-box, .registration-box, .verification-box { background: rgba(12, 12, 20, 0.95); border-radius: 14px; padding: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+    .box-header { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 6px; }
+
+    .steps-box { border: 1.5px solid #00ccff; }
+    .rules-box { border: 1.5px solid #ff0055; }
+    .registration-box { border: 2.5px solid #ffcc00; box-shadow: 0 0 30px rgba(255, 204, 0, 0.35); }
+
+    .step-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border-radius: 8px; text-decoration: none; color: #fff; font-family: 'Orbitron'; font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; width: 100%; text-align: center; }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .btn-group { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+
+    .rules-list { list-style: none; font-size: 0.82rem; color: #eee; line-height: 1.45; }
+    .rules-list li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; background: rgba(255, 0, 85, 0.06); padding: 8px; border-radius: 6px; border-left: 3px solid #ff0055; }
+    .rules-list li i { color: #ff0055; margin-top: 2px; }
+
+    .checkbox-container { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); }
+    .checkbox-container input[type="checkbox"] { width: 20px; height: 20px; accent-color: #ffcc00; cursor: pointer; margin-top: 2px; }
+    .checkbox-container label { font-size: 0.8rem; color: #ddd; font-weight: 700; cursor: pointer; line-height: 1.3; }
+
+    .input-group { margin-bottom: 12px; text-align: left; }
+    .input-group label { display: block; font-size: 0.78rem; color: #ccc; margin-bottom: 4px; font-weight: 700; }
+    .input-wrapper { position: relative; display: flex; align-items: center; }
+    .input-wrapper i { position: absolute; left: 12px; color: #ffcc00; }
+    .input-field { width: 100%; padding: 11px 12px 11px 38px; background: #08080e; border: 1.5px solid #2a2a3a; border-radius: 7px; color: #fff; font-size: 0.9rem; font-weight: 700; outline: none; }
+
+    .btn-main { width: 100%; padding: 15px; background: linear-gradient(45deg, #ffcc00, #ff9900); border: none; border-radius: 8px; color: #000; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 25px rgba(255, 204, 0, 0.6); display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+    .verification-box { display: none; text-align: center; border: 2px solid #ffcc00; }
+
+    footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="bg-animation"></div>
+
+  <div class="main-wrapper">
+
+    <!-- Header -->
+    <div class="hero scroll-animate active">
+      <div class="logo-frame">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/ffcc00/ffffff?text=SIKARI'">
+      </div>
+      <h1 class="main-title">SIKARI ESPORTS</h1>
+      <p class="sub-title">🎁 REFER 5 FRIENDS = GET 1 FREE TICKET 🎁</p>
+    </div>
+
+    <!-- Mega Banner -->
+    <div class="jackpot-banner scroll-animate active">
+      <h2>🚀 BRING 5 FRIENDS ➔ GET FREE ENTRY 🚀</h2>
+      <p>Apne 5 Dosto ko Instagram ID Follow & Broadcast Group Join Karwao!</p>
+    </div>
+
+    <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
+
+      <!-- Quick Action Links -->
+      <div class="steps-box scroll-animate">
+        <div class="box-header" style="color:#00ccff;"><i class="fa-solid fa-link"></i> STEP 1: SHARE THESE LINKS TO 5 FRIENDS</div>
+        <p style="font-size:0.8rem; color:#aaa; margin-bottom:10px;">Apne 5 dosto ko niche diye gaye dono links bhejo aur unse Follow & Group Join karwao:</p>
+        <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="step-btn btn-insta"><i class="fa-brands fa-instagram"></i> 1. FOLLOW MAIN INSTAGRAM ID</a>
+        <a href="https://ig.me/j/AbZh7Yi-DubnF9-J/" target="_blank" class="step-btn btn-group"><i class="fa-solid fa-users"></i> 2. JOIN INSTAGRAM BROADCAST GROUP</a>
+      </div>
+
+      <!-- Rules Box -->
+      <div class="rules-box scroll-animate">
+        <div class="box-header" style="color:#ff0055;"><i class="fa-solid fa-shield-halved"></i> REFERRAL RULES & POLICY</div>
+        <ul class="rules-list">
+          <li><i class="fa-solid fa-users-check"></i> <b>5 FRIENDS MANDATORY:</b> Aapke 5 Dosto ko Insta Page <b>@sikariesport</b> ko Follow aur Broadcast Group ko Join karna Zaroori hai.</li>
+          <li><i class="fa-solid fa-desktop"></i> <b>ONLY MOBILE PLAYERS:</b> PC / Emulator / Panel players strictly NOT ALLOWED! Emulator detected hone par instantly kick aur zero refund/entry!</li>
+          <li><i class="fa-solid fa-ticket"></i> <b>FREE ENTRY CLAIM:</b> Proof Verify hote hi aapko agle kisi bhi Match me <b>1 FREE ENTRY TICKET</b> mil jayegi.</li>
+        </ul>
+      </div>
+
+      <!-- Claim Form -->
+      <div class="registration-box scroll-animate">
+        <div class="box-header" style="color:#ffcc00; justify-content:center;"><i class="fa-solid fa-gift"></i> STEP 2: SUBMIT REFERRAL CLAIM</div>
+
+        <form id="referralForm" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="🎁 NEW REFERRAL TICKET CLAIM (5 FRIENDS)">
+
+          <div class="input-group">
+            <label><i class="fa-solid fa-user"></i> YOUR NAME / GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" name="Your_Name" class="input-field" placeholder="In-Game Name..." required></div>
+          </div>
+
+          <div class="input-group">
+            <label><i class="fa-brands fa-instagram"></i> YOUR INSTAGRAM USERNAME</label>
+            <div class="input-wrapper"><i class="fa-brands fa-instagram"></i><input type="text" name="Your_Insta" class="input-field" placeholder="@your_instagram_id" required></div>
+          </div>
+
+          <div class="input-group">
+            <label><i class="fa-solid fa-users"></i> 5 FRIENDS' INSTAGRAM USERNAMES (SEPARATED BY COMMA)</label>
+            <div class="input-wrapper"><i class="fa-solid fa-user-plus"></i><input type="text" name="Friends_Insta_IDs" class="input-field" placeholder="@friend1, @friend2, @friend3, @friend4, @friend5" required></div>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="rulesCheck" required>
+            <label for="rulesCheck">Maine apne 5 dosto se Instagram Page Follow aur Broadcast Group Join karwa diya hai. Screenshots Insta DM me bhejunga.</label>
+          </div>
+
+          <button type="submit" class="btn-main" id="submitBtn">CLAIM FREE TICKET <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+      </div>
+
+    </div>
+
+    <!-- Verification Box -->
+    <div class="verification-box" id="verificationPage">
+      <i class="fa-solid fa-award" style="font-size: 3.5rem; color: #ffcc00; margin-bottom:8px;"></i>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.3rem; color:#00ff66;">CLAIM SUBMITTED!</h2>
+      <p style="font-size:0.85rem; color:#ccc; margin: 10px 0; line-height:1.4;">
+        Aapka Referral Claim humne receive kar liya hai! <br>
+        Abhi hamare **Official Instagram (@sikariesport)** par apne 5 dosto ke Follow/Group Join ka **Screenshot DM** kar do taaki aapko FREE TICKET mil jaye!
+      </p>
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="btn-main" style="text-decoration:none; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; margin-top:12px;">
+        <i class="fa-brands fa-instagram" style="font-size:1.3rem;"></i> SEND SCREENSHOTS ON INSTA DM
+      </a>
+    </div>
+
+    <footer class="scroll-animate">
+      © 2026 SIKARI ESPORTS. All Rights Reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const animatedElements = document.querySelectorAll(".scroll-animate");
+      function checkScroll() {
+        const triggerBottom = window.innerHeight * 0.92;
+        animatedElements.forEach(el => {
+          if (el.getBoundingClientRect().top < triggerBottom) el.classList.add("active");
+        });
+      }
+      window.addEventListener("scroll", checkScroll);
+      checkScroll();
+    });
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const check = document.getElementById("rulesCheck");
+      if(!check.checked) {
+        alert("Kripya Checkbox tick karke confirm karein!");
+        return;
+      }
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true; submitBtn.innerHTML = 'Submitting...';
+      fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' } })
+      .then(() => { 
+        document.getElementById("formPage").style.display = "none"; 
+        document.getElementById("verificationPage").style.display = "block"; 
+        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+      });
+    }
+  </script>
+</body>
+</html>

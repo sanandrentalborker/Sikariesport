@@ -439,8 +439,8 @@
         <div class="val" style="color:#ffcc00;">₹30</div>
       </div>
       <div class="info-card">
-        <div class="label">MODE</div>
-        <div class="val" style="color:#00ff66; font-size:0.9rem; margin-top:4px;">HEADSHOT ONLY</div>
+        <div class="label">WINNING SQUAD PRIZE</div>
+        <div class="val" style="color:#00ff66;">₹55 CASH</div>
       </div>
     </div>
 
@@ -448,14 +448,14 @@
     <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
 
       <!-- BOX 1: MATCH TIMING & WAITING POLICY -->
-      <div class="timing-box scroll-animate">
+      <div class="timing-box scroll-animate active">
         <h4><i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES</h4>
         <p>• Match exact scheduled time par chalu kar diya jayega.</p>
         <p>• Sabhi players ka maximum <b>5 Minutes</b> wait kiya jayega. Late hone par room start ho jayega aur <b>Refund nahi milega</b>.</p>
       </div>
 
       <!-- BOX 2: CUSTOM ROOM SETTINGS -->
-      <div class="settings-box scroll-animate">
+      <div class="settings-box scroll-animate active">
         <div class="box-header">
           <i class="fa-solid fa-sliders"></i> CS CUSTOM SETTINGS
         </div>
@@ -488,7 +488,7 @@
       </div>
 
       <!-- BOX 3: GAME RULES -->
-      <div class="rules-box scroll-animate">
+      <div class="rules-box scroll-animate active">
         <div class="box-header" style="color: #ff0055;">
           <i class="fa-solid fa-triangle-exclamation"></i> STRICT 4v4 RULES
         </div>
@@ -497,12 +497,12 @@
           <li><i class="fa-solid fa-crosshairs"></i> <b>HEADSHOT ONLY:</b> Pure Headshot mode hai, body kill/spamming strictly prohibited.</li>
           <li><i class="fa-solid fa-ban"></i> <b>No Roof Climbing & Trapping:</b> Ghar ke upar chadhna aur Gloowall me enemy ko pack karna allowed nahi hai.</li>
           <li><i class="fa-solid fa-ban"></i> <b>Banned Gun:</b> Double Vector chalana strictly BANNED hai.</li>
-          <li><i class="fa-solid fa-skull"></i> <b>Anti-Hack & Panel Policy:</b> Agar koi panel/hacker milta hai toh screen recording bhejein, ID permanent ban hogi aur fair refund milega!</li>
+          <li><i class="fa-solid fa-skull"></i> <b>Anti-Hack & Panel Policy:</b> Agar koi panel/hacker milta hai toh screen recording bhejein, ID permanent ban hogi aur clean players ko refund milega!</li>
         </ul>
       </div>
 
       <!-- BOX 4: 4v4 SQUAD REGISTRATION FORM -->
-      <div class="registration-box scroll-animate">
+      <div class="registration-box scroll-animate active">
         <div class="box-header" style="color:#00ff66; justify-content:center;">
           <i class="fa-solid fa-users-gear"></i> 4v4 SQUAD REGISTRATION
         </div>
@@ -562,7 +562,7 @@
             </div>
           </div>
 
-          <!-- MULTI-OPTION REFERRAL SHARE BOX (NATIVE PHONE SHARE) -->
+          <!-- MULTI-OPTION REFERRAL SHARE BOX -->
           <div class="share-trigger-box" onclick="shareReferral()">
             <div style="font-size:0.95rem; color:#ffcc00; font-family:'Orbitron'; font-weight:800; display:flex; align-items:center; justify-content:center; gap:8px;">
               <i class="fa-solid fa-share-nodes" style="font-size:1.2rem; color:#00ff66;"></i> SHARE TOURNAMENT WITH FRIENDS
@@ -595,7 +595,7 @@
     <!-- PAGE 2: QR Payment View Box -->
     <div class="qr-box" id="qrPage">
       <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.25rem;">SCAN & PAY SQUAD ENTRY FEE</h2>
-      <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹30 | CS 4v4 Headshot Mode</p>
+      <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹30 | Winning Prize: ₹55</p>
 
       <div class="qr-frame">
         <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/200/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
@@ -612,4 +612,4 @@
 
     <!-- PAGE 3: Instagram Verification Page Box -->
     <div class="insta-box" id="instaPage">
-      <i class="fa-solid fa-s
+      <i class="fa-solid fa-shield-h

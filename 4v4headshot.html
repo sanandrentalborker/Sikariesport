@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>🔥 SIKARI ESPORTS - 4v4 CS Custom 🔥</title>
   
   <!-- Gaming Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- AOS (Animate On Scroll) CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
   <style>
     * {
@@ -18,6 +15,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Rajdhani', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -51,23 +49,23 @@
       max-width: 450px;
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 16px;
     }
 
     .hero {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     .logo-frame {
       position: relative;
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .logo-img {
-      width: 110px;
-      height: 110px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       border: 3.5px solid #ff0066;
       box-shadow: 0 0 30px #ff0066, inset 0 0 15px #ff0066;
@@ -82,25 +80,25 @@
 
     .main-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
+      font-size: 1.85rem;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       color: #fff;
       text-shadow: 0 0 12px #ff0066, 0 0 25px #ff0066;
     }
 
     .sub-title {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #ffcc00;
       font-weight: 800;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     .match-info-grid {
       display: flex;
-      gap: 12px;
+      gap: 10px;
     }
 
     .info-card {
@@ -108,14 +106,14 @@
       background: rgba(25, 25, 38, 0.9);
       border: 1.5px solid #ff0066;
       border-radius: 12px;
-      padding: 12px 5px;
+      padding: 10px 5px;
       text-align: center;
-      transition: all 0.3s ease;
       backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
     }
 
     .info-card .label {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       color: #aaa;
       font-weight: 700;
       text-transform: uppercase;
@@ -123,23 +121,23 @@
 
     .info-card .val {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 800;
     }
 
     .timing-box {
       background: rgba(255, 102, 0, 0.15);
       border: 2px solid #ff6600;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 0 25px rgba(255, 102, 0, 0.3);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.25);
       backdrop-filter: blur(12px);
       text-align: left;
     }
 
     .timing-box h4 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: #ffaa00;
       margin-bottom: 8px;
       display: flex;
@@ -148,7 +146,7 @@
     }
 
     .timing-box p {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: #ddd;
       line-height: 1.4;
     }
@@ -156,17 +154,17 @@
     .settings-box {
       background: rgba(12, 12, 20, 0.92);
       border: 2px solid #ffcc00;
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 0 25px rgba(255, 204, 0, 0.25);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.25);
       backdrop-filter: blur(12px);
     }
 
     .box-header {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #ffcc00;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -177,14 +175,14 @@
     .settings-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 8px;
     }
 
     .setting-item {
       background: rgba(255, 255, 255, 0.05);
       padding: 8px 10px;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -197,7 +195,7 @@
       color: #fff;
       padding: 2px 8px;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-family: 'Orbitron', sans-serif;
     }
 
@@ -206,47 +204,47 @@
       color: #000;
       padding: 2px 8px;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-family: 'Orbitron', sans-serif;
     }
 
     .rules-box {
       background: rgba(28, 10, 16, 0.92);
       border: 2px solid #ff0055;
-      border-radius: 16px;
-      padding: 18px;
+      border-radius: 14px;
+      padding: 16px;
       text-align: left;
-      box-shadow: 0 0 25px rgba(255, 0, 85, 0.3);
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.25);
       backdrop-filter: blur(12px);
     }
 
     .rules-list {
       list-style: none;
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: #eee;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     .rules-list li {
       margin-bottom: 10px;
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 8px;
     }
 
     .rules-list li i {
       color: #ff0055;
       margin-top: 3px;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .refund-warning {
       background: rgba(255, 0, 85, 0.25);
       border-left: 4px solid #ff0055;
-      padding: 10px;
-      font-size: 0.82rem;
+      padding: 8px 10px;
+      font-size: 0.8rem;
       color: #ff99bb;
-      margin-top: 12px;
+      margin-top: 10px;
       border-radius: 6px;
       font-weight: 700;
     }
@@ -254,45 +252,45 @@
     .registration-box {
       background: rgba(15, 15, 25, 0.95);
       border: 2.5px solid #00ff66;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 0 35px rgba(0, 255, 102, 0.3);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 0 30px rgba(0, 255, 102, 0.3);
       backdrop-filter: blur(14px);
     }
 
     .form-header {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #00ff66;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 1px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .player-title {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #ffcc00;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       border-bottom: 1px dashed rgba(255, 204, 0, 0.4);
-      padding-bottom: 4px;
+      padding-bottom: 3px;
     }
 
     .input-group {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-align: left;
     }
 
     .input-group label {
       display: block;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: #ccc;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       font-weight: 700;
     }
 
@@ -304,54 +302,42 @@
 
     .input-wrapper i {
       position: absolute;
-      left: 14px;
+      left: 12px;
       color: #00ff66;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .input-field {
       width: 100%;
-      padding: 12px 15px 12px 45px;
+      padding: 10px 12px 10px 38px;
       background: #08080e;
       border: 1.5px solid #2a2a3a;
       border-radius: 8px;
       color: #fff;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       outline: none;
-      transition: all 0.3s ease;
-    }
-
-    .input-field:focus {
-      border-color: #00ff66;
-      box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
     }
 
     .btn-main {
       width: 100%;
-      padding: 15px;
+      padding: 14px;
       background: linear-gradient(45deg, #00b09b, #96c93d);
       border: none;
       border-radius: 8px;
       color: #fff;
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
       box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);
-      transition: all 0.3s ease;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .btn-main:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(0, 255, 102, 0.8);
+      gap: 8px;
+      margin-top: 12px;
     }
 
     .qr-box {
@@ -359,24 +345,24 @@
       text-align: center;
       background: rgba(15, 15, 25, 0.95);
       border: 2px solid #ff0066;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.35);
     }
 
     .qr-frame {
       background: #fff;
-      padding: 12px;
-      border-radius: 14px;
+      padding: 10px;
+      border-radius: 12px;
       display: inline-block;
       border: 3.5px solid #ff0066;
-      box-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
-      margin: 15px 0;
+      box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+      margin: 12px 0;
     }
 
     .qr-frame img {
-      width: 210px;
-      height: 210px;
+      width: 190px;
+      height: 190px;
       display: block;
       object-fit: contain;
     }
@@ -386,9 +372,9 @@
       border: 1px dashed #ff0066;
       border-radius: 8px;
       padding: 10px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #ffcc00;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       font-weight: 600;
     }
 
@@ -397,9 +383,9 @@
       text-align: center;
       background: rgba(15, 15, 25, 0.95);
       border: 2px solid #ff0066;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 0 35px rgba(255, 0, 102, 0.35);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.35);
     }
 
     .info-card-dm {
@@ -407,10 +393,10 @@
       border: 1px solid rgba(255, 204, 0, 0.4);
       border-radius: 10px;
       padding: 12px;
-      margin: 15px 0;
+      margin: 12px 0;
       text-align: left;
-      font-size: 0.88rem;
-      line-height: 1.5;
+      font-size: 0.85rem;
+      line-height: 1.4;
     }
 
     .info-card-dm b {
@@ -421,24 +407,20 @@
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
       color: #fff;
       text-decoration: none;
-      padding: 14px 20px;
+      padding: 14px 18px;
       border-radius: 8px;
       font-family: 'Orbitron', sans-serif;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
-      transition: all 0.3s ease;
       margin-top: 10px;
       width: 100%;
       justify-content: center;
     }
 
-    .btn-insta:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 30px rgba(220, 39, 67, 0.9);
-    }
+    footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -448,16 +430,16 @@
   <div class="main-wrapper">
 
     <!-- Header Section -->
-    <div class="hero" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="hero">
       <div class="logo-frame">
-        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/120/ff0066/ffffff?text=SIKARI'">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/105/ff0066/ffffff?text=SIKARI'">
       </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
       <p class="sub-title">⚔️ 4v4 Squad CS Custom ⚔️</p>
     </div>
 
     <!-- Match Info Grid -->
-    <div class="match-info-grid" data-aos="fade-down" data-aos-duration="800">
+    <div class="match-info-grid">
       <div class="info-card">
         <div class="label">SQUAD ENTRY FEE</div>
         <div class="val" style="color:#ffcc00;">₹30</div>
@@ -469,18 +451,18 @@
     </div>
 
     <!-- PAGE 1: SEPARATE BOXES -->
-    <div id="formPage" style="display: flex; flex-direction: column; gap: 22px;">
+    <div id="formPage" style="display: flex; flex-direction: column; gap: 16px;">
 
       <!-- BOX 1: MATCH TIMING & WAITING POLICY -->
-      <div class="timing-box" data-aos="fade-up" data-aos-duration="800">
+      <div class="timing-box">
         <h4><i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES</h4>
         <p>• Match exact scheduled time par chalu kar diya jayega.</p>
-        <p>• **Waiting Time:** Sabhi players ka maximum **5 Minutes** hi wait kiya jayega (e.g. Agar match 10:00 AM ka hai toh 10:05 AM tak room start ho jayega).</p>
-        <p>• 5 minutes ke baad late hone par match start ho jayega aur **refund nahi milega**.</p>
+        <p>• Sabhi players ka maximum <b>5 Minutes</b> hi wait kiya jayega.</p>
+        <p>• 5 minutes ke baad late hone par match start ho jayega aur <b>refund nahi milega</b>.</p>
       </div>
 
       <!-- BOX 2: CUSTOM ROOM SETTINGS -->
-      <div class="settings-box" data-aos="zoom-in-up" data-aos-duration="900">
+      <div class="settings-box">
         <div class="box-header">
           <i class="fa-solid fa-sliders"></i> CUSTOM ROOM SETTINGS
         </div>
@@ -509,7 +491,7 @@
       </div>
 
       <!-- BOX 3: GAME RULES -->
-      <div class="rules-box" data-aos="flip-up" data-aos-duration="1000">
+      <div class="rules-box">
         <div class="box-header" style="color: #ff0055;">
           <i class="fa-solid fa-triangle-exclamation"></i> STRICT MATCH RULES
         </div>
@@ -525,7 +507,7 @@
       </div>
 
       <!-- BOX 4: 4v4 SQUAD REGISTRATION FORM -->
-      <div class="registration-box" data-aos="fade-up" data-aos-duration="1000">
+      <div class="registration-box">
         <div class="form-header">
           <i class="fa-solid fa-users-gear"></i> 4v4 SQUAD REGISTRATION
         </div>
@@ -544,7 +526,7 @@
           </div>
 
           <!-- PLAYER 1 (LEADER) -->
-          <div class="player-title"><i class="fa-solid fa-user-crown"></i> PLAYER 1 (CAPTAIN) DETAILS</div>
+          <div class="player-title"><i class="fa-solid fa-crown" style="color:#ffcc00;"></i> PLAYER 1 (CAPTAIN) DETAILS</div>
           <div class="input-group">
             <label for="p1_name">P1 GAME NAME</label>
             <div class="input-wrapper">
@@ -561,7 +543,7 @@
           </div>
 
           <!-- PLAYER 2 -->
-          <div class="player-title" style="margin-top: 15px;"><i class="fa-solid fa-user-ninja"></i> PLAYER 2 DETAILS</div>
+          <div class="player-title" style="margin-top: 12px;"><i class="fa-solid fa-user-ninja"></i> PLAYER 2 DETAILS</div>
           <div class="input-group">
             <label for="p2_name">P2 GAME NAME</label>
             <div class="input-wrapper">
@@ -578,7 +560,7 @@
           </div>
 
           <!-- PLAYER 3 -->
-          <div class="player-title" style="margin-top: 15px;"><i class="fa-solid fa-user-ninja"></i> PLAYER 3 DETAILS</div>
+          <div class="player-title" style="margin-top: 12px;"><i class="fa-solid fa-user-ninja"></i> PLAYER 3 DETAILS</div>
           <div class="input-group">
             <label for="p3_name">P3 GAME NAME</label>
             <div class="input-wrapper">
@@ -595,7 +577,7 @@
           </div>
 
           <!-- PLAYER 4 -->
-          <div class="player-title" style="margin-top: 15px;"><i class="fa-solid fa-user-ninja"></i> PLAYER 4 DETAILS</div>
+          <div class="player-title" style="margin-top: 12px;"><i class="fa-solid fa-user-ninja"></i> PLAYER 4 DETAILS</div>
           <div class="input-group">
             <label for="p4_name">P4 GAME NAME</label>
             <div class="input-wrapper">
@@ -612,7 +594,7 @@
           </div>
 
           <!-- SQUAD INSTAGRAM -->
-          <div class="input-group" style="margin-top: 15px;">
+          <div class="input-group" style="margin-top: 12px;">
             <label for="insta"><i class="fa-brands fa-instagram"></i> SQUAD INSTAGRAM USERNAME</label>
             <div class="input-wrapper">
               <i class="fa-brands fa-instagram"></i>
@@ -630,11 +612,11 @@
 
     <!-- PAGE 2: QR Payment View Box -->
     <div class="qr-box" id="qrPage">
-      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.3rem;">SCAN & PAY SQUAD ENTRY FEE</h2>
-      <p style="color: #00ff66; font-size: 1rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹30 | Win: ₹55</p>
+      <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.25rem;">SCAN & PAY SQUAD ENTRY FEE</h2>
+      <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 4px;">Entry Fee: ₹30 | Win: ₹55</p>
 
       <div class="qr-frame">
-        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/210/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
+        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/200/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
       </div>
 
       <div class="pay-instruction">
@@ -647,4 +629,10 @@
     </div>
 
     <!-- PAGE 3: Instagram Verification Page Box -->
-    <d
+    <div class="insta-box" id="instaPage">
+      <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #ff0055; margin-bottom: 10px;"></i>
+      <h2 style="font-family: 'Orbitron'; font-size: 1.25rem; color: #fff;">PAYMENT VERIFICATION</h2>
+
+      <div class="info-card-dm">
+        <p style="margin-bottom: 8px;">📩 <b>Room ID & Password Kahan Milega?</b><br>Payment Screenshot hamare Official Instagram DM par bhejein. Verification ke baad match start hone se <b>3-10 minutes prior</b> aapko direct <b>Instagram DM</b> par Room ID & Password bhej diya jayega.</p>
+        <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 8px; margin-top: 8px;">💰 <b>Refund Pol

@@ -66,15 +66,15 @@
       width: 105px;
       height: 105px;
       border-radius: 50%;
-      border: 3.5px solid #ff0066;
-      box-shadow: 0 0 35px #ff0066;
+      border: 3.5px solid #ff0055;
+      box-shadow: 0 0 35px #ff0055;
       object-fit: cover;
       animation: logoGlow 2s infinite alternate;
     }
 
     @keyframes logoGlow {
-      0% { box-shadow: 0 0 15px #ff0066; transform: scale(1); }
-      100% { box-shadow: 0 0 40px #ff0066, 0 0 60px #ff5500; transform: scale(1.05); }
+      0% { box-shadow: 0 0 15px #ff0055; transform: scale(1); }
+      100% { box-shadow: 0 0 40px #ff0055, 0 0 60px #ff5500; transform: scale(1.05); }
     }
 
     .main-title {
@@ -83,7 +83,7 @@
       font-weight: 900;
       letter-spacing: 1.5px;
       color: #fff;
-      text-shadow: 0 0 15px #ff0066;
+      text-shadow: 0 0 15px #ff0055;
     }
 
     .sub-title {
@@ -103,12 +103,12 @@
     .info-card {
       flex: 1;
       background: rgba(25, 25, 38, 0.95);
-      border: 1.5px solid #ff0066;
+      border: 1.5px solid #ff0055;
       border-radius: 12px;
       padding: 10px 4px;
       text-align: center;
       backdrop-filter: blur(8px);
-      box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
+      box-shadow: 0 0 15px rgba(255, 0, 85, 0.25);
     }
 
     .info-card .label {
@@ -158,13 +158,13 @@
     .box-header {
       font-family: 'Orbitron', sans-serif;
       font-size: 0.95rem;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
       text-transform: uppercase;
       border-bottom: 1px dashed rgba(255,255,255,0.15);
-      padding-bottom: 6px;
+      padding-bottom: 8px;
     }
 
     .settings-box {
@@ -207,31 +207,43 @@
       font-family: 'Orbitron', sans-serif;
     }
 
+    /* PERFECT MOBILE RULES SECTION */
     .rules-box {
       border: 2px solid #ff0055;
     }
 
     .rules-list {
       list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rule-item {
+      background: rgba(255, 0, 85, 0.06);
+      border: 1px solid rgba(255, 0, 85, 0.2);
+      border-left: 3.5px solid #ff0055;
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+
+    .rule-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #ff0055;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .rule-desc {
       font-size: 0.82rem;
       color: #eee;
-      line-height: 1.45;
-    }
-
-    .rules-list li {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      background: rgba(255, 0, 85, 0.06);
-      padding: 8px;
-      border-radius: 6px;
-      border-left: 3px solid #ff0055;
-    }
-
-    .rules-list li i {
-      color: #ff0055;
-      margin-top: 2px;
+      line-height: 1.4;
+      font-weight: 600;
     }
 
     .registration-box {
@@ -342,7 +354,7 @@
 
     .pay-instruction {
       background: rgba(255, 0, 102, 0.15);
-      border: 1px dashed #ff0066;
+      border: 1px dashed #ff0055;
       border-radius: 8px;
       padding: 10px;
       font-size: 0.82rem;
@@ -398,8 +410,8 @@
       <!-- MATCH TIMING -->
       <div class="timing-box">
         <h4><i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES</h4>
-        <p>• Match exact scheduled time par chalu ho jayega.</p>
-        <p>• Maximum <b>5 Minutes</b> wait kiya jayega. Late hone par match start ho jayega aur <b>refund nahi milega</b>.</p>
+        <p>• Match scheduled time par exact shuru ho jayega.</p>
+        <p>• Maximum <b>5 Minutes</b> wait kiya jayega. Late hone par room start ho jayega aur refund nahi milega.</p>
       </div>
 
       <!-- SETTINGS -->
@@ -417,17 +429,38 @@
         </div>
       </div>
 
-      <!-- RULES -->
+      <!-- RULES SECTION (FULLY PROPER MOBILE FORMATTED) -->
       <div class="rules-box">
         <div class="box-header" style="color: #ff0055;">
           <i class="fa-solid fa-triangle-exclamation"></i> STRICT 4v4 RULES & POLICY
         </div>
-        <ul class="rules-list">
-          <li><i class="fa-solid fa-desktop"></i> <b>MOBILE ONLY:</b> PC / Emulator / Panel players strictly NOT ALLOWED!</li>
-          <li><i class="fa-solid fa-crosshairs"></i> <b>HEADSHOT ONLY:</b> Pure Headshot mode hai, body kill completely banned hai.</li>
-          <li><i class="fa-solid fa-ban"></i> <b>NO ROOF / NO PACK:</b> Chhat par chadhna ya Gloowall me enemy ko pack karna strictly mana hai.</li>
-          <li><i class="fa-solid fa-skull"></i> <b>STRICT ANTI-HACK / PANEL BAN:</b> Agar kisi team me Panel User ya Hacker nikla, toh puri team ko <b>SIKARI ESPORTS se PERMANENT BAN</b> kar diya jaega aur <b>0 REFUND</b> milega!</li>
-        </ul>
+        
+        <div class="rules-list">
+          <div class="rule-item">
+            <div class="rule-title"><i class="fa-solid fa-mobile-screen"></i> MOBILE ONLY</div>
+            <div class="rule-desc">PC / Emulator / Panel players strictly NOT ALLOWED!</div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-title"><i class="fa-solid fa-crosshairs"></i> HEADSHOT ONLY MODE</div>
+            <div class="rule-desc">Pure Headshot mode hai. Body kill / spamming strictly banned hai.</div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-title"><i class="fa-solid fa-ban"></i> NO ROOF / NO PACK</div>
+            <div class="rule-desc">Chhat par chadhna ya Gloowall me enemy ko pack karna strictly prohibited hai.</div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-title"><i class="fa-solid fa-skull"></i> STRICT ANTI-HACK / PANEL BAN</div>
+            <div class="rule-desc">Agar kisi team me Panel User ya Hacker nikla, toh puri team ko <b>SIKARI ESPORTS se PERMANENT BAN</b> kar diya jaega aur <b>0 REFUND</b> milega!</div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-title"><i class="fa-solid fa-building-columns"></i> BANK / UPI PENDING ISSUE</div>
+            <div class="rule-desc">Payment karte waqt agar aapke bank ya UPI server issue ki wajah se payment atak ya pending hota hai, toh uski zimmedari player ki khud ki hogi.</div>
+          </div>
+        </div>
       </div>
 
       <!-- REGISTRATION FORM -->
@@ -441,7 +474,7 @@
             <label><i class="fa-solid fa-shield-halved"></i> SQUAD / TEAM NAME</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-trophy"></i>
-              <input type="text" id="squad_name" class="input-field" placeholder="Squad Name..." required>
+              <input type="text" id="squad_name" name="Squad_Name" class="input-field" placeholder="Squad Name..." required>
             </div>
           </div>
 
@@ -449,32 +482,32 @@
           <div class="player-section-title"><i class="fa-solid fa-crown" style="color:#ffcc00;"></i> PLAYER 1 (CAPTAIN)</div>
           <div class="input-group">
             <label>CAPTAIN GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-user-ninja"></i><input type="text" id="p1_name" class="input-field" placeholder="Captain In-Game Name..." required></div>
+            <div class="input-wrapper"><i class="fa-solid fa-user-ninja"></i><input type="text" id="p1_name" name="P1_Name" class="input-field" placeholder="Captain In-Game Name..." required></div>
           </div>
           <div class="input-group">
             <label>CAPTAIN GAME UID</label>
-            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" id="p1_uid" class="input-field" placeholder="Captain 10-Digit Game UID..." required></div>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" id="p1_uid" name="P1_UID" class="input-field" placeholder="Captain 10-Digit Game UID..." required></div>
           </div>
 
           <!-- P2 -->
           <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 2</div>
           <div class="input-group">
             <label>PLAYER 2 GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p2_name" class="input-field" placeholder="Player 2 In-Game Name..." required></div>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p2_name" name="P2_Name" class="input-field" placeholder="Player 2 In-Game Name..." required></div>
           </div>
 
           <!-- P3 -->
           <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 3</div>
           <div class="input-group">
             <label>PLAYER 3 GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p3_name" class="input-field" placeholder="Player 3 In-Game Name..." required></div>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p3_name" name="P3_Name" class="input-field" placeholder="Player 3 In-Game Name..." required></div>
           </div>
 
           <!-- P4 -->
           <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 4</div>
           <div class="input-group">
             <label>PLAYER 4 GAME NAME</label>
-            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p4_name" class="input-field" placeholder="Player 4 In-Game Name..." required></div>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p4_name" name="P4_Name" class="input-field" placeholder="Player 4 In-Game Name..." required></div>
           </div>
 
           <!-- INSTA -->
@@ -553,14 +586,14 @@
       btn.innerHTML = 'Submitting... <i class="fa-solid fa-spinner fa-spin"></i>';
       btn.disabled = true;
 
-      // Instantly open QR code view
+      // 1. Instantly switch view to QR Code
       document.getElementById("formSection").style.display = "none";
       document.getElementById("qrSection").style.display = "block";
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Silently submit data in background to Gmail
+      // 2. Submit details to your Gmail in background
       const formData = new FormData();
-      formData.append("_subject", "🔥 NEW 4v4 CS HEADSHOT CUSTOM REGISTRATION");
+      formData.append("_subject", "🔥 NEW 4v4 CS HEADSHOT REGISTRATION");
       formData.append("_captcha", "false");
       formData.append("Squad_Name", squadName);
       formData.append("Captain_P1_Name", p1Name);
@@ -576,14 +609,4 @@
         headers: {
           'Accept': 'application/json'
         }
-      }).catch(err => console.log("Form submitted"));
-    }
-
-    function goToInstaVerification() {
-      document.getElementById("qrSection").style.display = "none";
-      document.getElementById("instaSection").style.display = "block";
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+      }).catch(err => console.log("

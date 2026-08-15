@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>🔥 SIKARI ESPORTS - 4v4 CS Custom 🔥</title>
+  <title>🔥 SIKARI ESPORTS - 4v4 CS Headshot Custom 🔥</title>
   
-  <!-- Gaming Fonts & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -27,7 +26,7 @@
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
-      padding: 15px 10px 40px 10px;
+      padding: 15px 12px 40px 12px;
     }
 
     .bg-animation {
@@ -38,7 +37,7 @@
       height: 100%;
       background: 
         radial-gradient(circle at 50% 30%, rgba(255, 0, 102, 0.35), transparent 70%),
-        linear-gradient(to bottom, rgba(10, 10, 15, 0.88), rgba(5, 5, 8, 0.98)),
+        linear-gradient(to bottom, rgba(10, 10, 15, 0.92), rgba(5, 5, 8, 0.98)),
         url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
       z-index: -1;
       filter: brightness(0.7);
@@ -54,21 +53,21 @@
 
     .hero {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     .logo-frame {
       position: relative;
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .logo-img {
-      width: 110px;
-      height: 110px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       border: 3.5px solid #ff0066;
-      box-shadow: 0 0 30px #ff0066, inset 0 0 15px #ff0066;
+      box-shadow: 0 0 35px #ff0066;
       object-fit: cover;
       animation: logoGlow 2s infinite alternate;
     }
@@ -80,40 +79,40 @@
 
     .main-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
+      font-size: 1.85rem;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       color: #fff;
-      text-shadow: 0 0 12px #ff0066, 0 0 25px #ff0066;
+      text-shadow: 0 0 15px #ff0066;
     }
 
     .sub-title {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       color: #ffcc00;
       font-weight: 800;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     .match-info-grid {
       display: flex;
-      gap: 12px;
+      gap: 10px;
     }
 
     .info-card {
       flex: 1;
-      background: rgba(25, 25, 38, 0.9);
+      background: rgba(25, 25, 38, 0.95);
       border: 1.5px solid #ff0066;
       border-radius: 12px;
-      padding: 12px 5px;
+      padding: 10px 4px;
       text-align: center;
       backdrop-filter: blur(8px);
       box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
     }
 
     .info-card .label {
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       color: #aaa;
       font-weight: 700;
       text-transform: uppercase;
@@ -121,28 +120,28 @@
 
     .info-card .val {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 800;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #00ff66;
+      margin-top: 2px;
     }
 
     .timing-box, .settings-box, .rules-box, .registration-box {
-      background: rgba(12, 12, 20, 0.92);
-      border-radius: 16px;
+      background: rgba(12, 12, 20, 0.95);
+      border-radius: 14px;
       padding: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
       backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
     .timing-box {
-      background: rgba(255, 102, 0, 0.15);
       border: 2px solid #ff6600;
-      box-shadow: 0 0 25px rgba(255, 102, 0, 0.3);
-      text-align: left;
+      background: rgba(255, 102, 0, 0.12);
     }
 
     .timing-box h4 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: #ffaa00;
       margin-bottom: 8px;
       display: flex;
@@ -151,28 +150,25 @@
     }
 
     .timing-box p {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: #ddd;
       line-height: 1.4;
     }
 
-    .settings-box {
-      border: 2px solid #ffcc00;
-      box-shadow: 0 0 25px rgba(255, 204, 0, 0.25);
-    }
-
     .box-header {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1rem;
-      color: #ffcc00;
-      margin-bottom: 14px;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
       border-bottom: 1px dashed rgba(255,255,255,0.15);
       padding-bottom: 6px;
+    }
+
+    .settings-box {
+      border: 2px solid #ffcc00;
     }
 
     .settings-grid {
@@ -182,10 +178,10 @@
     }
 
     .setting-item {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       padding: 8px 10px;
-      border-radius: 8px;
-      font-size: 0.85rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -196,85 +192,58 @@
     .badge-no {
       background: #ff0055;
       color: #fff;
-      padding: 2px 8px;
+      padding: 2px 6px;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-family: 'Orbitron', sans-serif;
     }
 
     .badge-yes {
       background: #00ff66;
       color: #000;
-      padding: 2px 8px;
+      padding: 2px 6px;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-family: 'Orbitron', sans-serif;
     }
 
     .rules-box {
-      background: rgba(28, 10, 16, 0.92);
       border: 2px solid #ff0055;
-      box-shadow: 0 0 25px rgba(255, 0, 85, 0.3);
     }
 
     .rules-list {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .rule-item {
-      background: rgba(255, 0, 85, 0.06);
-      border: 1px solid rgba(255, 0, 85, 0.2);
-      border-left: 3.5px solid #ff0055;
-      padding: 10px 12px;
-      border-radius: 8px;
-    }
-
-    .rule-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: #ff0055;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
-
-    .rule-desc {
       font-size: 0.82rem;
       color: #eee;
-      line-height: 1.4;
-      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .rules-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: rgba(255, 0, 85, 0.06);
+      padding: 8px;
+      border-radius: 6px;
+      border-left: 3px solid #ff0055;
+    }
+
+    .rules-list li i {
+      color: #ff0055;
+      margin-top: 2px;
     }
 
     .registration-box {
       border: 2.5px solid #00ff66;
-      box-shadow: 0 0 35px rgba(0, 255, 102, 0.3);
+      box-shadow: 0 0 30px rgba(0, 255, 102, 0.35);
     }
 
-    .form-header {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
-      color: #00ff66;
-      margin-bottom: 16px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .player-title {
+    .player-section-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 0.82rem;
       color: #ffcc00;
-      margin: 12px 0 6px 0;
+      margin: 10px 0 6px 0;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -282,13 +251,13 @@
     }
 
     .input-group {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-align: left;
     }
 
     .input-group label {
       display: block;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: #ccc;
       margin-bottom: 4px;
       font-weight: 700;
@@ -304,7 +273,6 @@
       position: absolute;
       left: 12px;
       color: #00ff66;
-      font-size: 1rem;
     }
 
     .input-field {
@@ -312,9 +280,9 @@
       padding: 10px 12px 10px 38px;
       background: #08080e;
       border: 1.5px solid #2a2a3a;
-      border-radius: 8px;
+      border-radius: 7px;
       color: #fff;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
       outline: none;
     }
@@ -334,14 +302,13 @@
       font-size: 1.05rem;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 1px;
       cursor: pointer;
       box-shadow: 0 0 25px rgba(0, 255, 102, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .btn-main:active {
@@ -353,18 +320,16 @@
       text-align: center;
       background: rgba(15, 15, 25, 0.95);
       border: 2px solid #ff0055;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 0 35px rgba(255, 0, 85, 0.35);
+      border-radius: 16px;
+      padding: 18px;
     }
 
     .qr-frame {
       background: #fff;
       padding: 10px;
-      border-radius: 14px;
+      border-radius: 12px;
       display: inline-block;
-      border: 3.5px solid #ff0055;
-      box-shadow: 0 0 25px rgba(255, 0, 85, 0.8);
+      border: 3px solid #ff0055;
       margin: 12px 0;
     }
 
@@ -382,7 +347,7 @@
       padding: 10px;
       font-size: 0.82rem;
       color: #ffcc00;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       font-weight: bold;
     }
 
@@ -397,30 +362,7 @@
       line-height: 1.4;
     }
 
-    .btn-insta {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 8px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 0 20px rgba(220, 39, 67, 0.6);
-      margin-top: 10px;
-      width: 100%;
-      justify-content: center;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.78rem;
-      color: #777;
-      margin-top: 15px;
-      font-weight: 600;
-    }
+    footer { text-align: center; font-size: 0.78rem; color: #777; margin-top: 15px; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -432,7 +374,7 @@
     <!-- Header Section -->
     <div class="hero">
       <div class="logo-frame">
-        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/110/ff0066/ffffff?text=SIKARI'">
+        <img src="ae2836a1-e747-4020-b10b-5a6fe78c5dbf.png" alt="Sikari Esports Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/105/ff0066/ffffff?text=SIKARI'">
       </div>
       <h1 class="main-title">SIKARI ESPORTS</h1>
       <p class="sub-title">⚔️ 4v4 CS HEADSHOT ONLY ⚔️</p>
@@ -453,142 +395,92 @@
     <!-- STEP 1: FORM SECTION -->
     <div id="formSection" style="display: flex; flex-direction: column; gap: 16px;">
 
-      <!-- BOX 1: MATCH TIMING & WAITING POLICY -->
+      <!-- MATCH TIMING -->
       <div class="timing-box">
         <h4><i class="fa-solid fa-clock"></i> MATCH TIMING & WAITING RULES</h4>
-        <p>• Match exact scheduled time par chalu ho jayega.</p>
-        <p>• Maximum <b>5 Minutes</b> wait kiya jayega. Late hone par room start ho jayega aur <b>refund nahi milega</b>.</p>
+        <p>• Match scheduled time par chalu ho jayega.</p>
+        <p>• Maximum <b>5 Minutes</b> wait kiya jayega. Late hone par room start ho jayega aur refund nahi milega.</p>
       </div>
 
-      <!-- BOX 2: CUSTOM ROOM SETTINGS -->
+      <!-- SETTINGS -->
       <div class="settings-box">
-        <div class="box-header">
-          <i class="fa-solid fa-sliders"></i> CUSTOM ROOM SETTINGS
+        <div class="box-header" style="color:#ffcc00;">
+          <i class="fa-solid fa-sliders"></i> CS CUSTOM SETTINGS
         </div>
         <div class="settings-grid">
-          <div class="setting-item">
-            <span>Mode</span>
-            <span class="badge-yes">CS 4v4</span>
-          </div>
-          <div class="setting-item">
-            <span>Headshot Only</span>
-            <span class="badge-yes">YES</span>
-          </div>
-          <div class="setting-item">
-            <span>Limited Ammo</span>
-            <span class="badge-no">NO</span>
-          </div>
-          <div class="setting-item">
-            <span>Character Skill</span>
-            <span class="badge-no">NO</span>
-          </div>
-          <div class="setting-item">
-            <span>Loadout</span>
-            <span class="badge-yes">YES</span>
-          </div>
-          <div class="setting-item">
-            <span>Gloowall</span>
-            <span class="badge-yes">UNLIMITED</span>
-          </div>
+          <div class="setting-item"><span>Mode</span><span class="badge-yes">CS 4v4</span></div>
+          <div class="setting-item"><span>Headshot Only</span><span class="badge-yes">YES</span></div>
+          <div class="setting-item"><span>Limited Ammo</span><span class="badge-no">NO</span></div>
+          <div class="setting-item"><span>Gun Attributes</span><span class="badge-no">NO</span></div>
+          <div class="setting-item"><span>Character Skill</span><span class="badge-no">NO</span></div>
+          <div class="setting-item"><span>Gloowall</span><span class="badge-yes">UNLIMITED</span></div>
         </div>
       </div>
 
-      <!-- BOX 3: GAME RULES -->
+      <!-- RULES -->
       <div class="rules-box">
         <div class="box-header" style="color: #ff0055;">
-          <i class="fa-solid fa-triangle-exclamation"></i> STRICT 4v4 RULES & POLICY
+          <i class="fa-solid fa-triangle-exclamation"></i> STRICT 4v4 RULES
         </div>
-        <div class="rules-list">
-          <div class="rule-item">
-            <div class="rule-title"><i class="fa-solid fa-mobile-screen"></i> MOBILE ONLY</div>
-            <div class="rule-desc">PC / Emulator / Panel players strictly NOT ALLOWED!</div>
-          </div>
-          <div class="rule-item">
-            <div class="rule-title"><i class="fa-solid fa-crosshairs"></i> HEADSHOT ONLY</div>
-            <div class="rule-desc">Pure Headshot mode hai, body kill completely banned hai.</div>
-          </div>
-          <div class="rule-item">
-            <div class="rule-title"><i class="fa-solid fa-ban"></i> NO ROOF / NO PACK</div>
-            <div class="rule-desc">Chhat par chadhna ya Gloowall me enemy ko pack karna strictly mana hai.</div>
-          </div>
-          <div class="rule-item">
-            <div class="rule-title"><i class="fa-solid fa-skull"></i> STRICT ANTI-HACK / PANEL BAN</div>
-            <div class="rule-desc">Agar kisi team me Panel User ya Hacker nikla, toh puri team ko <b>SIKARI ESPORTS se PERMANENT BAN</b> kar diya jaega aur <b>0 REFUND</b> milega!</div>
-          </div>
-          <div class="rule-item">
-            <div class="rule-title"><i class="fa-solid fa-building-columns"></i> BANK / UPI PENDING ISSUE</div>
-            <div class="rule-desc">Payment karte waqt agar aapke bank ya UPI issue ki wajah se transaction pending hota hai, toh uski zimmedari player ki khud ki hogi.</div>
-          </div>
-        </div>
+        <ul class="rules-list">
+          <li><i class="fa-solid fa-desktop"></i> <b>MOBILE ONLY:</b> PC / Emulator / Panel players strictly banned!</li>
+          <li><i class="fa-solid fa-crosshairs"></i> <b>HEADSHOT ONLY:</b> Pure Headshot mode hai, body kill allowed nahi hai.</li>
+          <li><i class="fa-solid fa-ban"></i> <b>NO ROOF / NO PACK:</b> Chhat par chadhna ya gloowall me pack karna strictly mana hai.</li>
+          <li><i class="fa-solid fa-skull"></i> <b>HACKER REPORT:</b> Hacker milne par video proof dein, ID ban hogi aur refund milega.</li>
+        </ul>
       </div>
 
-      <!-- BOX 4: 4v4 SQUAD REGISTRATION FORM -->
+      <!-- REGISTRATION FORM -->
       <div class="registration-box">
-        <div class="form-header">
+        <div class="box-header" style="color:#00ff66; justify-content:center;">
           <i class="fa-solid fa-users-gear"></i> 4v4 SQUAD REGISTRATION
         </div>
 
         <form id="squadForm">
-          <!-- SQUAD NAME -->
           <div class="input-group">
-            <label for="squad_name"><i class="fa-solid fa-shield-halved"></i> SQUAD / TEAM NAME</label>
+            <label><i class="fa-solid fa-shield-halved"></i> SQUAD / TEAM NAME</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-trophy"></i>
               <input type="text" id="squad_name" name="Squad_Name" class="input-field" placeholder="Squad Name..." required>
             </div>
           </div>
 
-          <!-- PLAYER 1 (CAPTAIN) -->
-          <div class="player-title"><i class="fa-solid fa-crown"></i> PLAYER 1 (CAPTAIN)</div>
+          <!-- P1 -->
+          <div class="player-section-title"><i class="fa-solid fa-crown" style="color:#ffcc00;"></i> PLAYER 1 (CAPTAIN)</div>
           <div class="input-group">
-            <label for="p1_name">CAPTAIN GAME NAME</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-user-ninja"></i>
-              <input type="text" id="p1_name" name="P1_Name" class="input-field" placeholder="Captain In-Game Name..." required>
-            </div>
+            <label>P1 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-user-ninja"></i><input type="text" id="p1_name" name="P1_Name" class="input-field" placeholder="Captain Name..." required></div>
           </div>
           <div class="input-group">
-            <label for="p1_uid">CAPTAIN GAME UID</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-id-card"></i>
-              <input type="number" id="p1_uid" name="P1_UID" class="input-field" placeholder="Captain 10-Digit Game UID..." required>
-            </div>
+            <label>P1 FREE FIRE UID</label>
+            <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="number" id="p1_uid" name="P1_UID" class="input-field" placeholder="10-Digit UID..." required></div>
           </div>
 
-          <!-- PLAYER 2 -->
-          <div class="player-title" style="color: #00ccff;"><i class="fa-solid fa-user"></i> PLAYER 2</div>
+          <!-- P2 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 2</div>
           <div class="input-group">
-            <label for="p2_name">PLAYER 2 GAME NAME</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-gamepad"></i>
-              <input type="text" id="p2_name" name="P2_Name" class="input-field" placeholder="Player 2 In-Game Name..." required>
-            </div>
+            <label>P2 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p2_name" name="P2_Name" class="input-field" placeholder="P2 Name..." required></div>
           </div>
 
-          <!-- PLAYER 3 -->
-          <div class="player-title" style="color: #00ccff;"><i class="fa-solid fa-user"></i> PLAYER 3</div>
+          <!-- P3 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 3</div>
           <div class="input-group">
-            <label for="p3_name">PLAYER 3 GAME NAME</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-gamepad"></i>
-              <input type="text" id="p3_name" name="P3_Name" class="input-field" placeholder="Player 3 In-Game Name..." required>
-            </div>
+            <label>P3 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p3_name" name="P3_Name" class="input-field" placeholder="P3 Name..." required></div>
           </div>
 
-          <!-- PLAYER 4 -->
-          <div class="player-title" style="color: #00ccff;"><i class="fa-solid fa-user"></i> PLAYER 4</div>
+          <!-- P4 -->
+          <div class="player-section-title"><i class="fa-solid fa-user" style="color:#00ccff;"></i> PLAYER 4</div>
           <div class="input-group">
-            <label for="p4_name">PLAYER 4 GAME NAME</label>
-            <div class="input-wrapper">
-              <i class="fa-solid fa-gamepad"></i>
-              <input type="text" id="p4_name" name="P4_Name" class="input-field" placeholder="Player 4 In-Game Name..." required>
-            </div>
+            <label>P4 GAME NAME</label>
+            <div class="input-wrapper"><i class="fa-solid fa-gamepad"></i><input type="text" id="p4_name" name="P4_Name" class="input-field" placeholder="P4 Name..." required></div>
           </div>
 
-          <!-- SQUAD INSTAGRAM -->
-          <div class="player-title" style="color: #ff0055;"><i class="fa-brands fa-instagram"></i> CONTACT INFO</div>
+          <!-- INSTA -->
+          <div class="player-section-title"><i class="fa-brands fa-instagram" style="color:#ff0055;"></i> CONTACT INFO</div>
           <div class="input-group">
-            <label for="insta_handle">LEADER INSTAGRAM USERNAME</label>
+            <label>LEADER INSTAGRAM USERNAME</label>
             <div class="input-wrapper">
               <i class="fa-brands fa-instagram"></i>
               <input type="text" id="insta_handle" name="Instagram_Handle" class="input-field" placeholder="@leader_instagram_id" required>
@@ -603,13 +495,13 @@
 
     </div>
 
-    <!-- STEP 2: QR PAYMENT VIEW BOX -->
+    <!-- STEP 2: QR PAYMENT SECTION -->
     <div class="qr-box" id="qrSection">
       <h2 style="font-family: 'Orbitron'; color: #ffcc00; font-size: 1.25rem;">SCAN & PAY SQUAD ENTRY FEE</h2>
       <p style="color: #00ff66; font-size: 0.95rem; font-weight: bold; margin-top: 4px;">Squad Fee: ₹30 | Winning Prize: ₹54</p>
 
       <div class="qr-frame">
-        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/190/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
+        <img src="qr.jpeg" alt="Payment QR Code" onerror="this.src='https://via.placeholder.com/200/000000/ffffff?text=Scan+QR+To+Pay+₹30'">
       </div>
 
       <div class="pay-instruction">
@@ -621,7 +513,7 @@
       </button>
     </div>
 
-    <!-- STEP 3: INSTAGRAM VERIFICATION PAGE BOX -->
+    <!-- STEP 3: INSTAGRAM VERIFICATION SECTION -->
     <div class="insta-box" id="instaSection">
       <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: #ff0055; margin-bottom: 10px;"></i>
       <h2 style="font-family: 'Orbitron'; font-size: 1.25rem; color: #fff;">PAYMENT VERIFICATION</h2>
@@ -631,8 +523,8 @@
         <p style="border-top: 1px dashed rgba(255,204,0,0.3); padding-top: 8px; margin-top: 8px;">💰 <b>Refund Policy:</b><br>Match cancel hone par <b>100% Instant Refund</b> mil jata hai.</p>
       </div>
 
-      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="btn-insta">
-        <i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> SEND SCREENSHOT ON INSTA DM
+      <a href="https://www.instagram.com/sikariesport?igsh=MTkzYTJ0dHllb3plMg%3D%3D" target="_blank" class="btn-main" style="text-decoration:none; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color:#fff; margin-top:10px;">
+        <i class="fa-brands fa-instagram" style="font-size:1.3rem;"></i> SEND SCREENSHOT ON INSTA DM
       </a>
     </div>
 
@@ -647,4 +539,52 @@
       const squadName = document.getElementById("squad_name").value.trim();
       const p1Name = document.getElementById("p1_name").value.trim();
       const p1Uid = document.getElementById("p1_uid").value.trim();
-      const p2Name = document.get
+      const p2Name = document.getElementById("p2_name").value.trim();
+      const p3Name = document.getElementById("p3_name").value.trim();
+      const p4Name = document.getElementById("p4_name").value.trim();
+      const insta = document.getElementById("insta_handle").value.trim();
+
+      // Check required validation
+      if (!squadName || !p1Name || !p1Uid || !p2Name || !p3Name || !p4Name || !insta) {
+        alert("Kripya saare box bharein!");
+        return;
+      }
+
+      const btn = document.getElementById("submitBtn");
+      btn.innerHTML = 'Submitting... <i class="fa-solid fa-spinner fa-spin"></i>';
+      btn.disabled = true;
+
+      // 1. Instantly switch view to QR Code
+      document.getElementById("formSection").style.display = "none";
+      document.getElementById("qrSection").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // 2. Submit details to your Gmail in background
+      const formData = new FormData();
+      formData.append("_subject", "🔥 NEW 4v4 CS HEADSHOT REGISTRATION");
+      formData.append("_captcha", "false");
+      formData.append("Squad_Name", squadName);
+      formData.append("P1_Captain_Name", p1Name);
+      formData.append("P1_Captain_UID", p1Uid);
+      formData.append("P2_Name", p2Name);
+      formData.append("P3_Name", p3Name);
+      formData.append("P4_Name", p4Name);
+      formData.append("Leader_Instagram", insta);
+
+      fetch("https://formsubmit.co/ajax/sanandrentalbroker@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).catch(err => console.log("Form submitted"));
+    }
+
+    function goToInstaVerification() {
+      document.getElementById("qrSection").style.display = "none";
+      document.getElementById("instaSection").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
